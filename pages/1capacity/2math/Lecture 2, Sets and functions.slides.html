@@ -14382,51 +14382,18 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><head>
-<meta charset="UTF-8">
-</head>
-<section  data-state="no-title-footer">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
-    <p>&nbsp;</p>
-    <h3 style="text-align:center;">数学知识点</h3>
-    <h3 style="color:tomato;text-align:center;">数学基础-数列与极限</h3>
-    <p>&nbsp;</p>
-    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
-    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
-</section><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
+<div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Sets">Sets<a class="anchor-link" href="#Sets">&#182;</a></h1><p>A set is a collection of elements where each elements without duplicates. This means that a set cannot contain the same element twice. For example, $\{1,2,3,a,b\}$ denotes a set but $\{1,1,2\}$ does not as the element $1$ is duplicated.</p>
 <p>Sets can be either finite or infinite. Infinite sets contain a infinite numbers of elements.</p>
 <p>In this course we are mainly interested in sets of numbers. The most useful examples are:</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-set-of-natural-numbers">The set of natural numbers<a class="anchor-link" href="#The-set-of-natural-numbers">&#182;</a></h3><p>This is the set of numbers you learned to use in primary school. In this course we will consider $0$ to be a natural number.</p>
 $$
 \mathbb{N} := \{0, 1, 2, 3, 4, ...\}
 $$
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-set-of-integers">The set of integers<a class="anchor-link" href="#The-set-of-integers">&#182;</a></h3><p>Integers are natural numbers with a sign. Each natural number except for $0$ has its negative version:</p>
@@ -14440,7 +14407,7 @@ $$
 \mathbb{Z}^{-} := \{-1, -2, -3, ...\}
 $$
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-set-of-rational-numbers">The set of rational numbers<a class="anchor-link" href="#The-set-of-rational-numbers">&#182;</a></h3><p>Rational numbers are defined as ratios of integers:
@@ -14453,7 +14420,7 @@ $$
 \frac{1}{2} = \frac{2}{4}
 $$
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-set-of-real-numbers">The set of real numbers<a class="anchor-link" href="#The-set-of-real-numbers">&#182;</a></h3><p>Not all numbers can be expressed as a ratio of integers. The simplest example is the square root of two: $\sqrt{2}$.</p>
@@ -14469,7 +14436,7 @@ $$
 $$<p>The true definition of $\mathbb{R}$ is not given since it's too complex for this course.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Bonus:-Extraordinary-proof">Bonus: Extraordinary proof<a class="anchor-link" href="#Bonus:-Extraordinary-proof">&#182;</a></h4><p>More formally, the fractional part of a real number can be defined as the limit of a infinite sum. Consider a infinite sequence of digits:
@@ -14490,11 +14457,6 @@ $$
 &amp;0.000\color{purple}{2}... + \\
 \end{aligned}
 $$</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>using this definition, it is easy to see that $1.0000000000...$ = $0.9999999999$:</p>
 $$
 1.00000... = 1 + \sum_{n=1}^\infty \frac{0}{10^n} = 1
@@ -14503,6 +14465,21 @@ $$$$
 $$<p>where I used the formula for summing the infinite geometric series (see lecture 1).</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14512,11 +14489,6 @@ $$
 f:A \rightarrow B
 $$<p>For each element $a$ of $A$, we denote the corresponding element of $B$ as $f(a)$. The (input) set $A$ is called domain while the (output) set $B$ is called codomain.</p>
 <p>The following figure visualize a function from the set (of characters) $A = \{a, b, c\}$ to the set (of numbers) $B = \{1, 2\}$.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="https://www.sciencehq.com/image/onto_function.JPG" alt="drawing" width="200"/></p>
 <p>A function can be seen as a (potentially infinite) table of pairs. For example, the function in the image is defined by the following table:
 $$
@@ -14528,13 +14500,13 @@ $$
 $$</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Interlude:-functions-in-Python">Interlude: functions in Python<a class="anchor-link" href="#Interlude:-functions-in-Python">&#182;</a></h2><p>there are two ways for defining a function in Python. The first is using a def statment:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
@@ -14549,13 +14521,13 @@ $$</p>
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Alternatively, we can define the same function using a lambda expression:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
@@ -14569,7 +14541,7 @@ $$</p>
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Bonus-excercises">Bonus excercises<a class="anchor-link" href="#Bonus-excercises">&#182;</a></h3><p>Write the following functions in Python using lambda expressions:</p>
@@ -14583,7 +14555,7 @@ $$</p>
 </ul>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Injective-functions">Injective functions<a class="anchor-link" href="#Injective-functions">&#182;</a></h2><p>A function $f:A \rightarrow B$ is said to be injective if, for all different $a_1$ and $a_2$ in $A$, $f(a_1)$ is always different from $f(a_2)$. In other words, a injective function never maps to elements of $A$ on the same element of $B$.</p>
@@ -14594,7 +14566,7 @@ $$</p>
 <p><strong>c)</strong> $f_3: \mathbb{R} \rightarrow \mathbb{R}, \quad f_3(x) = x^2$</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Surjective-functions">Surjective functions<a class="anchor-link" href="#Surjective-functions">&#182;</a></h2><p>The range (or image) of a function is the set of its values. We will denote the range of $f$ as $f(A)$:</p>
@@ -14608,7 +14580,7 @@ $$<p>Clearly, the range of a function $f: A \rightarrow B$ is a subset of $B$. T
 <p><strong>c)</strong> $f_3: \mathbb{R} \rightarrow \mathbb{R}, \quad f_3(x) = x^2$</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Bijective-functions-and-their-inverse-function">Bijective functions and their inverse function<a class="anchor-link" href="#Bijective-functions-and-their-inverse-function">&#182;</a></h2><p>A function is said to be bijective (one-to-one correspondence) when it is both injective and surjective. This means that each element $b$ of $B$ can be written as $f(a)$ in a unique way. 
@@ -14618,12 +14590,7 @@ f^{-1}(f(a)) = a
 $$<p>and</p>
 $$
 f(f^{-1}(b)) = b 
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The inverse function is obtained simply by reversing the order of the pairs. For example, the inverse of:</p>
+$$<p>The inverse function is obtained simply by reversing the order of the pairs. For example, the inverse of:</p>
 $$
 \begin{aligned}
 &amp;(1, f(1)) = (1, 1) \\
@@ -14637,19 +14604,9 @@ $$
 &amp;(3, f^{-1}(3)) = (3, 2) \\
 &amp;(2, f^{-1}(2)) = (2, 3)
 \end{aligned}
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Note that this is possible only if the function is bijective since:</p>
+$$<p>Note that this is possible only if the function is bijective since:</p>
 <p>1) $f^{-1}(b)$ needs to be defined $\forall b\in B$, this is possible only if $f$ is surjective.</p>
 <p>2) $f^{-1}(b)$ has to be uniquely defined. This is only true when $f$ is injective.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h3><ul>
 <li>The function $f_1(x) = x$ is equal to its own inverse.</li>
 <li>The inverse of $f_2(x) = x + 1$ is $f_2^{-1}(x) = x - 1$.</li>
@@ -14657,7 +14614,7 @@ $$
 </ul>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="2.4">2.4<a class="anchor-link" href="#2.4">&#182;</a></h4><p>Find the inverse of the following functions:</p>
@@ -14673,7 +14630,7 @@ $$
 <h1 id="A-library-of-functions">A library of functions<a class="anchor-link" href="#A-library-of-functions">&#182;</a></h1><p>We are now going to discuss some simple example of functions from $\mathbb{R}$ to $\mathbb{R}$.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Constant-functions">Constant functions<a class="anchor-link" href="#Constant-functions">&#182;</a></h2><p>Constant functions are the simplest possible functions. They map all the input to a single value:</p>
@@ -14683,7 +14640,7 @@ $$<p>Clearly, constant functions are not injective as all $x$ in $R$ are mapped 
 <p>here is the graph of $f(x) = 2 \ldots $ not very exciting!</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
@@ -14743,7 +14700,7 @@ $$<p>Clearly, constant functions are not injective as all $x$ in $R$ are mapped 
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Linear-functions">Linear functions<a class="anchor-link" href="#Linear-functions">&#182;</a></h2><p>linear functions are obtained by multiplying the input by a factor:</p>
@@ -14755,7 +14712,7 @@ f^{-1}(x) = \dfrac{x}{a}
 $$<p>note that the inverse of a linear function is itself a linear function. Here is the plot of the function $f(x) = 2 x$ and its inverse:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -14817,7 +14774,7 @@ $$<p>note that the inverse of a linear function is itself a linear function. Her
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Powers-and-roots">Powers and roots<a class="anchor-link" href="#Powers-and-roots">&#182;</a></h2><p>Powers functions are obtained by taking a integer power of the input:</p>
@@ -14831,7 +14788,7 @@ $$<p>Note that, when $p$ is even, $\sqrt[p]{x}$ is defined only when $p$ is non-
 <p>We can now plot the graph of some power functions:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
@@ -14889,13 +14846,13 @@ $$<p>Note that, when $p$ is even, $\sqrt[p]{x}$ is defined only when $p$ is non-
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>and of the corresponding root functions:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
@@ -14961,7 +14918,7 @@ $$<p>Note that, when $p$ is even, $\sqrt[p]{x}$ is defined only when $p$ is non-
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Root functions can also be written as fractional roots:</p>
@@ -14972,7 +14929,7 @@ $$
 (x^p)^{\frac{1}{p}} = x^{\frac{p}{p}} = x^1 = x
 $$
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Polynomials">Polynomials<a class="anchor-link" href="#Polynomials">&#182;</a></h2><p>Polynomials are one of the most important class of functions. A polynomial is a scaled sums of powers:</p>
@@ -14985,7 +14942,7 @@ f_1(x) = 1 + x + 3x^3 - x^4
 $$</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
@@ -15044,13 +15001,13 @@ $$</p>
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>As you can see from the graph, polynomials are not always injective as they can assume the same values at multiple points.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Rational-functions">Rational functions<a class="anchor-link" href="#Rational-functions">&#182;</a></h2><p>Rational functions are defined as ratios of polynomials:</p>
@@ -15066,7 +15023,7 @@ $$
 $$<p>here is the graph:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
@@ -15127,13 +15084,13 @@ $$<p>here is the graph:</p>
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Note that the function tend to +- infinity near zero.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Excercises">Excercises<a class="anchor-link" href="#Excercises">&#182;</a></h3><h4 id="2.5">2.5<a class="anchor-link" href="#2.5">&#182;</a></h4><p>Find the domain of the following rational functions:</p>
@@ -15147,7 +15104,7 @@ $$
 $$</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="The-exponential-function">The exponential function<a class="anchor-link" href="#The-exponential-function">&#182;</a></h2><p>The esponential function is positive-valued and its domain is the whole set of real numbers. The most important property of the exponential is that it converts sums into products:</p>
@@ -15165,12 +15122,7 @@ $$
 $$<p>Hence:</p>
 $$
 \exp(-x) = \dfrac{1}{\exp(x)}
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Exponential-function-with-integer-inputs">Exponential function with integer inputs<a class="anchor-link" href="#Exponential-function-with-integer-inputs">&#182;</a></h3><p>Let's consider the case where the input of the exponential function is a natural number:</p>
+$$<h3 id="Exponential-function-with-integer-inputs">Exponential function with integer inputs<a class="anchor-link" href="#Exponential-function-with-integer-inputs">&#182;</a></h3><p>Let's consider the case where the input of the exponential function is a natural number:</p>
 $$
 \exp(n)
 $$<p>Using the property of the exponential, we can derive a simple recursive relation:</p>
@@ -15181,12 +15133,7 @@ $$<p>Using the property of the exponential, we can derive a simple recursive rel
 &amp;= \underbrace{\exp(1) \cdot \exp(1) \cdot \ldots \cdot \exp(1)}_\text{$n$ times} \\
 &amp;= \exp(1)^n
 \end{aligned}
-" /></p>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Thereforem when $n$ is a integer the exponential can be written as the number $\exp(1)$ to the $n$-th power. This number is called the Euler constant (denoted as $e$) and it is defined by the following infinite sum:</p>
+" /></p><p>Thereforem when $n$ is a integer the exponential can be written as the number $\exp(1)$ to the $n$-th power. This number is called the Euler constant (denoted as $e$) and it is defined by the following infinite sum:</p>
 $$
 \mathrm{e} = \exp(1) = \displaystyle\sum_{n=1}^\infty \dfrac{1}{n!}
 $$<p>Therefore, we can write $\exp(n)$ as</p>
@@ -15196,43 +15143,23 @@ $$<p>Similarly, we will sometime write</p>
 $$
 \exp(x) = \mathrm{e}^x
 $$<p>note that this is just a convenient notation as it does not make sense to say that the number $\mathrm{e}$ should be multiplied by itself $x$ times when $x$ is not a integer.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-natural-logarithm">The natural logarithm<a class="anchor-link" href="#The-natural-logarithm">&#182;</a></h3><p>The natural logarithm is the inverse function of the exponential:</p>
 $$
 \log(\exp(x)) = \exp(\log(x)) = x
 $$<p>Since the exponential is positive-valued, the domain of the logarithm is the set of positive real numbers. In other words, we cannot define the logarithm of a negative number (or of zero) as the value of the exponential is always positive.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Being the inverse of the exponential, the logarithm converts products into sums:</p>
 $$
 \log(a \cdot b) = \log(a) + \log(b)
 $$<p>The logarithm also converts ratios into differences:</p>
 $$
 \log\Big(\dfrac{a}{b}\Big) = \log(a) - \log(b)
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Exponential-functions-with-different-bases">Exponential functions with different bases<a class="anchor-link" href="#Exponential-functions-with-different-bases">&#182;</a></h3><p>There are infinitely many other version of the exponential function all respecting the property:</p>
+$$<h3 id="Exponential-functions-with-different-bases">Exponential functions with different bases<a class="anchor-link" href="#Exponential-functions-with-different-bases">&#182;</a></h3><p>There are infinitely many other version of the exponential function all respecting the property:</p>
 $$
 y^a y^b = y^{a+b}
 $$<p>when $a$ and $b$ are integers these functions are easy to define:</p>
 <p align="center" style="text-align: center;"><img align="center" src="https://tex.s2cms.ru/svg/%0Ay%5Ea%20%3D%20%5Cunderbrace%7By%20%5Ccdot%20y%20%5Ccdot%20...%20%5Ccdot%20y%7D_%5Ctext%7B%24a%24%20times%7D%0A" alt="
 y^a = \underbrace{y \cdot y \cdot ... \cdot y}_\text{$a$ times}
-" /></p>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>we now need to define $y^x$ when $x$ is a arbitrary real number. We can define this using the exponential function and the logarithm. In fact, the number $y$ can be written as follows:</p>
+" /></p><p>we now need to define $y^x$ when $x$ is a arbitrary real number. We can define this using the exponential function and the logarithm. In fact, the number $y$ can be written as follows:</p>
 $$
 y = \exp(\log(y))
 $$<p>Hence:</p>
@@ -15240,7 +15167,7 @@ $$
 y^x = \exp(\log(y))^x = (\mathrm{e}^{\log(y)})^x = \mathrm{e}^{x \log(y)}
 $$
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -15300,7 +15227,7 @@ $$
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
@@ -15356,7 +15283,7 @@ $$
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Trigonometric-functions">Trigonometric functions<a class="anchor-link" href="#Trigonometric-functions">&#182;</a></h2><p>The trigonometric functions are strictly connected with circles. The equation for a circle centered at the origin with radius one is:</p>
@@ -15366,17 +15293,12 @@ $$<p>Each point in the circle is uniquely defined by a angle $\color{purple}{\th
 $$
 \color{blue}{\cos(\color{purple}{\theta})^2} + \color{green}{\sin(\color{purple}{\theta})^2} = 1~.
 $$<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg/500px-Sinus_und_Kosinus_am_Einheitskreis_1.svg.png" alt="drawing" width="300"/></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Therefore, the cosine gives the $x$ coordinate of a point in a circle of radius one while the sine gives the $y$ coordinate.</p>
 <p>From the diagram is clear that, when $\color{purple}{\theta}$ is equal to zero, the sine is equal to zero while the cosine is equal to one. Conversely, the cosine is zero and the sine is one when $\color{purple}{\theta}$ is equal to $\pi/2$.</p>
 <p>The result are functions that oscillate up and down:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
@@ -15435,13 +15357,13 @@ $$<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sinus_u
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can also extend these functions to the whole real axis by assuming that they are periodic with period $2 \pi$.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
@@ -15500,7 +15422,7 @@ $$<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sinus_u
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Important-trigonometric-identities">Important trigonometric identities<a class="anchor-link" href="#Important-trigonometric-identities">&#182;</a></h3><p>There are many important identities relating the values of the trigonometric functions. You can find a comprehensive list <a href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities">here</a>.</p>
@@ -15510,24 +15432,14 @@ $$
 $$<p>As you can see from their graphs, sine and cosine can be obtained from each other by shifting the input:</p>
 $$
 \sin(x) = \cos(x + \pi/2)
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
+$$$$
 \cos(x) = \sin(x - \pi/2)
 $$<p>Other two very important identities can be used for doubling the angle:</p>
 $$
 \sin(2x) = 2\cos(x)\sin(x)
 $$$$
 \cos(2x) = \cos(x)^2 - \sin(x)^2
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>These are special cases of formulas for summing angles:</p>
+$$<p>These are special cases of formulas for summing angles:</p>
 $$
 \sin(x + y) = \cos(x)\sin(y) + \cos(y)\sin(x)
 $$$$
@@ -15537,12 +15449,7 @@ $$
 \sin\Big(\frac{x}{2}\Big)^2 = \frac{1 - \cos(x)}{2}
 $$$$
 \cos\Big(\frac{x}{2}\Big)^2 = \frac{1 + \cos(x)}{2}
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="2.6">2.6<a class="anchor-link" href="#2.6">&#182;</a></h4><p>Compute the following values using trigonometric identities:</p>
+$$<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="2.6">2.6<a class="anchor-link" href="#2.6">&#182;</a></h4><p>Compute the following values using trigonometric identities:</p>
 <p><strong>a)</strong> $\cos(\pi/2) = ?$</p>
 <p><strong>b)</strong> $
 \cos(\pi/4) = ?
@@ -15561,7 +15468,7 @@ $</p>
 $</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="The-tangent-and-the-inverse-trigonometric-functions">The tangent and the inverse trigonometric functions<a class="anchor-link" href="#The-tangent-and-the-inverse-trigonometric-functions">&#182;</a></h2><p>The tangent is defined as the ration between sine and cosine:</p>
@@ -15570,7 +15477,7 @@ $$
 $$<p>Clearly, this expression makes sense only when the denominator is different from zero (you can't divide by zero!). Therefore, the domain of the tangent is the set of real numbers $z$ such that $\cos(z) \neq 0$.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
@@ -15631,13 +15538,13 @@ $$<p>Clearly, this expression makes sense only when the denominator is different
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>As you can see from the graph, the tangent is periodic with period $\pi$.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Inverse-functions">Inverse functions<a class="anchor-link" href="#Inverse-functions">&#182;</a></h3><p>Sine, cosinge and tangents are periodic and therefore they are clearly not one-to-one. This means that we cannot define their inverses.</p>
@@ -15651,7 +15558,7 @@ $$<p>for all possible integers $n$.</p>
 <h4 id="The-arcosine-function">The arcosine function<a class="anchor-link" href="#The-arcosine-function">&#182;</a></h4><p>However, can can define the inverse functions of the restriction of the trigonometric functions to a smaller domain. For example, consider the sine function defined between $-\dfrac{\pi}{2}$ and $\dfrac{\pi}{2}$:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
@@ -15709,7 +15616,7 @@ $$<p>for all possible integers $n$.</p>
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>As you can see from the graph, the sine is one-to-one in this interval. This imply that we can define the inverse function of this restriction.</p>
@@ -15719,7 +15626,7 @@ $$
 $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arcosine is the interval between $-1$ and $1$. Here is its graph</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
@@ -15777,13 +15684,13 @@ $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arc
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="The-arccosine-function">The arccosine function<a class="anchor-link" href="#The-arccosine-function">&#182;</a></h4><p>Similarly, we can define the arccosine function by restrincting the cosine in the interval between $0$ and $\pi$:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
@@ -15841,7 +15748,7 @@ $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arc
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
@@ -15899,13 +15806,13 @@ $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arc
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="The-arctangent-function">The arctangent function<a class="anchor-link" href="#The-arctangent-function">&#182;</a></h4><p>Finally, we can define the arctangent function by inverting the restriction of the tangent in the interval between $-\dfrac{\pi}{2}$ and $\dfrac{\pi}{2}$. Note that $\tan(x)$ tends to plus infinity when $x$ tends to $-\dfrac{\pi}{2}$ and to minus infinity when $x$ tends to $\dfrac{\pi}{2}$.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
@@ -15964,13 +15871,13 @@ $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arc
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The arctangent function is the inverse of the tangent in this interval. Its domain is the whole set of real numbers since tangent assumes all possible values.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -16035,11 +15942,6 @@ $$<p>Sine the values of the sine are between $-1$ and $1$, the dimain of the arc
 $$
 \displaystyle\lim_{x\rightarrow x_0} f(x) = l
 $$<p></p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Definition">Definition<a class="anchor-link" href="#Definition">&#182;</a></h2><p>The function $f(x)$ is said to have limit $l$ for $x$ tending to $x_0$ when:</p>
 <p>For all $\epsilon &gt; 0$, there is a $\delta_\epsilon &gt; 0$ such that:</p>
 $$
@@ -16049,7 +15951,7 @@ $$<p>for all values of $x$ such that $|x - x_0| &lt; \delta$.</p>
 <p>This can be visualized as follows:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
@@ -16115,7 +16017,7 @@ $$<p>for all values of $x$ such that $|x - x_0| &lt; \delta$.</p>
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The black line is the graph of the function $f(x)$. The red dashed line denotes the location of the limit point $x_0$ while the blue dashed line denotes the value of the limit. The blue shaded area is the region that is not more than $\epsilon$ away from the limit $l$. The definition of the limit says that for any blue shaded areas around the limit there has to be a red shaded area around $x_0$ such that the graph of the function within this red shaded area is fully contained within the blue shaded area.</p>
@@ -16130,10 +16032,10 @@ $$
 $$<p>Let's try to see if this function has a limit for $x$ tending to $x_0 = 1$. We can start with the guess that the limit is equal to $1$ and see what happens. Let's consider $\epsilon = 2$. in this case, we can find a $\delta_\epsilon$ such that the graph is fully contaned in the blue shaded area as far as we are in the red shaded area.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -16152,20 +16054,7 @@ $$<p>Let's try to see if this function has a limit for $x$ tending to $x_0 = 1$.
 <span class="n">epsilon1</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">l</span><span class="o">-</span><span class="n">epsilon1</span><span class="p">,</span> <span class="n">l</span><span class="o">+</span><span class="n">epsilon1</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;|f(x) - l| &lt; epsilon_1&quot;</span><span class="p">)</span>
 <span class="n">delta1</span> <span class="o">=</span> <span class="mf">0.2</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">delta1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">delta1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;|x - a| &lt; delta_1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">delta1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">delta1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;|x - a| &lt; delta_1&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_range</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_range</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;x_0 = 1 (Limit point)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;l (Tentative limit)&quot;</span><span class="p">)</span>
@@ -16203,17 +16092,17 @@ $$<p>Let's try to see if this function has a limit for $x$ tending to $x_0 = 1$.
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This is a good first step. However, in order to prove that $1$ is really the limit this property needs to hold for all possible values of $\epsilon$. 
 Let's see what happens if $\epsilon$ is equal to $0.5$.</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_range</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
@@ -16223,20 +16112,7 @@ Let's see what happens if $\epsilon$ is equal to $0.5$.</p>
 <span class="n">epsilon1</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">delta1</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">epsilon2</span> <span class="o">=</span> <span class="mf">0.5</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">l</span><span class="o">-</span><span class="n">epsilon2</span><span class="p">,</span> <span class="n">l</span><span class="o">+</span><span class="n">epsilon2</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;|f(x) - l| &lt; epsilon_2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">l</span><span class="o">-</span><span class="n">epsilon2</span><span class="p">,</span> <span class="n">l</span><span class="o">+</span><span class="n">epsilon2</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;|f(x) - l| &lt; epsilon_2&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_range</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_range</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;x_0 = 1 (Limit point)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;l (Tentative limit)&quot;</span><span class="p">)</span>
@@ -16274,14 +16150,14 @@ Let's see what happens if $\epsilon$ is equal to $0.5$.</p>
 
 </div>
 
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In this case you can see that is is impossible to find a $\delta_\epsilon$ that satsfies the property since every small interval around $x_0 = 1$ will always contains a small part on the right side of one that is always more than $1$ away from $l = 1$ since the function has a jump of size one at that point.</p>
 <p>therefore, we can conclude that $1$ is not the limit of this function at $x_0 = 1$.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Limits-at-infinity">Limits at infinity<a class="anchor-link" href="#Limits-at-infinity">&#182;</a></h2><p>The limit at infinity is defined in a similar way. A function $f(x)$ has limit $l$ for $x$ tending to $\infty$ when for all $L &gt; 0$, there is a $x_L &gt; 0$ such that:</p>
@@ -16291,7 +16167,7 @@ $$<p>for all $x$ bigger than $x_L$.</p>
 <p>This definition can again be visualized using shaded areas:</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
@@ -16355,7 +16231,7 @@ $$<p>for all $x$ bigger than $x_L$.</p>
 
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Continuous-functions">Continuous functions<a class="anchor-link" href="#Continuous-functions">&#182;</a></h1><p>The concept of continuity is very important in caclulus. A function $f(x)$ is sais to be continuous at a point $x_0$ if the function has a limit for $x$ tending to $x_0$ and the limit is equal to the value of the function.</p>
@@ -16373,51 +16249,26 @@ $$</p>
 $$
 \displaystyle\lim_{x \rightarrow x_0} \dfrac{f(x)}{g(x)} = \displaystyle\lim_{x \rightarrow x_0} \dfrac{g(x)}{f(x)} = 1
 $$<p>Note that this definition depends on the choice of the limit point $x_0$. For example, $x^2 + x$ is asymptotic to $x$ for $x$ tending to $0$ but it is instead asymptotic to $x^2$ for $x$ tending to infinity:</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For $x$ tending to $0$:</p>
 $$
 \displaystyle\lim_{x \rightarrow 0} \dfrac{x^2 + x}{x} = \displaystyle\lim_{x \rightarrow 0} \left( \dfrac{x^2}{x} + 1 \right) = \left(\displaystyle\lim_{x \rightarrow 0} x \right) + 1 = 0 + 1 = 1
 $$<p>Therefore $x^2 + x$ is asymptotic to $x$ for $x$ tending to $0$.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Conversely, for $x$ tending to infinity:</p>
 $$
 \displaystyle\lim_{x \rightarrow \infty} \dfrac{x^2 + x}{x^2} = \displaystyle\lim_{x \rightarrow \infty} \left( \dfrac{x^2}{x^2} + \dfrac{1}{x} \right) = 1 + \left(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} \right) = 1 + 0 = 1
 $$<p>Therefore $x^2 + x$ is asymptotic to $x^2$ for $x$ tending to $\infty$.</p>
 <p>In general, when $x$ tends to zero a polynomial is always asymptotic to the monomial with the LOWEST power. Conversely, when $x$ tends to infinity the polynomial is asymptotic to the monomial with the its HIGHEST power.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="2.7">2.7<a class="anchor-link" href="#2.7">&#182;</a></h4><p>Determine if the following asymptotic relations are correct. If they are incorrect give a alternative correct asymptotic relation.</p>
 <p><strong>a)</strong> For $x \rightarrow \infty, \enspace 2 x^2 + 4 \sim 2 x^2$</p>
 <p><strong>b)</strong> For $x \rightarrow \infty, \enspace 3 x^2 + 4 x + 3 \sim x^2$</p>
 <p><strong>c)</strong> For $x \rightarrow \infty, \enspace -4 x^2 + 4 x \sim 4 x$</p>
 <p><strong>d)</strong> For $x \rightarrow 0, \enspace -4 x^2 + 4 x \sim -4 x^2$</p>
 <p><strong>e)</strong> For $x \rightarrow 0, \enspace -4 x^2 + 4 x \sim 4 x$</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>f)</strong> For $x \rightarrow 0, \enspace x^3 + 4 x + 2 \sim 2$</p>
 <p><strong>g)</strong> For $x \rightarrow 0, \enspace x^3 + 4 x \sim 4 x$</p>
 <p><strong>h)</strong> For $x \rightarrow \infty, \enspace x^3 + 4 x \sim 4 x$</p>
 <p><strong>i)</strong> For $x \rightarrow \infty, \enspace x + \frac{1}{x} \sim x$</p>
 <p><strong>j)</strong> For $x \rightarrow 0, \enspace x + \frac{1}{x} \sim x$</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Important-asymptotic-relations">Important asymptotic relations<a class="anchor-link" href="#Important-asymptotic-relations">&#182;</a></h2><p>We can also use asymptotic relations for dealing with more complex functions such as the exponential and the trigonometric functions. here is a list of very important asymptotic relations for $x$ tending to $0$.</p>
 <p>for $x$ tending to $0$:</p>
 <ul>
@@ -16433,13 +16284,6 @@ $$</p>
 \sin(x) \sim x
 $$</p>
 </li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
 <li><p>$$
 \cos(x) \sim 1
 $$</p>
@@ -16455,18 +16299,13 @@ $$</p>
 </ul>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="2.8">2.8<a class="anchor-link" href="#2.8">&#182;</a></h4><p>Find the limit of the following functions for $x$ tending to $0$.</p>
 <p><strong>a)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{\mathrm{e}^x - 1}{x}\\[1cm]$</p>
 <p><strong>b)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{\tan(x)}{x^2}\\[1cm]$</p>
 <p><strong>c)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{3 \sin(x)}{\mathrm{e}^x}\\[1cm]$</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>d)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{x + 2x^2 + x^3}{\sin(x)}\\[1cm]$</p>
 <p><strong>e)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{\mathrm{e}^x}{4x^5 + 2x + 1}\\[1cm]$</p>
 <p><strong>f)</strong> $ \displaystyle\lim_{x\rightarrow 0}\dfrac{\tan(x)^2}{x^2}\\[1cm]$</p>
