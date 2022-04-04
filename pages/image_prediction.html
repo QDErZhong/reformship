@@ -1,0 +1,196 @@
+<!-- This file shows how to load a MobileNet model for image classification using TensorFlow.js -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>图片识别(使用MobileNet模型)</title>
+    <!-- Load TensorFlow.js Library -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <!-- Load mobilenet model from TF.js -->
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+
+    <!-- Javascript code -->
+    <!-- <script src="script.js"></script> -->
+
+    <!-- CSS Code -->
+    <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    .img-div { height:100%; width:100%;}
+    /* .img { max-width:100% } */
+    .img{
+      height: 100%;
+      width: 100%;
+    }
+    /* Create three equal columns that sits next to each other */
+    .fix{
+       position:fixed;
+       bottom: 0;
+       left: 13%;
+       width: 80%;
+     }
+
+     .fix1{
+        position:fixed;
+        bottom: 35%;
+        left: 13%;
+        width: 30%;
+      }
+
+      .fix2{
+        position:fixed;
+         bottom: 40%;
+         left: 55%;
+         width: 200%;
+       }
+
+     .column {
+      float: left;
+      width: 12%;
+      padding: 1%;
+      top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      /* padding: 5px; */
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align:center">图片分类(TensorFlow.js)</h1>
+
+    <!-- Show some Sample Images to Select from for Classification -->
+    <div class="row fix">
+      <!-- <div class="column">
+        <img id="1" onclick="imageSelected(this.id)" src="https://timedotcom.files.wordpress.com/2015/02/panda-cub.jpg" alt="Snow" width="100" height="100">
+      </div> -->
+      <div class="column">
+        <img id="1" onclick="imageSelected(this.id)" src="4resource/44other/images/panda.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="2" onclick="imageSelected(this.id)" src="4resource/44other/images/parachute.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="3" onclick="imageSelected(this.id)" src="4resource/44other/images/cannon.png" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="4" onclick="imageSelected(this.id)" src="4resource/44other/images/bagpack.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="5" onclick="imageSelected(this.id)" src="4resource/44other/images/hummingbird.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="6" onclick="imageSelected(this.id)" src="4resource/44other/images/wall_clock.jpeg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="7" onclick="imageSelected(this.id)" src="4resource/44other/images/beer.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="8" onclick="imageSelected(this.id)" src="4resource/44other/images/crawfish.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="9" onclick="imageSelected(this.id)" src="4resource/44other/images/broom.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="10" onclick="imageSelected(this.id)" src="4resource/44other/images/warplane.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="11" onclick="imageSelected(this.id)" src="4resource/44other/images/golf-cart.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="12" onclick="imageSelected(this.id)" src="4resource/44other/images/monkey.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="13" onclick="imageSelected(this.id)" src="4resource/44other/images/microphone.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="14" onclick="imageSelected(this.id)" src="4resource/44other/images/tractor-trailer.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="15" onclick="imageSelected(this.id)" src="4resource/44other/images/necklace.jpg" alt="Snow" width="80" height="80">
+      </div>
+      <div class="column">
+        <img id="16" onclick="imageSelected(this.id)" src="4resource/44other/images/goggles.jpeg" alt="Snow" width="80" height="80">
+      </div>
+    </div>
+
+
+    <!-- Show Selected Image here as a Large Image -->
+    <div class="row fix1">
+      <div class="column">
+        <img id="selectedImage" src="http://savings.gov.pk/wp-content/plugins/ldd-directory-lite/public/images/noimage.png" alt="Snow" width= "450" height= "300">
+      </div>
+    </div>
+
+
+   <div id="prediction" class="row fix2" style="height:40%;width:35%;border:0px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+     <br/> <br/>预测类别及可能性<br/><br/> 从下面几张图中挑选一幅图然后开始
+  </div>
+
+    <!-- Javascript Code to Get the Image and Perform Classification -->
+    <script type="text/javascript">
+    // Function to get the id of the image selected by clicking on it.
+    function imageSelected(image_id){
+      console.log("Selected Image: " + image_id);
+      document.getElementById("selectedImage").src = document.getElementById(image_id).src
+      if (image_id != " "){
+        app(image_id);
+      }
+    }
+
+    // Function to Load the Model, get the image and make predictions
+    async function app(selectedImageID) {
+      console.log('加载模型');
+      console.log("模型 ID: " + selectedImageID);
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = document.getElementById(selectedImageID).src;
+      img.width = 224;
+      img.height = 224;
+
+      // Load the model.
+      net = await mobilenet.load();
+      console.log('成功加载模型');
+
+      var text = " ";
+
+      // Make a prediction through the model on our image.
+      const imgEl = document.getElementById(selectedImageID);
+      const result = await net.classify(img);
+      console.log("图片: " + selectedImageID + "; 预测: " + result.length);
+      for (let j=0; j<result.length; j++){
+        console.log("类别名: " + result[j].className + "; " + "可能性: " + result[j].probability);
+        text += "模型是 " + Math.round(result[j].probability*100) + "% 确定它是 " + result[j].className + ". <br/><br/>"
+      }
+      document.getElementById("prediction").innerHTML = text;
+    }
+    </script>
+  </body>
+</html>
