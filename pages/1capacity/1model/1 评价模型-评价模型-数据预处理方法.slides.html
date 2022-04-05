@@ -14391,7 +14391,7 @@ div.jp-OutputPrompt {
     <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
     <p>&nbsp;</p>
     <h3 style="text-align:center;">模型知识点</h3>
-    <h3 style="color:tomato;text-align:center;">评价模型-评价模型-数值预处理方法</h3>
+    <h3 style="color:tomato;text-align:center;">评价模型-评价模型-数据预处理方法</h3>
     <p>&nbsp;</p>
     <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
     <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
@@ -14403,20 +14403,127 @@ div.jp-OutputPrompt {
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>一般情况下，在综合评价指标中，有的指标比较重要，有的影响微乎其微，另外各指标值可能属于不同类型、不同单位或不同数量级，从而使得各指标之间存在着不可公度性，给综合评价带来了诸多不便。为了尽可能地反映实际情况，消除由于各项指标间的这些差别带来的影响，避免出现不合理的评价结果，就需要对评价指标进行一定的预处理，包括</p>
+<p>一般情况下，在综合评价指标中，有的指标比较重要，有的影响微乎其微，另外各指标值可能属于不同类型、不同单位或不同数量级，从而使得各指标之间存在着不可公度性，给综合评价带来了诸多不便。为了尽可能地反映实际情况，消除由于各项指标间的这些差别带来的影响，避免出现不合理的评价结果，需要对评价指标进行一定的预处理，具体包括</p>
 <ol>
-<li><a href="content:choose_1"><strong>指标的筛选</strong></a></li>
-<li><a href="content:choose_2"><strong>指标的一致化处理</strong></a></li>
-<li><a href="content:choose_3"><strong>无量纲化处理</strong></a></li>
-<li><a href="content:choose_4"><strong>定性数据定量化</strong></a></li>
+<li>指标的筛选</li>
+<li>标的一致化处理</li>
+<li>无量纲化处理</li>
+<li>定性数据定量化</li>
 </ol>
-<p>下面分别介绍。</p>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;">&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;<a class="anchor-link" href="#&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;">&#182;</a></h2><p>要根据综合评价的目的，针对具体的评价对象、评价内容收集有关指标信息，采用适当的筛选方法对指标进行筛选，合理地选取主要指标，剔除次要指标，以简化评价指标体系。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>常用的评价指标筛选方法主要有专家调研法（Delphi method）、<strong>最小均方差法、极大极小离差法</strong>等。</p>
 
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;">&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;<a class="anchor-link" href="#&#35780;&#20215;&#25351;&#26631;&#30340;&#31579;&#36873;">&#182;</a></h2><p>要根据综合评价的目的，针对具体的评价对象、评价内容收集有关指标信息，采用适当的筛选方法对指标进行筛选，合理地选取主要指标，剔除次要指标，以简化评价指标体系。常用的评价指标筛选方法主要有专家调研法、<strong>最小均方差法、极大极小离差法</strong>等。我们重点来看后两种方法。</p>
+<h3 id="&#19987;&#23478;&#35843;&#30740;&#27861;">&#19987;&#23478;&#35843;&#30740;&#27861;<a class="anchor-link" href="#&#19987;&#23478;&#35843;&#30740;&#27861;">&#182;</a></h3>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>专家调查法分为德尔菲法和头脑风暴法。德尔菲法也翻译为德尔斐(Delphi)法。Delphi是古希腊传说中阿波罗神殿所在地,美国兰德(Land)公司首先于1964年把德尔斐法用于技术预测中。它是在专家个人判断和专家会议方法的基础上发展起来的一种直观预测方法,特别适用于客观资料或数据缺乏情况下的长期预测,或其它方法难以进行的技术预测。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>专家调查法或称专家评估法，是以专家作为索取信息的对象，依靠专家的知识和经验，由专家通过调查研究对问题作出判断、评估和预测的一种方法。</p>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#24037;&#20316;&#31243;&#24207;">&#24037;&#20316;&#31243;&#24207;<a class="anchor-link" href="#&#24037;&#20316;&#31243;&#24207;">&#182;</a></h4>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>包括:</p>
+<ul>
+<li>①确定主持人,组织专门小组。</li>
+<li>②拟定调查提纲。所提问题要明确具体,选择得当,数量不宜过多，并提供必要的背景材料。</li>
+<li>③选择调查对象。所选的专家要有广泛的代表性，他们要熟悉业务，有特长、一定的声望、较强的判断和洞察能力。选定的专家人数不宜太少也不宜太多，一般以10～50人为宜。</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>④轮番征询意见。通常要经过三轮：<ul>
+<li>第一轮是提出问题，要求专家们在规定的时间内把调查表格填完寄回；</li>
+<li>第二轮是修改问题，请专家根据整理的不同意见修改自己所提问题，即让调查对象了解其他见解后，再一次征求他本人的意见；</li>
+<li>第三轮是最后判定。把专家们最后重新考虑的意见收集上来,加以整理。有时根据实际需要,还可进行更多几轮的征询活动。</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>⑤整理调查结果，提出调查报告。对征询所得的意见进行统计处理，一般采用中位数法，把处于中位数的专家意见作为调查结论，并进行文字归纳，写成报告。从上述工作程序可以看出，专家调查法能否取得理想的结果，关键在于调查对象的人选及其对所调查问题掌握的资料和熟悉的程度，调查主持人的水平和经验也是一个很重要的因素。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#29305;&#28857;">&#29305;&#28857;<a class="anchor-link" href="#&#29305;&#28857;">&#182;</a></h4>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>专家调查法的特点是：</p>
+<ul>
+<li>①函询。用通讯方式反复征求专家意见，调查人与调查对象之间的联系是通过书信来实现的。</li>
+<li>②多向。调查对象分布于不同的专业领域，在同一个问题上能了解到各方面专家的意见。</li>
+<li>③匿名。调查对象通过调查组织者的整理，可以了解到其他专家的意见。但他们是背靠背的,不记名的,互不了解对方为谁。这有助于他们发表独立的见解。</li>
+<li>④反复。有控制地进行反馈的迭代,使分散的意见逐步趋向一致,以发挥集体智慧。</li>
+<li>⑤集中。用统计方法集中所有调查对象的意见，把每个专家的个人判断尽可能反映在最后归纳的集体意见中。从上述特点可知专家调查法是比较科学的，有广泛的用途，但是交换信件费时间，不能面对面讨论,所提问题很难提得很明确而不需要进一步解释,最后得出的一致意见具有一定程度的人为强制性。若与其他调查方法配合使用，就能取得更好的效果。</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#36866;&#29992;&#26465;&#20214;">&#36866;&#29992;&#26465;&#20214;<a class="anchor-link" href="#&#36866;&#29992;&#26465;&#20214;">&#182;</a></h4>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>在下列3种典型情况下，利用专家的知识和经验是有效的，也是唯一可选用的调查方法。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>数据缺乏：数据是各种定量研究的基础。然而，有时数据不足，或数据不能反映真实情况，或采集数据的时间过长，或者付出的代价过高，因而无法采用定量方法。</p>
+</li>
+<li><p>新技术评估：对于一些崭新的科学技术，在没有或缺乏数据的条件下，专家的判断往往是唯一的评价根据。</p>
+</li>
+<li><p>非技术因素起主要作用：当决策的问题超出了技术和经济范围而涉及到生态环境、公众舆论以致政治因素时，这些非技术因素的重要性往往超过技术本身的发展因素，因而过去的数据和技术因素就处于次要地位，在这种情况下，只有依靠专家才能作出判断。</p>
+</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>此外，由于原始信息量极大，决策涉及的相关因素（技术、政治、经济、环境、心理、文化传统等等）过多，计算机处理这样大的信息量，费用很高。这时，从费用效果考虑，也应采用专家调查法。</p>
 
 </div>
 </div><div class="fragment">
@@ -14472,12 +14579,6 @@ $$
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>注意：最小均方差法只考虑了指标的差异程度，也有可能将重要的指标删除。你能否举一个例子?</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#26497;&#22823;&#26497;&#23567;&#31163;&#24046;&#27861;">&#26497;&#22823;&#26497;&#23567;&#31163;&#24046;&#27861;<a class="anchor-link" href="#&#26497;&#22823;&#26497;&#23567;&#31163;&#24046;&#27861;">&#182;</a></h3>
 </div>
 </div><div class="fragment">
@@ -14528,7 +14629,7 @@ $$
 <p>其他几个常用的评价指标筛选方法还有条件广义方差极小法、极大不相关法等，这里限于篇幅不再展开。</p>
 
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#25351;&#26631;&#30340;&#19968;&#33268;&#21270;&#22788;&#29702;">&#25351;&#26631;&#30340;&#19968;&#33268;&#21270;&#22788;&#29702;<a class="anchor-link" href="#&#25351;&#26631;&#30340;&#19968;&#33268;&#21270;&#22788;&#29702;">&#182;</a></h2>
@@ -14536,9 +14637,13 @@ $$
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>所谓一致化处理就是将评价指标的类型进行统一。</p>
-<p>一般来说，在评价指标体系中，可能会同时存在极大型指标、极小型指标、居中型指标和区间型指标，它们都具有不同的特点。</p>
-<p>若指标体系中存在不同类型的指标，必须在综合评价之前将评价指标的类型做一致化处理。</p>
+<p>所谓一致化处理就是将评价指标的方向进行统一。比如有的指标越小评价得分越高，我们往往会将这类指标转化成另一种指标，使得新指标越大，评分越高。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>一般来说，在评价指标体系中，可能会同时存在极大型指标、极小型指标、居中型指标和区间型指标，它们都具有不同的特点。若指标体系中存在不同类型的指标，常常在在综合评价之前将评价指标的类型做一致化处理。</p>
 <p>例如，将各类指标都转化为极大型指标，或极小型指标。一般的做法是将非极大型指标转化为极大型指标。</p>
 
 </div>
@@ -14550,7 +14655,7 @@ $$
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>对极小型指标$x_j$，将其转化为极大型指标时，只需对指标$x_j$取倒数：</p>
+<p>对极小型指标$x_j$，将其转化为极大型指标时，可以对指标$x_j$取倒数：</p>
 $$
 x_{j}^{\prime}=\frac{1}{x_{j}}
 $$
@@ -14608,7 +14713,12 @@ $$
 <p>对区间型指标$x_j$， $x_j$是取值介于区间$\left[b_{j}^{(1)}, b_{j}^{(2)}\right]$,内时为最好，指标值离该区间越远就越差。令</p>
 $$
 M_{j}=\max _{1 \leq i \leq n}\left\{a_{i j}\right\}, \quad m_{j}=\min _{\| \leq i \leq n}\left\{a_{i j}\right\}, \quad c_{j}=\max \left\{b_{j}^{(1)}-m_{j}, M_{j}-b_{j}^{(2)}\right\}
-$$<p>就可以将区间型指标$x_j$转化为极大型指标。</p>
+$$
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>就可以将区间型指标$x_j$转化为极大型指标。</p>
 $$
 x_{j}'=\left\{\begin{array}{lll}
 {1-\dfrac{b_{j}^{(1)}-x_{j}}{c_{j}},} &amp; {x_{j} &lt; b_{j}^{(1)}} \\
@@ -14617,7 +14727,7 @@ x_{j}'=\left\{\begin{array}{lll}
 \end{array}\right.
 $$
 </div>
-</div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#25351;&#26631;&#30340;&#26080;&#37327;&#32434;&#21270;&#22788;&#29702;">&#25351;&#26631;&#30340;&#26080;&#37327;&#32434;&#21270;&#22788;&#29702;<a class="anchor-link" href="#&#25351;&#26631;&#30340;&#26080;&#37327;&#32434;&#21270;&#22788;&#29702;">&#182;</a></h2>
@@ -14626,7 +14736,7 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>所谓无量纲化，也称为指标的规范化，是通过数学变换来消除原始指标的单位及其数值数量级影响的过程。</strong></p>
-<p>因此，就有指标的实际值和评价值之分。一般地，将指标无量纲化处理以后的值称为指标评价值。</p>
+<p>因此，就有指标的<strong>实际值</strong>和评价值之分。一般地，将指标无量纲化处理以后的值称为<strong>指标评价值</strong>。</p>
 
 </div>
 </div></div><div class="fragment">
@@ -14643,7 +14753,13 @@ $$
 a_{i j}(i=1,2, \cdots, n ; j=1,2, \cdots, m)
 $$
 </div>
-</div></section><section>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>下面我们介绍几种常用的指标变换的方法</p>
+
+</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#26631;&#20934;&#26679;&#26412;&#21464;&#25442;&#27861;">&#26631;&#20934;&#26679;&#26412;&#21464;&#25442;&#27861;<a class="anchor-link" href="#&#26631;&#20934;&#26679;&#26412;&#21464;&#25442;&#27861;">&#182;</a></h3>
@@ -14729,7 +14845,7 @@ $$
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>对于极小型直指标</p>
+<p>对于极小型指标</p>
 $$
 a_{i j}^{*}=\frac{\max _{1 \leq i \leq n} a_{i j}-a_{i j}}{\max _{1 \leq i \leq n} a_{i j}-\min _{1 \leq i \leq n} a_{i j}}(1 \leq i \leq n, 1 \leq j \leq m)
 $$
@@ -14754,7 +14870,7 @@ a_{i j}^{*}=c+\frac{a_{i j}-\min _{1 \leq i \leq n} a_{i j}}{\max _{1 \leq i \le
 $$<p>其$c,d$均为确定的常数，$c$表示“平移量”，表示指标实际基础值， $d$表示“旋转量”，即表示“放大”或“缩小”倍数</p>
 
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#23450;&#24615;&#25351;&#26631;&#30340;&#23450;&#37327;&#21270;">&#23450;&#24615;&#25351;&#26631;&#30340;&#23450;&#37327;&#21270;<a class="anchor-link" href="#&#23450;&#24615;&#25351;&#26631;&#30340;&#23450;&#37327;&#21270;">&#182;</a></h2>
@@ -14792,13 +14908,14 @@ $$<p>其$c,d$均为确定的常数，$c$表示“平移量”，表示指标实�
 </table>
 
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
-<li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
+<li>刘建明，王泰玄等.宣传舆论学大辞典..经济日报出版社.</li>
+<li><a href="https://baike.sogou.com/v7811976.htm">https://baike.sogou.com/v7811976.htm</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 
