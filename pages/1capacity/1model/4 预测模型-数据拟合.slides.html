@@ -14399,7 +14399,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>拟合是用一个连续函数（曲线）靠近给定的离散数据，使其与给定的数据相吻合。
-数据拟合的算法相对比较简单，但调用不同工具和方法时的函数定义和参数设置有所差异，往往使小白感到困惑。
+数据拟合的算法相对比较简单，但调用不同工具和方法时的函数定义和参数设置有所差异。
 本文基于 Scipy 工具包，对单变量、多变量线性最小二乘拟合，指数函数、多项式函数、样条函数的非线性拟合，单变量、多变量的自定义函数拟合问题进行分析、给出完整例程和结果，数据拟合从此无忧。</p>
 
 </div>
@@ -14529,19 +14529,13 @@ leastsq() 与 linregress() 进行线性拟合，得到的参数估计结果是�
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 1. 单变量线性拟合：最小二乘法 scipy.optimize.leastsq</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. 单变量线性拟合：最小二乘法 scipy.optimize.leastsq</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">leastsq</span>  <span class="c1"># 导入 scipy 中的最小二乘法拟合工具</span>
@@ -14555,16 +14549,40 @@ Python 例程：</p>
 <span class="k">def</span> <span class="nf">error1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  <span class="c1"># 定义观测值与拟合函数值的误差函数</span>
     <span class="n">err</span> <span class="o">=</span> <span class="n">fitfunc1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span>  <span class="c1"># 误差</span>
     <span class="k">return</span> <span class="n">err</span>
+</pre></div>
 
-<span class="c1"># 创建给定数据点集 (x,yObs)</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 创建给定数据点集 (x,yObs)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]</span>  <span class="c1"># y = p[0] + p[1] * x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span>  <span class="c1"># 理论值 y</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">yObs</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
 <span class="c1"># print(x.shape, y.shape, yObs.shape)</span>
+</pre></div>
 
-<span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 pFit</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 pFit</span>
 <span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 设置拟合函数的参数初值</span>
 <span class="n">pFit</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error1</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">yObs</span><span class="p">))</span>  <span class="c1"># 最小二乘法求拟合参数</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data fitting with Scipy.optimize.leastsq&quot;</span><span class="p">)</span>
@@ -14573,8 +14591,20 @@ Python 例程：</p>
 
 <span class="c1"># 由拟合函数 fitfunc 计算拟合曲线在数据点的函数值</span>
 <span class="n">yFit</span> <span class="o">=</span> <span class="n">fitfunc1</span><span class="p">(</span><span class="n">pFit</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># 比较：线性回归，可以返回斜率，截距，r 值，p 值，标准误差</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 比较：线性回归，可以返回斜率，截距，r 值，p 值，标准误差</span>
 <span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yObs</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Linear regress with Scipy.stats.linregress&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y = p[0] + p[1] * x&quot;</span><span class="p">)</span>
@@ -14583,8 +14613,20 @@ Python 例程：</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r^2_value: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r_value</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># 输出 r^2 值</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p_value: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p_value</span><span class="p">))</span>  <span class="c1"># 输出 p 值</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;std: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">std</span><span class="p">))</span>  <span class="c1"># 输出标准差 std</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;youcans-xupt&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gainsboro&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Data fitting with linear least squares&quot;</span><span class="p">)</span>
@@ -14659,19 +14701,13 @@ scipy 只能做一元线性回归，例程中通过调用 statsmodels.api 进行
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 2. 多变量线性拟合：最小二乘法 scipy.optimize.leastsq</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. 多变量线性拟合：最小二乘法 scipy.optimize.leastsq</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">leastsq</span>  <span class="c1"># 导入 scipy 中的最小二乘法工具</span>
@@ -14693,8 +14729,20 @@ Python 例程：</p>
 <span class="n">z</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">x2</span>  <span class="c1"># 理论值 z</span>
 <span class="n">zObs</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">zObs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># 由给定数据点集 (x,z) 求拟合函数的参数 pFit</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由给定数据点集 (x,z) 求拟合函数的参数 pFit</span>
 <span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 设置拟合函数的参数初值</span>
 <span class="n">pFit</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error2</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">zObs</span><span class="p">))</span>  <span class="c1"># 最小二乘法求拟合参数</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data fitting with Scipy.optimize.leastsq:&quot;</span><span class="p">)</span>
@@ -14703,8 +14751,20 @@ Python 例程：</p>
 
 <span class="c1"># 由拟合函数 fitfunc 计算拟合曲线在数据点的函数值</span>
 <span class="n">zFit</span> <span class="o">=</span> <span class="n">fitfunc2</span><span class="p">(</span><span class="n">pFit</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># 多元线性回归：最小二乘法(OLS)</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 多元线性回归：最小二乘法(OLS)</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 截距列 x0=[1,...1]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">))</span>  <span class="c1"># (nSample,3): [x0, x1, x2]</span>
@@ -14824,19 +14884,13 @@ leastsq() 中误差函数的函数名可以任意定义，但误差函数的参�
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 3. 非线性函数拟合：指数函数拟合(exponential function)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3. 非线性函数拟合：指数函数拟合(exponential function)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">leastsq</span>  <span class="c1"># 导入 scipy 中的最小二乘法工具</span>
@@ -14857,8 +14911,20 @@ Python 例程：</p>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">yObs</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
 <span class="c1"># print(x.shape, y.shape, yObs.shape)</span>
+</pre></div>
 
-<span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 pFit</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 pFit</span>
 <span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 设置拟合函数的参数初值</span>
 <span class="n">pFit</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error3</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">yObs</span><span class="p">))</span>  <span class="c1"># 最小二乘法求拟合参数</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data fitting of exponential function&quot;</span><span class="p">)</span>
@@ -14867,8 +14933,20 @@ Python 例程：</p>
 
 <span class="c1"># 由拟合函数 fitfunc 计算拟合曲线在数据点的函数值</span>
 <span class="n">yFit</span> <span class="o">=</span> <span class="n">fitfunc3</span><span class="p">(</span><span class="n">pFit</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Data fitting of exponential function&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yObs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;observed data&quot;</span><span class="p">)</span>
@@ -14936,19 +15014,13 @@ scipy.linalg.lstsq() 只要传入观测数据 (x,yObs)，并将 x 按多项式�
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 4. 非线性函数拟合：多项式函数拟合(Polynomial function)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 4. 非线性函数拟合：多项式函数拟合(Polynomial function)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">lstsq</span>  <span class="c1"># 导入 scipy 中的 linalg, stats 函数库</span>
@@ -14962,8 +15034,20 @@ Python 例程：</p>
 <span class="k">def</span> <span class="nf">error4</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  <span class="c1"># 定义观测值与拟合函数值的误差函数</span>
     <span class="n">err</span> <span class="o">=</span> <span class="n">fitfunc4</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span>  <span class="c1"># 残差</span>
     <span class="k">return</span> <span class="n">err</span>
+</pre></div>
 
-<span class="c1"># 创建给定数据点集 (x,yObs)</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 创建给定数据点集 (x,yObs)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>  <span class="c1"># y = p0 + ((x*x-p1)**2+p2) * np.sin(x*p3)</span>
 <span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># 定义 y=f(x)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -14985,8 +15069,20 @@ Python 例程：</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Polynomial fitting by scipy.optimize.leastsq&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y = p[0] + p[1]*x + p[2]*x^2 +p[3]*x^3&quot;</span><span class="p">)</span>  <span class="c1"># 拟合函数的表达式</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p[0] = </span><span class="si">{:.4f}</span><span class="se">\n</span><span class="s2">p[1] = </span><span class="si">{:.4f}</span><span class="se">\n</span><span class="s2">p[2] = </span><span class="si">{:.4f}</span><span class="se">\n</span><span class="s2">p[3] = </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pFit</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+</pre></div>
 
-<span class="c1"># 用 scipy.linalg.lstsq() 进行多项式函数拟合</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用 scipy.linalg.lstsq() 进行多项式函数拟合</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Polynomial fitting by scipy.linalg.lstsq&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y = w[0] + w[1]*x + w[2]*x^2 + ... + w[m]*x^m&quot;</span><span class="p">)</span>  <span class="c1"># 拟合函数的表达式</span>
 <span class="c1"># 最小二乘法多项式数据拟合，求解多项式函数的系数 W=[w[0],...w[m]]</span>
@@ -15005,7 +15101,20 @@ Python 例程：</p>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yFit</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;order=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">order</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15087,19 +15196,13 @@ UnivariateSpline 类既可以进行数据插值，也可以进行拟合。参数
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 5 非线性函数拟合：样条函数拟合(Spline function)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">=</span><span class="c1"># 5 非线性函数拟合：样条函数拟合(Spline function)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">UnivariateSpline</span>  <span class="c1"># 导入 scipy 中的样条插值工具</span>
@@ -15111,8 +15214,20 @@ Python 例程：</p>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># 生成已知数据点集的 x</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">p0</span> <span class="o">+</span> <span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">p1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span> <span class="n">p2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">p3</span><span class="p">)</span>  <span class="c1"># 生成理论值 y</span>
 <span class="n">yObs</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
+</pre></div>
 
-<span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 fSpl</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由给定数据点集 (x,y) 求拟合函数的参数 fSpl</span>
 <span class="n">fSpl</span> <span class="o">=</span> <span class="n">UnivariateSpline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yObs</span><span class="p">)</span>  <span class="c1"># 三次样条插值，默认 s= len(w)</span>
 <span class="n">coeffs</span> <span class="o">=</span> <span class="n">fSpl</span><span class="o">.</span><span class="n">get_coeffs</span><span class="p">()</span>  <span class="c1"># Return spline coefficients</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data fitting with spline function&quot;</span><span class="p">)</span>
@@ -15135,7 +15250,20 @@ Python 例程：</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yFit</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;3rd spline fitting&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yS</span><span class="p">,</span> <span class="s1">&#39;m-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;smoothing spline&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15216,10 +15344,10 @@ leastsq() 也可以对自定义的拟合函数进行最小二乘拟合。
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 6. 自定义函数曲线拟合：单变量</span>
@@ -15243,8 +15371,20 @@ Python 例程：</p>
 <span class="n">y</span> <span class="o">=</span> <span class="n">fitfunc6</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">yObs</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
+</pre></div>
 
-<span class="c1"># # 用 scipy.optimize.leastsq() 进行函数拟合</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # 用 scipy.optimize.leastsq() 进行函数拟合</span>
 <span class="c1"># pIni = [1, 1, 1, 1]  # 设置拟合函数的参数初值</span>
 <span class="c1"># pFit, info = leastsq(error6, pIni, args=(x, yObs))  # 最小二乘法求拟合参数</span>
 <span class="c1"># print(&quot;Data fitting of custom function by leastsq&quot;)</span>
@@ -15261,8 +15401,20 @@ Python 例程：</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;estimated covariancepcov:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">pcov</span><span class="p">)</span>
 <span class="c1"># 由拟合函数 fitfunc 计算拟合曲线在数据点的函数值</span>
 <span class="n">yFit</span> <span class="o">=</span> <span class="n">fitfunc6</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pFit</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Data fitting of custom function&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yObs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;observed data&quot;</span><span class="p">)</span>
@@ -15334,19 +15486,13 @@ curve_fit(fitfunc7, X, yObs) 中的 X 是 (n,m) 数组，n 是观测数据点集
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel25_v1.py</span>
-<span class="c1"># Demo25 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of curve fitting with Scipy</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-03</span>
-
-<span class="c1"># 7. 自定义函数曲线拟合：多变量</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 7. 自定义函数曲线拟合：多变量</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>  <span class="c1"># 导入 scipy 中的曲线拟合工具</span>
@@ -15369,8 +15515,20 @@ Python 例程：</p>
 <span class="n">y</span> <span class="o">=</span> <span class="n">fitfunc7</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span>  <span class="c1"># 理论计算值 y=f(X,p)</span>
 <span class="n">yObs</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 生成带有噪声的观测数据</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">x2</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">xmesh1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">xx1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># 用 scipy.optimize.curve_fit() 进行自定义函数拟合(多变量)</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用 scipy.optimize.curve_fit() 进行自定义函数拟合(多变量)</span>
 <span class="n">pFit</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">fitfunc7</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">yObs</span><span class="p">)</span>  <span class="c1"># 非线性最小二乘法曲线拟合</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data fitting of multivariable custom function&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y = p0 + p1*x1 + p2*x2 + p3*np.sin(x1+x2+x1^2+x2^2)&quot;</span><span class="p">)</span>
@@ -15413,21 +15571,12 @@ p[3] = 5.0000	p[3]_fit = 5.0061
 
 </div>
 
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 
 </div>
