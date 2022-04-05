@@ -1,0 +1,2223 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>CELEST Matlab Tutorial</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-07"><meta name="DC.source" content="CELEST_matlab.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><h1>CELEST Matlab Tutorial</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Comments, Variables, Vectors and Matrices</a></li><li><a href="#2">Mathematical Operations</a></li><li><a href="#3">Logical operations</a></li><li><a href="#4">Selective Indexing</a></li><li><a href="#5">Control Loops - For and If</a></li><li><a href="#6">Graphics</a></li><li><a href="#7">Functions vs Scripts</a></li><li><a href="#8">Saving and Loading Data</a></li><li><a href="#9">Loading Audio Files</a></li><li><a href="#10">Loading Image Files</a></li><li><a href="#11">Other Useful Built-in Matlab Functions and Miscellany</a></li><li><a href="#12">For more information</a></li></ul></div><h2>Comments, Variables, Vectors and Matrices<a name="1"></a></h2><pre class="codeinput"><span class="comment">% Comments</span>
+
+<span class="comment">% Green text preceded by a percent sign % are comments.  Matlab</span>
+<span class="comment">% ignores comments -- that is, any text with a percent sign before it will</span>
+<span class="comment">% result in Matlab doing nothing.  Try it out by copying and pasting the</span>
+<span class="comment">% following:</span>
+
+<span class="comment">% a = 5</span>
+
+<span class="comment">% Comments are useful to put in your code so that you remember why are you</span>
+<span class="comment">% writing a particular line of code.  It also helps other people understand</span>
+<span class="comment">% your code should they have to use it.</span>
+
+<span class="comment">% Often it is more useful and clear to assign a value to a variable name.</span>
+<span class="comment">% This makes your code more readable and understandable.  For example, what</span>
+<span class="comment">% is more readable?</span>
+
+<span class="comment">% firingRate * 10</span>
+
+<span class="comment">% OR</span>
+
+<span class="comment">% 5 * 10.</span>
+
+<span class="comment">% Here is how you assign a</span>
+<span class="comment">% value to a variable in Matlab:</span>
+
+firingRate = 5
+
+<span class="comment">% You can assign more than one value to a variable.  The following code</span>
+<span class="comment">% makes a 2 x 1 vector:</span>
+
+b = [3; 4]
+
+<span class="comment">% You can verify this is a 2 x 1 vector by the following command:</span>
+size(b)
+
+<span class="comment">% size is a built-in matlab function.  It tells you how many elements are</span>
+<span class="comment">% in a vector of matrix.</span>
+
+<span class="comment">% You can also make a 2 x 1 vector.  Notice that omitting the semi-colon</span>
+<span class="comment">% makes this vector "horizontal":</span>
+
+c = [3 4]
+
+size(c)
+
+<span class="comment">% If you don't want to see the output in the command window each time, you</span>
+<span class="comment">% can supress the output by ending the statement with a semi-colon:</span>
+
+c = [3 4];
+
+<span class="comment">% You can also make a matrix.  Here is a 2x2 matrix:</span>
+
+d = [1 2; 3 4]
+
+d = [1 2; <span class="keyword">...</span>
+     3 4]
+
+size(d)
+
+<span class="comment">% Typing in each number for a vector or matrix can be a pain in the ass.</span>
+<span class="comment">% Luckily, you can tell Matlab to assign a consecutive sequence of numbers</span>
+<span class="comment">% to a variable:</span>
+
+vec = 1:10
+
+<span class="comment">% The "step-size" of the consecutive sequence of numbers doesn't have to be</span>
+<span class="comment">% one.  You can also step by larger or smaller numbers:</span>
+
+vec = 1:.25:10
+
+<span class="comment">% Sometimes you just want to access and change a single elmement of a</span>
+<span class="comment">% vector.  You can access the fourth element of a vector by:</span>
+
+vec(4)
+
+<span class="comment">% And you can change the fourth element by:</span>
+
+vec(4) = 33
+
+<span class="comment">% Sometimes you don't want to have all the output in the command window.</span>
+<span class="comment">% You can clear the command window by typing:</span>
+
+clc
+
+<span class="comment">% Similarly, you might want to clear variables from your workspace to</span>
+<span class="comment">% reduce clutter:</span>
+
+clear <span class="string">all</span>
+
+<span class="comment">% A helpful way to learn about built-in matlab functions is to type help</span>
+<span class="comment">% before the function:</span>
+
+help <span class="string">clc</span>
+help <span class="string">clear</span>
+
+clc
+</pre><pre class="codeoutput">
+firingRate =
+
+     5
+
+
+b =
+
+     3
+     4
+
+
+ans =
+
+     2     1
+
+
+c =
+
+     3     4
+
+
+ans =
+
+     1     2
+
+
+d =
+
+     1     2
+     3     4
+
+
+d =
+
+     1     2
+     3     4
+
+
+ans =
+
+     2     2
+
+
+vec =
+
+     1     2     3     4     5     6     7     8     9    10
+
+
+vec =
+
+  Columns 1 through 7
+
+    1.0000    1.2500    1.5000    1.7500    2.0000    2.2500    2.5000
+
+  Columns 8 through 14
+
+    2.7500    3.0000    3.2500    3.5000    3.7500    4.0000    4.2500
+
+  Columns 15 through 21
+
+    4.5000    4.7500    5.0000    5.2500    5.5000    5.7500    6.0000
+
+  Columns 22 through 28
+
+    6.2500    6.5000    6.7500    7.0000    7.2500    7.5000    7.7500
+
+  Columns 29 through 35
+
+    8.0000    8.2500    8.5000    8.7500    9.0000    9.2500    9.5000
+
+  Columns 36 through 37
+
+    9.7500   10.0000
+
+
+ans =
+
+    1.7500
+
+
+vec =
+
+  Columns 1 through 7
+
+    1.0000    1.2500    1.5000   33.0000    2.0000    2.2500    2.5000
+
+  Columns 8 through 14
+
+    2.7500    3.0000    3.2500    3.5000    3.7500    4.0000    4.2500
+
+  Columns 15 through 21
+
+    4.5000    4.7500    5.0000    5.2500    5.5000    5.7500    6.0000
+
+  Columns 22 through 28
+
+    6.2500    6.5000    6.7500    7.0000    7.2500    7.5000    7.7500
+
+  Columns 29 through 35
+
+    8.0000    8.2500    8.5000    8.7500    9.0000    9.2500    9.5000
+
+  Columns 36 through 37
+
+    9.7500   10.0000
+
+ CLC    Clear command window.
+    CLC clears the command window and homes the cursor.
+ 
+    See also HOME.
+
+    Reference page in Help browser
+       doc clc
+
+ CLEAR  Clear variables and functions from memory.
+    CLEAR removes all variables from the workspace.
+    CLEAR VARIABLES does the same thing.
+    CLEAR GLOBAL removes all global variables.
+    CLEAR FUNCTIONS removes all compiled MATLAB and MEX-functions.
+ 
+    CLEAR ALL removes all variables, globals, functions and MEX links.
+    CLEAR ALL at the command prompt also clears the base import list.
+ 
+    CLEAR IMPORT clears the base import list.  It can only be issued at the 
+    command prompt. It cannot be used in a function.
+ 
+    CLEAR CLASSES is the same as CLEAR ALL except that class definitions
+    are also cleared. If any objects exist outside the workspace (say in 
+    userdata or persistent in a locked program file) a warning will be
+    issued and the class definition will not be cleared. CLEAR CLASSES must
+    be used if the number or names of fields in a class are changed.
+ 
+    CLEAR JAVA is the same as CLEAR ALL except that java classes on the
+    dynamic java path (defined using JAVACLASSPATH) are also cleared. 
+ 
+    CLEAR VAR1 VAR2 ... clears the variables specified. The wildcard
+    character '*' can be used to clear variables that match a pattern. For
+    instance, CLEAR X* clears all the variables in the current workspace
+    that start with X.
+ 
+    CLEAR -REGEXP PAT1 PAT2 can be used to match all patterns using regular
+    expressions. This option only clears variables. For more information on
+    using regular expressions, type "doc regexp" at the command prompt.
+ 
+    If X is global, CLEAR X removes X from the current workspace, but
+    leaves it accessible to any functions declaring it global. 
+    CLEAR GLOBAL X completely removes the global variable X. 
+    CLEAR GLOBAL -REGEXP PAT removes global variables that match regular
+    expression patterns.
+    Note that to clear specific global variables, the GLOBAL option must
+    come first. Otherwise, all global variables will be cleared.
+ 
+    CLEAR FUN clears the function specified. If FUN has been locked by
+    MLOCK it will remain in memory. Use a partial path (see PARTIALPATH) to
+    distinguish between different overloaded versions of FUN.  For
+    instance, 'clear inline/display' clears only the INLINE method for
+    DISPLAY, leaving any other implementations in memory.
+ 
+    CLEAR ALL, CLEAR FUN, or CLEAR FUNCTIONS also have the side effect of
+    removing debugging breakpoints and reinitializing persistent variables
+    since the breakpoints for a function and persistent variables are
+    cleared whenever the program file changes or is cleared.
+ 
+    Use the functional form of CLEAR, such as CLEAR('name'), when the
+    variable name or function name is stored in a string.
+ 
+    Examples for pattern matching:
+        clear a*                % Clear variables starting with "a"
+        clear -regexp ^b\d{3}$  % Clear variables starting with "b" and
+                                %    followed by 3 digits
+        clear -regexp \d        % Clear variables containing any digits
+ 
+    See also CLEARVARS, WHO, WHOS, MLOCK, MUNLOCK, PERSISTENT, IMPORT.
+
+    Reference page in Help browser
+       doc clear
+
+</pre><h2>Mathematical Operations<a name="2"></a></h2><pre class="codeinput"><span class="comment">% You can use Matlab as a calculator.  For example, here is how you</span>
+<span class="comment">% multiply, add, divide, and exponentiate:</span>
+
+3 * 4
+3 + 4
+3 / 4
+3 ^ 4
+
+<span class="comment">% You can also use mathematical operations on vectors and matrices.</span>
+<span class="comment">% Element-wise operations (multipying each element of a vector or matrix</span>
+<span class="comment">% individually) are performed by using the period . before a mathematical</span>
+<span class="comment">% operator such as times *:</span>
+
+vector = [2 2]
+vector .* 5
+matrix = [2 2; 2 2]
+matrix .* 3
+
+<span class="comment">% If you want to multiply matrices as in linear algebra (which is not element-wise)</span>
+<span class="comment">% you omit the period before the mathematical operator:</span>
+
+matrix * matrix
+
+[3 1; 9 2; 3 7] * [1; 2]
+</pre><pre class="codeoutput">
+ans =
+
+    12
+
+
+ans =
+
+     7
+
+
+ans =
+
+    0.7500
+
+
+ans =
+
+    81
+
+
+vector =
+
+     2     2
+
+
+ans =
+
+    10    10
+
+
+matrix =
+
+     2     2
+     2     2
+
+
+ans =
+
+     6     6
+     6     6
+
+
+ans =
+
+     8     8
+     8     8
+
+
+ans =
+
+     5
+    13
+    17
+
+</pre><h2>Logical operations<a name="3"></a></h2><pre class="codeinput"><span class="comment">% Sometimes you want to know whether two variables are equal or if one</span>
+<span class="comment">% variable is larger than the other.  This is achieved by logical operators.</span>
+<span class="comment">% In Matlab, 1 stands for True and 0 stands for False.  For example, say you</span>
+<span class="comment">% want to know if the firing rate from neuron1 is greater than the firing</span>
+<span class="comment">% rate from neuron2:</span>
+
+<span class="comment">% First let's give the neurons' firing rates</span>
+neuronFiringRate1 = 4
+neuronFiringRate2 = 3
+
+<span class="comment">% Now you can test whether the two variables are equal:</span>
+neuronFiringRate1 == neuronFiringRate2
+
+<span class="comment">% or if neuron1 has a greater firing rate than neuron2?</span>
+neuronFiringRate1 &gt; neuronFiringRate2
+
+<span class="comment">% These operations also work on vectors and matrices element-wise, so you</span>
+<span class="comment">% can determine whether a number is greater than each element in a matrix:</span>
+
+<span class="comment">% Here is our original matrix</span>
+
+matrix
+
+<span class="comment">% And here is the result of comparing the matrix to the number 6:</span>
+
+6 &gt; matrix
+
+<span class="comment">% Logical operators such as AND and OR are also useful.  For example, say</span>
+<span class="comment">% that you had had a data set that consisted of animals and whether they</span>
+<span class="comment">% were fast and big.  Suppose you only wanted the animals that were fast</span>
+<span class="comment">% and big.  Using logical operators, you can select only the fast and big</span>
+<span class="comment">% animals:</span>
+
+<span class="comment">% Here we define the properties of one animal</span>
+isBig = 1; <span class="comment">%  isBig = true</span>
+isFast = 0; <span class="comment">% isFast = false</span>
+
+<span class="comment">% Is it both big and fast?  The ampersand &amp; indicates AND</span>
+isBig &amp; isFast
+
+<span class="comment">% Suppose you only cared if the animal is big or fast, but either one would</span>
+<span class="comment">% do.  You could then use the OR operator | :</span>
+
+isBig | isFast
+
+<span class="comment">% Finally, suppose you wanted animals that were small and slow.  You can</span>
+<span class="comment">% use the negation operator, the tilde ~:</span>
+
+~isBig | ~isFast
+
+<span class="comment">% If you want to find out if they are not equal, then use the tilde and</span>
+<span class="comment">% equal sign:</span>
+
+isBig ~= isFast
+</pre><pre class="codeoutput">
+neuronFiringRate1 =
+
+     4
+
+
+neuronFiringRate2 =
+
+     3
+
+
+ans =
+
+     0
+
+
+ans =
+
+     1
+
+
+matrix =
+
+     2     2
+     2     2
+
+
+ans =
+
+     1     1
+     1     1
+
+
+ans =
+
+     0
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+</pre><h2>Selective Indexing<a name="4"></a></h2><pre class="codeinput"><span class="comment">% You can combine what you've learned with assigning elements to variables</span>
+<span class="comment">% and logical operators.  One of the more useful things you can learn is to</span>
+<span class="comment">% use logical operators to access and change elements in vectors and</span>
+<span class="comment">% matrices. Suppose you have a vector that goes from 1 to 10:</span>
+
+vec = 1:10
+
+<span class="comment">% Remember you could access each individual element of vec by typing:</span>
+
+vec(1)
+vec(2)
+vec(3)
+
+<span class="comment">% Suppose that you wanted to only access the elements of vec greater than</span>
+<span class="comment">% five.  From before, you know that</span>
+
+vec &gt; 5
+
+<span class="comment">% is a vector with zeros for each element in vec that is not greater than</span>
+<span class="comment">% five and ones for each element that is.  Now, if you type:</span>
+
+vec(vec &gt; 5)
+
+<span class="comment">% You get only the elements of vec greater than 5.</span>
+<span class="comment">% This can be useful if you want to set all elements of a vector or matrix</span>
+<span class="comment">% to a certain value.  For instance, if you wanted the values of vec</span>
+<span class="comment">% greater than 5 to be zero, then:</span>
+
+vec(vec &gt; 5) = 0
+
+<span class="comment">% Some other examples of this are:</span>
+
+vec(vec == 5)
+vec(vec ~= 5)
+
+<span class="comment">% Some useful functions that we will not cover that also use logical</span>
+<span class="comment">% operators and are often useful when comparing two vectors or matrices</span>
+<span class="comment">% are:</span>
+
+help <span class="string">ismember</span>
+help <span class="string">intersect</span>
+help <span class="string">find</span>
+help <span class="string">setdiff</span>
+help <span class="string">unique</span>
+</pre><pre class="codeoutput">
+vec =
+
+     1     2     3     4     5     6     7     8     9    10
+
+
+ans =
+
+     1
+
+
+ans =
+
+     2
+
+
+ans =
+
+     3
+
+
+ans =
+
+     0     0     0     0     0     1     1     1     1     1
+
+
+ans =
+
+     6     7     8     9    10
+
+
+vec =
+
+     1     2     3     4     5     0     0     0     0     0
+
+
+ans =
+
+     5
+
+
+ans =
+
+     1     2     3     4     0     0     0     0     0
+
+ ISMEMBER True for set member.
+    LIA = ISMEMBER(A,B) for arrays A and B returns an array of the same
+    size as A containing true where the elements of A are in B and false 
+    otherwise.
+ 
+    LIA = ISMEMBER(A,B,'rows') for matrices A and B with the same number 
+    of columns, returns a vector containing true where the rows of A are 
+    also rows of B and false otherwise.
+ 
+    [LIA,LOCB] = ISMEMBER(A,B) also returns an array LOCB containing the
+    highest absolute index in B for each element in A which is a member of 
+    B and 0 if there is no such index.
+ 
+    [LIA,LOCB] = ISMEMBER(A,B,'rows') also returns a vector LOCB containing 
+    the highest absolute index in B for each row in A which is a member 
+    of B and 0 if there is no such index.
+ 
+    In a future release, the behavior of ISMEMBER will change including:
+      -	occurrence of indices in LOCB will switch from highest to lowest
+      -	tighter restrictions on combinations of classes
+ 
+    In order to see what impact those changes will have on your code, use:
+  
+       [LIA,LOCB] = ISMEMBER(A,B,'R2012a')
+       [LIA,LOCB] = ISMEMBER(A,B,'rows','R2012a')
+  
+    If the changes in behavior adversely affect your code, you may preserve
+    the current behavior with:
+  
+       [LIA,LOCB] = ISMEMBER(A,B,'legacy')
+       [LIA,LOCB] = ISMEMBER(A,B,'rows','legacy')
+ 
+    Examples:
+ 
+       a = [9 9 8 8 7 7 7 6 6 6 5 5 4 4 2 1 1 1]
+       b = [1 1 1 3 3 3 3 3 4 4 4 4 4 9 9 9]
+ 
+       [lia1,locb1] = ismember(a,b)
+       % returns
+       lia1 = [1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1]
+       locb1 = [16 16 0 0 0 0 0 0 0 0 0 0 13 13 0 3 3 3]
+ 
+       [lia2,locb2] = ismember(a,b,'R2012a')
+       % returns
+       lia2 = [1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1]
+       locb2 = [14 14 0 0 0 0 0 0 0 0 0 0 9 9 0 1 1 1]
+ 
+       [lia,locb] = ismember([1 NaN 2 3],[3 4 NaN 1])
+       % NaNs compare as not equal, so this returns
+       lia = [1 0 0 1], locb = [4 0 0 1]
+ 
+    Class support for inputs A and B, where A and B must be of the same
+    class unless stated otherwise:
+       - logical, char, all numeric classes (may combine with double arrays)
+       - cell arrays of strings (may combine with char arrays)
+       -- 'rows' option is not supported for cell arrays
+       - objects with methods SORT (SORTROWS for the 'rows' option), EQ and NE
+       -- including heterogeneous arrays derived from the same root class
+ 
+    See also UNIQUE, UNION, INTERSECT, SETDIFF, SETXOR, SORT, SORTROWS.
+
+    Overloaded methods:
+       cell/ismember
+       ordinal/ismember
+       nominal/ismember
+       categorical/ismember
+
+    Reference page in Help browser
+       doc ismember
+
+ INTERSECT Set intersection.
+    C = INTERSECT(A,B) for vectors A and B, returns the values common to 
+    the two vectors with no repetitions. C will be sorted.
+ 
+    C = INTERSECT(A,B,'rows') for matrices A and B with the same 
+    number of columns, returns the rows common to the two matrices. The
+    rows of the matrix C will be in sorted order.
+ 
+    [C,IA,IB] = INTERSECT(A,B) also returns index vectors IA and IB such 
+    that C = A(IA) and C = B(IB). If there are repeated common values in
+    A or B then the index of the last occurrence of each repeated value is
+    returned.
+ 
+    [C,IA,IB] = INTERSECT(A,B,'rows') also returns index vectors IA and IB 
+    such that C = A(IA,:) and C = B(IB,:). 
+ 
+    [C,IA,IB] = INTERSECT(A,B,'stable') for arrays A and B, returns the
+    values of C in the same order that they appear in A.
+    [C,IA,IB] = INTERSECT(A,B,'sorted') returns the values of C in sorted
+    order.
+    If A and B are row vectors, then C will be a row vector as well,
+    otherwise C will be a column vector. IA and IB are column vectors.
+    If there are repeated common values in A or B then the index of the
+    first occurrence of each repeated value is returned.
+ 
+    [C,IA,IB] = INTERSECT(A,B,'rows','stable') returns the rows of C in the
+    same order that they appear in A.
+    [C,IA,IB] = INTERSECT(A,B,'rows','sorted') returns the rows of C in
+    sorted order.
+ 
+    In a future release, the behavior of the following syntaxes will change
+    including:
+      -	occurrence of indices in IA and IB will switch from last to first
+      -	orientation of vector C
+      -	IA and IB will always be column index vectors
+      -	tighter restrictions on combinations of classes
+  
+    In order to see what impact those changes will have on your code, use:
+  
+       [C,IA,IB] = INTERSECT(A,B,'R2012a')
+       [C,IA,IB] = INTERSECT(A,B,'rows','R2012a')
+  
+    If the changes in behavior adversely affect your code, you may preserve
+    the current behavior with:
+  
+       [C,IA,IB] = INTERSECT(A,B,'legacy')
+       [C,IA,IB] = INTERSECT(A,B,'rows','legacy')
+ 
+    Examples:
+ 
+       a = [9 9 9 9 9 9 8 8 8 8 7 7 7 6 6 6 5 5 4 2 1]
+       b = [1 1 1 3 3 3 3 3 4 4 4 4 4 10 10 10]
+ 
+       [c1,ia1,ib1] = intersect(a,b)
+       % returns
+       c1 = [1 4], ia1 = [21 19], ib1 = [3 13]
+ 
+       [c2,ia2,ib2] = intersect(a,b,'stable')
+       % returns
+       c2 = [4 1], ia2 = [19 21]', ib2 = [9 1]'
+ 
+       c = intersect([1 NaN 2 3],[3 4 NaN 1])
+       % NaNs compare as not equal, so this returns
+       c = [1 3]
+ 
+    Class support for inputs A and B, where A and B must be of the same
+    class unless stated otherwise:
+       - logical, char, all numeric classes (may combine with double arrays)
+       - cell arrays of strings (may combine with char arrays)
+       -- 'rows' option is not supported for cell arrays
+       - objects with methods SORT (SORTROWS for the 'rows' option), EQ and NE
+       -- including heterogeneous arrays derived from the same root class
+ 
+    See also UNIQUE, UNION, SETDIFF, SETXOR, ISMEMBER, SORT, SORTROWS.
+
+    Overloaded methods:
+       cell/intersect
+       ordinal/intersect
+       nominal/intersect
+       categorical/intersect
+
+    Reference page in Help browser
+       doc intersect
+
+ FIND   Find indices of nonzero elements.
+    I = FIND(X) returns the linear indices corresponding to 
+    the nonzero entries of the array X.  X may be a logical expression. 
+    Use IND2SUB(SIZE(X),I) to calculate multiple subscripts from 
+    the linear indices I.
+  
+    I = FIND(X,K) returns at most the first K indices corresponding to 
+    the nonzero entries of the array X.  K must be a positive integer, 
+    but can be of any numeric type.
+ 
+    I = FIND(X,K,'first') is the same as I = FIND(X,K).
+ 
+    I = FIND(X,K,'last') returns at most the last K indices corresponding 
+    to the nonzero entries of the array X.
+ 
+    [I,J] = FIND(X,...) returns the row and column indices instead of
+    linear indices into X. This syntax is especially useful when working
+    with sparse matrices.  If X is an N-dimensional array where N &gt; 2, then
+    J is a linear index over the N-1 trailing dimensions of X.
+ 
+    [I,J,V] = FIND(X,...) also returns a vector V containing the values
+    that correspond to the row and column indices I and J.
+ 
+    Example:
+       A = magic(3)
+       find(A &gt; 5)
+ 
+    finds the linear indices of the 4 entries of the matrix A that are
+    greater than 5.
+ 
+       [rows,cols,vals] = find(speye(5))
+ 
+    finds the row and column indices and nonzero values of the 5-by-5
+    sparse identity matrix.
+ 
+    See also SPARSE, IND2SUB, RELOP, NONZEROS.
+
+    Overloaded methods:
+       codistributed/find
+
+    Reference page in Help browser
+       doc find
+
+ SETDIFF Set difference.
+    C = SETDIFF(A,B) for vectors A and B, returns the values in A that 
+    are not in B with no repetitions. C will be sorted.
+ 
+    C = SETDIFF(A,B,'rows') for matrices A and B with the same number of
+    columns, returns the rows from A that are not in B. The rows of the
+    matrix C will be in sorted order.
+ 
+    [C,IA] = SETDIFF(A,B) also returns an index vector IA such that
+    C = A(IA). If there are repeated values in A that are not in B, then
+    the index of the last occurrence of each repeated value is returned.
+ 
+    [C,IA] = SETDIFF(A,B,'rows') also returns an index vector IA such that
+    C = A(IA,:).
+ 
+    [C,IA] = SETDIFF(A,B,'stable') for arrays A and B, returns the values
+    of C in the order that they appear in A.
+    [C,IA] = SETDIFF(A,B,'sorted') returns the values of C in sorted order.
+    If A is a row vector, then C will be a row vector as well, otherwise C
+    will be a column vector. IA is a column vector. If there are repeated
+    values in A that are not in B, then the index of the first occurrence of
+    each repeated value is returned.
+ 
+    [C,IA] = SETDIFF(A,B,'rows','stable') returns the rows of C in the
+    same order that they appear in A.
+    [C,IA] = SETDIFF(A,B,'rows','sorted') returns the rows of C in sorted
+    order.
+ 
+    In a future release, the behavior of the following syntaxes will change
+    including:
+      -	occurrence of indices in IA will switch from last to first
+      -	orientation of vector C
+      -	IA will always be a column index vector
+      -	tighter restrictions on combinations of classes
+  
+    In order to see what impact those changes will have on your code, use:
+  
+       [C,IA] = SETDIFF(A,B,'R2012a')
+       [C,IA] = SETDIFF(A,B,'rows','R2012a')
+  
+    If the changes in behavior adversely affect your code, you may preserve
+    the current behavior with:
+  
+       [C,IA] = SETDIFF(A,B,'legacy')
+       [C,IA] = SETDIFF(A,B,'rows','legacy')
+ 
+    Examples:
+ 
+       a = [9 9 9 9 9 9 8 8 8 8 7 7 7 6 6 6 5 5 4 2 1]
+       b = [1 1 1 3 3 3 3 3 4 4 4 4 4 10 10 10]
+ 
+       [c1,ia1] = setdiff(a,b)
+       % returns
+       c1 = [2 5 6 7 8 9]
+       ia1 = [20 18 16 13 10 6]
+ 
+       [c2,ia2] = setdiff(a,b,'stable')
+       % returns
+       c2 = [9 8 7 6 5 2]
+       ia2 = [1 7 11 14 17 20]'
+ 
+       c = setdiff([1 NaN 2 3],[3 4 NaN 1])
+       % NaNs compare as not equal, so this returns
+       c = [2 NaN]
+ 
+    Class support for inputs A and B, where A and B must be of the same
+    class unless stated otherwise:
+       - logical, char, all numeric classes (may combine with double arrays)
+       - cell arrays of strings (may combine with char arrays)
+       -- 'rows' option is not supported for cell arrays
+       - objects with methods SORT (SORTROWS for the 'rows' option), EQ and NE
+       -- including heterogeneous arrays derived from the same root class
+ 
+    See also UNIQUE, UNION, INTERSECT, SETXOR, ISMEMBER, SORT, SORTROWS.
+
+    Overloaded methods:
+       cell/setdiff
+       ordinal/setdiff
+       nominal/setdiff
+       categorical/setdiff
+
+    Reference page in Help browser
+       doc setdiff
+
+ UNIQUE Set unique.
+    C = UNIQUE(A) for the array A returns the same values as in A but with 
+    no repetitions. C will be sorted.    
+   
+    C = UNIQUE(A,'rows') for the matrix A returns the unique rows of A.
+    The rows of the matrix C will be in sorted order.
+   
+    [C,IA,IC] = UNIQUE(A) also returns index vectors IA and IC such that
+    C = A(IA) and A = C(IC).  
+   
+    [C,IA,IC] = UNIQUE(A,'rows') also returns index vectors IA and IC such
+    that C = A(IA,:) and A = C(IC,:). 
+   
+    [C,IA,IC] = UNIQUE(A,OCCURRENCE) and
+    [C,IA,IC] = UNIQUE(A,'rows',OCCURRENCE) specify which index is returned
+    in IA in the case of repeated values (or rows) in A. The default value
+    is OCCURENCE='last', which returns the index of the last occurrence of
+    each repeated value (or row) in A, while OCCURRENCE='first' returns the
+    index of the first occurrence of each repeated value (or row) in A.
+   
+    [C,IA,IC] = UNIQUE(A,'stable') returns the values of C in the same order
+    that they appear in A, while [C,IA,IC] = UNIQUE(A,'sorted') returns the
+    values of C in sorted order. If A is a row vector, then C will be a row
+    vector as well, otherwise C will be a column vector. IA and IC are
+    column vectors. If there are repeated values in A, then IA returns the
+    index of the first occurrence of each repeated value.
+  
+    [C,IA,IC] = UNIQUE(A,'rows','stable') returns the rows of C in the same
+    order that they appear in A, while [C,IA,IC] = UNIQUE(A,'rows','sorted')
+    returns the rows of C in sorted order.
+  
+    In a future release, the behavior of the following syntaxes will change
+    including:
+      -	Default occurrence of indices will switch from last to first
+      -	IA and IC will always be column index vectors
+  
+    In order to see what impact those changes will have on your code, use:
+  
+         [C,IA,IC] = UNIQUE(A,'R2012a')
+         [C,IA,IC] = UNIQUE(A,'rows','R2012a')
+         [C,IA,IC] = UNIQUE(A,OCCURRENCE,'R2012a')
+         [C,IA,IC] = UNIQUE(A,'rows',OCCURRENCE,'R2012a')
+  
+    If the changes in behavior adversely affect your code, you may preserve
+    the current behavior with:
+  
+         [C,IA,IC] = UNIQUE(A,'legacy')
+         [C,IA,IC] = UNIQUE(A,'rows','legacy') 
+         [C,IA,IC] = UNIQUE(A,OCCURRENCE,'legacy')
+         [C,IA,IC] = UNIQUE(A,'rows',OCCURRENCE,'legacy')
+ 
+    Examples:
+ 
+        a = [9 9 9 9 9 9 8 8 8 8 7 7 7 6 6 6 5 5 4 2 1]
+ 
+        [c1,ia1,ic1] = unique(a)
+        % returns
+        c1 = [1 2 4 5 6 7 8 9]
+        ia1 = [21 20 19 18 16 13 10 6]
+        ic1 = [8 8 8 8 8 8 7 7 7 7 6 6 6 5 5 5 4 4 3 2 1]
+ 
+        [c2,ia2,ic2] = unique(a,'stable')
+        % returns
+        c2 = [9 8 7 6 5 4 2 1]
+        ia2 = [1 7 11 14 17 19 20 21]'
+        ic2 = [1 1 1 1 1 1 2 2 2 2 3 3 3 4 4 4 5 5 6 7 8]'
+ 
+        c = unique([1 NaN NaN 2])
+        % NaNs compare as not equal, so this returns
+        c = [1 2 NaN NaN]
+ 
+    Class support for input A:
+       - logical, char, all numeric classes
+       - cell arrays of strings
+       -- 'rows' option is not supported for cell arrays
+       - objects with methods SORT (SORTROWS for the 'rows' option) and NE
+       -- including heterogeneous arrays
+ 
+    See also UNION, INTERSECT, SETDIFF, SETXOR, ISMEMBER, SORT, SORTROWS.
+
+    Overloaded methods:
+       cell/unique
+       RTW.unique
+       dataset/unique
+       categorical/unique
+
+    Reference page in Help browser
+       doc unique
+
+</pre><h2>Control Loops - For and If<a name="5"></a></h2><pre class="codeinput"><span class="comment">% For loops are useful if you need to repeat a section of code several</span>
+<span class="comment">% times.  A simple example would be:</span>
+
+<span class="keyword">for</span> ind = 1:20
+
+    ex(ind) = ind
+
+<span class="keyword">end</span>
+
+<span class="comment">% Notice that this is the same as</span>
+
+ex = 1:20;
+
+<span class="comment">% Often in Matlab, for loops can be avoided and their vector</span>
+<span class="comment">% representations (like above) will be faster and easier to use.  When</span>
+<span class="comment">% possible, you should always try to use the vector representation.</span>
+<span class="comment">% However, you shouldn't waste a whole lot of time trying to figure out the</span>
+<span class="comment">% vector representation if a quick and easy for loop will do.</span>
+
+<span class="comment">% If statements are also useful in Matlab.  There are occasions when you</span>
+<span class="comment">% will want to execute a section of code only if a certain condition is</span>
+<span class="comment">% fulfilled.</span>
+
+<span class="comment">% isBig is true</span>
+isBig = 1;
+
+<span class="comment">% What does the if statement display?</span>
+<span class="keyword">if</span> isBig
+   display(<span class="string">'I will crush you'</span>)
+<span class="keyword">else</span>
+    display(<span class="string">'Please do not hurt me'</span>);
+<span class="keyword">end</span>
+
+<span class="comment">% isBig is false</span>
+isBig = 0;
+
+<span class="comment">% Now what does the if statement display?</span>
+<span class="keyword">if</span> isBig
+   display(<span class="string">'I will crush you'</span>)
+<span class="keyword">else</span>
+    display(<span class="string">'Please do not hurt me'</span>);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">
+ex =
+
+     1
+
+
+ex =
+
+     1     2
+
+
+ex =
+
+     1     2     3
+
+
+ex =
+
+     1     2     3     4
+
+
+ex =
+
+     1     2     3     4     5
+
+
+ex =
+
+     1     2     3     4     5     6
+
+
+ex =
+
+     1     2     3     4     5     6     7
+
+
+ex =
+
+     1     2     3     4     5     6     7     8
+
+
+ex =
+
+     1     2     3     4     5     6     7     8     9
+
+
+ex =
+
+     1     2     3     4     5     6     7     8     9    10
+
+
+ex =
+
+     1     2     3     4     5     6     7     8     9    10    11
+
+
+ex =
+
+     1     2     3     4     5     6     7     8     9    10    11    12
+
+
+ex =
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Column 14
+
+    14
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 15
+
+    14    15
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 16
+
+    14    15    16
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 17
+
+    14    15    16    17
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 18
+
+    14    15    16    17    18
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 19
+
+    14    15    16    17    18    19
+
+
+ex =
+
+  Columns 1 through 13
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13
+
+  Columns 14 through 20
+
+    14    15    16    17    18    19    20
+
+I will crush you
+Please do not hurt me
+</pre><h2>Graphics<a name="6"></a></h2><pre class="codeinput"><span class="comment">% Matlab has the ability to allow you to visualize your data.  The most</span>
+<span class="comment">% common way of visualizing your data is by using the plot command.  For</span>
+<span class="comment">% example if you wanted a straight line going from (0,0) to (10,10) in x-y</span>
+<span class="comment">% coordinates you would type</span>
+
+figure; <span class="comment">% opens a blank new figure window</span>
+x = 1:10; <span class="comment">% x-values for the plot</span>
+y = 1:10; <span class="comment">% y-values for the plot</span>
+
+plot(x, y) <span class="comment">% Plots the x-y values</span>
+
+<span class="comment">% If you want to add another line to your plot in the same color, you type</span>
+hold <span class="string">on</span>
+plot(x, sin(x))
+
+<span class="comment">% Normally if you type plot twice, the second plot will erase the first.</span>
+<span class="comment">% Hold keeps you on the same plot. If you want to keep plotting on the same</span>
+<span class="comment">% plot but in different colors, you would type:</span>
+hold <span class="string">all</span>;
+
+
+<span class="comment">% You can also change the color of your plots by adding an additional</span>
+<span class="comment">% argument:</span>
+
+<span class="comment">% For instance, if you want a black line you would add 'k' to the plot</span>
+<span class="comment">% inputs like so</span>
+figure;
+plot(x, sin(x), <span class="string">'k'</span>);
+<span class="comment">% If you want a red line, you would add 'r'</span>
+figure;
+plot(x, cos(x), <span class="string">'r'</span>);
+
+<span class="comment">% There are several other ways to plot data in Matlab.  Here are a few that</span>
+<span class="comment">% come up frequently:</span>
+
+help <span class="string">bar</span>
+help <span class="string">hist</span>
+help <span class="string">stem</span>
+help <span class="string">surfc</span>
+</pre><pre class="codeoutput"> BAR Bar graph.
+    BAR(X,Y) draws the columns of the M-by-N matrix Y as M groups of N
+    vertical bars.  The vector X must not have duplicate values.
+ 
+    BAR(Y) uses the default value of X=1:M.  For vector inputs, BAR(X,Y)
+    or BAR(Y) draws LENGTH(Y) bars.  The colors are set by the colormap.
+ 
+    BAR(X,Y,WIDTH) or BAR(Y,WIDTH) specifies the width of the bars. Values
+    of WIDTH &gt; 1, produce overlapped bars.  The default value is WIDTH=0.8
+ 
+    BAR(...,'grouped') produces the default vertical grouped bar chart.
+    BAR(...,'stacked') produces a vertical stacked bar chart.
+    BAR(...,LINESPEC) uses the line color specified (one of 'rgbymckw').
+ 
+    BAR(AX,...) plots into AX instead of GCA.
+ 
+    H = BAR(...) returns a vector of handles to barseries objects.
+ 
+    Use SHADING FACETED to put edges on the bars.  Use SHADING FLAT to
+    turn them off.
+ 
+    Examples: subplot(3,1,1), bar(rand(10,5),'stacked'), colormap(cool)
+              subplot(3,1,2), bar(0:.25:1,rand(5),1)
+              subplot(3,1,3), bar(rand(2,3),.75,'grouped')
+ 
+    See also HIST, PLOT, BARH, BAR3, BAR3H.
+
+    Overloaded methods:
+       fints/bar
+
+    Reference page in Help browser
+       doc bar
+
+ HIST  Histogram.
+    N = HIST(Y) bins the elements of Y into 10 equally spaced containers
+    and returns the number of elements in each container.  If Y is a
+    matrix, HIST works down the columns.
+ 
+    N = HIST(Y,M), where M is a scalar, uses M bins.
+ 
+    N = HIST(Y,X), where X is a vector, returns the distribution of Y
+    among bins with centers specified by X. The first bin includes
+    data between -inf and the first center and the last bin
+    includes data between the last bin and inf. Note: Use HISTC if
+    it is more natural to specify bin edges instead. 
+ 
+    [N,X] = HIST(...) also returns the position of the bin centers in X.
+ 
+    HIST(...) without output arguments produces a histogram bar plot of
+    the results. The bar edges on the first and last bins may extend to
+    cover the min and max of the data unless a matrix of data is supplied.
+ 
+    HIST(AX,...) plots into AX instead of GCA.
+ 
+    Class support for inputs Y, X: 
+       float: double, single
+ 
+    See also HISTC, MODE.
+
+    Overloaded methods:
+       fints/hist
+       categorical/hist
+
+    Reference page in Help browser
+       doc hist
+
+ STEM   Discrete sequence or "stem" plot.
+    STEM(Y) plots the data sequence Y as stems from the x axis
+    terminated with circles for the data value. If Y is a matrix then
+    each column is plotted as a separate series.
+ 
+    STEM(X,Y) plots the data sequence Y at the values specified
+    in X.
+ 
+    STEM(...,'filled') produces a stem plot with filled markers.
+ 
+    STEM(...,'LINESPEC') uses the linetype specified for the stems and
+    markers.  See PLOT for possibilities.
+ 
+    STEM(AX,...) plots into axes with handle AX. Use GCA to get the
+    handle to the current axes or to create one if none exist.
+ 
+    H = STEM(...) returns a vector of stemseries handles in H, one handle
+    per column of data in Y.
+ 
+    See also PLOT, BAR, STAIRS.
+
+    Reference page in Help browser
+       doc stem
+
+ SURFC  Combination surf/contour plot.
+    SURFC(...) is the same as SURF(...) except that a contour plot
+    is drawn beneath the surface.
+ 
+    See also SURF, SHADING.
+
+    Reference page in Help browser
+       doc surfc
+
+</pre><img vspace="5" hspace="5" src="images/CELEST_matlab_01.png" alt=""> <img vspace="5" hspace="5" src="images/CELEST_matlab_02.png" alt=""> <img vspace="5" hspace="5" src="CELEST_matlab_03.png" alt=""> <h2>Functions vs Scripts<a name="7"></a></h2><pre class="codeinput"><span class="comment">% Scripts and functions are not the same.  Functions are given inputs and</span>
+<span class="comment">% they produce outputs.  Scripts, on the other hand, have no inputs and</span>
+<span class="comment">% outputs.  This m-file CELEST_matlab.m is a script because it contains a</span>
+<span class="comment">% bunch of commands, but you cannot give the script inputs.  For example,</span>
+<span class="comment">% you can run this whole file by typing its name:</span>
+
+<span class="comment">% CELEST_matlab</span>
+
+<span class="comment">% This will execute every line of code in this document.  You cannot give</span>
+<span class="comment">% this script specific inputs like:</span>
+
+input1 = 5;
+input2 = 10;
+
+<span class="comment">% CELEST_matlab(input1, input2);</span>
+
+<span class="comment">% This will not do anything.  However, functions do have this property.  I</span>
+<span class="comment">% have written an example function called myFirstFunction.  You can give it</span>
+<span class="comment">% two inputs.  The function will simply multiply those two inputs and</span>
+<span class="comment">% return a single output:</span>
+
+output = myFirstFunction(input1, input2)
+
+<span class="comment">% Some functions can have more than one output.  Many built-in Matlab</span>
+<span class="comment">% functions have this feature.  You can assign variables to the outputs for</span>
+<span class="comment">% a function by using the form [first_output, second_output] == myFunction(input).</span>
+<span class="comment">% For example, with the Matlab function size, it returns both the number of</span>
+<span class="comment">% rows and the number of columns</span>
+
+[row, col] = size(matrix);
+
+<span class="comment">% Compare</span>
+size(matrix)
+
+<span class="comment">% to</span>
+
+row
+col
+</pre><pre class="codeoutput">
+output =
+
+    50
+
+
+ans =
+
+     2     2
+
+
+row =
+
+     2
+
+
+col =
+
+     2
+
+</pre><h2>Saving and Loading Data<a name="8"></a></h2><pre class="codeinput"><span class="comment">% To save all the variables in your workspace, simply type the name that</span>
+<span class="comment">% you want to use followed by .mat:</span>
+save(<span class="string">'myFile.mat'</span>)
+
+<span class="comment">% To selectively save variables in your workspace, you follow the same</span>
+<span class="comment">% format as above, except you also type the name of the variable you want</span>
+<span class="comment">% to save in quotes:</span>
+
+save(<span class="string">'myFile.mat'</span>, <span class="string">'output'</span>);
+
+<span class="comment">% Loading a file works in the same way:</span>
+clear <span class="string">all</span>; clc; close <span class="string">all</span>;
+
+load(<span class="string">'myFile.mat'</span>)
+</pre><h2>Loading Audio Files<a name="9"></a></h2><pre class="codeinput"><span class="comment">% Use wavread to load in the waveform "fox" and the sampling frequency "fs"</span>
+[fox, fs] = wavread(<span class="string">'quickBrownFox.wav'</span>);
+
+<span class="comment">% Play the sound</span>
+sound(fox, fs);
+
+<span class="comment">% Plot the sound</span>
+figure;
+plot(fox);
+
+<span class="comment">% Alter the playback speed of the sound by changing its sampling frequency</span>
+sound(fox, 50000);
+</pre><img vspace="5" hspace="5" src="images/CELEST_matlab_04.png" alt=""> <h2>Loading Image Files<a name="10"></a></h2><pre class="codeinput"><span class="comment">% Load in an animated GIF using imread</span>
+mj = imread(<span class="string">'gotMJ.gif'</span>);
+
+<span class="comment">% Show only one frame</span>
+imshow(mj(:, :, :, 1));
+
+<span class="comment">% Play the animated GIF as a movie</span>
+implay(mj);
+</pre><img vspace="5" hspace="5" src="images/CELEST_matlab_05.png" alt=""> <img vspace="5" hspace="5" src="images/CELEST_matlab_06.png" alt=""> <h2>Other Useful Built-in Matlab Functions and Miscellany<a name="11"></a></h2><pre class="codeinput">help <span class="string">max</span>
+help <span class="string">min</span>
+help <span class="string">repmat</span>
+help <span class="string">ones</span>
+help <span class="string">zeros</span>
+help <span class="string">nan</span>
+help <span class="string">mean</span>
+help <span class="string">sort</span>
+help <span class="string">errorbar</span>
+help <span class="string">nanmean</span>
+help <span class="string">ode45</span>
+</pre><pre class="codeoutput"> MAX    Largest component.
+    For vectors, MAX(X) is the largest element in X. For matrices,
+    MAX(X) is a row vector containing the maximum element from each
+    column. For N-D arrays, MAX(X) operates along the first
+    non-singleton dimension.
+ 
+    [Y,I] = MAX(X) returns the indices of the maximum values in vector I.
+    If the values along the first non-singleton dimension contain more
+    than one maximal element, the index of the first one is returned.
+ 
+    MAX(X,Y) returns an array the same size as X and Y with the
+    largest elements taken from X or Y. Either one can be a scalar.
+ 
+    [Y,I] = MAX(X,[],DIM) operates along the dimension DIM. 
+ 
+    When X is complex, the maximum is computed using the magnitude
+    MAX(ABS(X)). In the case of equal magnitude elements, then the phase
+    angle MAX(ANGLE(X)) is used.
+ 
+    NaN's are ignored when computing the maximum. When all elements in X
+    are NaN's, then the first one is returned as the maximum.
+ 
+    Example: If X = [2 8 4   then max(X,[],1) is [7 8 9],
+                     7 3 9]
+ 
+        max(X,[],2) is [8    and max(X,5) is [5 8 5
+                        9],                   7 5 9].
+ 
+    See also MIN, MEDIAN, MEAN, SORT.
+
+    Overloaded methods:
+       codistributed/max
+       fints/max
+       ordinal/max
+       timeseries/max
+
+    Reference page in Help browser
+       doc max
+
+ MIN    Smallest component.
+    For vectors, MIN(X) is the smallest element in X. For matrices,
+    MIN(X) is a row vector containing the minimum element from each
+    column. For N-D arrays, MIN(X) operates along the first
+    non-singleton dimension.
+ 
+    [Y,I] = MIN(X) returns the indices of the minimum values in vector I.
+    If the values along the first non-singleton dimension contain more
+    than one minimal element, the index of the first one is returned.
+ 
+    MIN(X,Y) returns an array the same size as X and Y with the
+    smallest elements taken from X or Y. Either one can be a scalar.
+ 
+    [Y,I] = MIN(X,[],DIM) operates along the dimension DIM.
+ 
+    When X is complex, the minimum is computed using the magnitude
+    MIN(ABS(X)). In the case of equal magnitude elements, then the phase
+    angle MIN(ANGLE(X)) is used.
+ 
+    NaN's are ignored when computing the minimum. When all elements in X
+    are NaN's, then the first one is returned as the minimum.
+ 
+    Example: If X = [2 8 4   then min(X,[],1) is [2 3 4],
+                     7 3 9]
+ 
+        min(X,[],2) is [2    and min(X,5) is [2 5 4
+                        3],                   5 3 5].
+ 
+    See also MAX, MEDIAN, MEAN, SORT.
+
+    Overloaded methods:
+       codistributed/min
+       fints/min
+       ordinal/min
+       timeseries/min
+
+    Reference page in Help browser
+       doc min
+
+ REPMAT Replicate and tile an array.
+    B = repmat(A,M,N) creates a large matrix B consisting of an M-by-N
+    tiling of copies of A. The size of B is [size(A,1)*M, size(A,2)*N].
+    The statement repmat(A,N) creates an N-by-N tiling.
+    
+    B = REPMAT(A,[M N]) accomplishes the same result as repmat(A,M,N).
+ 
+    B = REPMAT(A,[M N P ...]) tiles the array A to produce a 
+    multidimensional array B composed of copies of A. The size of B is 
+    [size(A,1)*M, size(A,2)*N, size(A,3)*P, ...].
+ 
+    REPMAT(A,M,N) when A is a scalar is commonly used to produce an M-by-N
+    matrix filled with A's value and having A's CLASS. For certain values,
+    you may achieve the same results using other functions. Namely,
+       REPMAT(NAN,M,N)           is the same as   NAN(M,N)
+       REPMAT(SINGLE(INF),M,N)   is the same as   INF(M,N,'single')
+       REPMAT(INT8(0),M,N)       is the same as   ZEROS(M,N,'int8')
+       REPMAT(UINT32(1),M,N)     is the same as   ONES(M,N,'uint32')
+       REPMAT(EPS,M,N)           is the same as   EPS(ONES(M,N))
+ 
+    Example:
+        repmat(magic(2), 2, 3)
+        repmat(uint8(5), 2, 3)
+ 
+    Class support for input A:
+       float: double, single
+ 
+    See also BSXFUN, MESHGRID, ONES, ZEROS, NAN, INF.
+
+    Overloaded methods:
+       InputOutputModel/repmat
+       categorical/repmat
+
+    Reference page in Help browser
+       doc repmat
+
+ ONES   Ones array.
+    ONES(N) is an N-by-N matrix of ones.
+ 
+    ONES(M,N) or ONES([M,N]) is an M-by-N matrix of ones.
+ 
+    ONES(M,N,P,...) or ONES([M N P ...]) is an M-by-N-by-P-by-... array of
+    ones.
+ 
+    ONES(SIZE(A)) is the same size as A and all ones.
+ 
+    ONES with no arguments is the scalar 1.
+ 
+    ONES(..., CLASSNAME) is an array of ones of class specified by CLASSNAME.
+ 
+    Note: The size inputs M, N, and P... should be nonnegative integers. 
+    Negative integers are treated as 0.
+ 
+    Example:
+       x = ones(2,3,'int8');
+ 
+    See also EYE, ZEROS.
+
+    Overloaded methods:
+       distributed/ones
+       codistributor2dbc/ones
+       codistributor1d/ones
+       codistributed/ones
+
+    Reference page in Help browser
+       doc ones
+
+ ZEROS  Zeros array.
+    ZEROS(N) is an N-by-N matrix of zeros.
+ 
+    ZEROS(M,N) or ZEROS([M,N]) is an M-by-N matrix of zeros.
+ 
+    ZEROS(M,N,P,...) or ZEROS([M N P ...]) is an M-by-N-by-P-by-... array of
+    zeros.
+ 
+    ZEROS(SIZE(A)) is the same size as A and all zeros.
+ 
+    ZEROS with no arguments is the scalar 0.
+ 
+    ZEROS(..., CLASSNAME) is an array of zeros of class specified by CLASSNAME.
+ 
+    Note: The size inputs M, N, and P... should be nonnegative integers. 
+    Negative integers are treated as 0.
+ 
+    Example:
+       x = zeros(2,3,'int8');
+ 
+    See also EYE, ONES.
+
+    Overloaded methods:
+       distributed/zeros
+       codistributor2dbc/zeros
+       codistributor1d/zeros
+       codistributed/zeros
+
+    Reference page in Help browser
+       doc zeros
+
+ NaN    Not-a-Number.
+    NaN is the IEEE arithmetic representation for Not-a-Number.
+    A NaN is obtained as a result of mathematically undefined
+    operations like 0.0/0.0  and inf-inf.
+ 
+    NaN('double') is the same as NaN with no inputs.
+ 
+    NaN('single') is the single precision representation of NaN.
+ 
+    NaN(N) is an N-by-N matrix of NaNs.
+ 
+    NaN(M,N) or NaN([M,N]) is an M-by-N matrix of NaNs.
+ 
+    NaN(M,N,P,...) or NaN([M,N,P,...]) is an M-by-N-by-P-by-... array of NaNs.
+ 
+    NaN(...,CLASSNAME) is an array of NaNs of class specified by CLASSNAME.
+    CLASSNAME must be either 'single' or 'double'.
+ 
+    Note: The size inputs M, N, and P... should be nonnegative integers. 
+    Negative integers are treated as 0.
+ 
+    See also INF, ISNAN, ISFINITE, ISFLOAT.
+
+    Overloaded methods:
+       distributed/nan
+       codistributor2dbc/nan
+       codistributor1d/nan
+       codistributed/nan
+
+    Reference page in Help browser
+       doc nan
+
+ MEAN   Average or mean value.
+    For vectors, MEAN(X) is the mean value of the elements in X. For
+    matrices, MEAN(X) is a row vector containing the mean value of
+    each column.  For N-D arrays, MEAN(X) is the mean value of the
+    elements along the first non-singleton dimension of X.
+ 
+    MEAN(X,DIM) takes the mean along the dimension DIM of X. 
+ 
+    Example: If X = [1 2 3; 3 3 6; 4 6 8; 4 7 7];
+ 
+    then mean(X,1) is [3.0000 4.5000 6.0000] and 
+    mean(X,2) is [2.0000 4.0000 6.0000 6.0000].'
+ 
+    Class support for input X:
+       float: double, single
+ 
+    See also MEDIAN, STD, MIN, MAX, VAR, COV, MODE.
+
+    Overloaded methods:
+       fints/mean
+       ProbDistUnivParam/mean
+       timeseries/mean
+
+    Reference page in Help browser
+       doc mean
+
+ SORT   Sort in ascending or descending order.
+    For vectors, SORT(X) sorts the elements of X in ascending order.
+    For matrices, SORT(X) sorts each column of X in ascending order.
+    For N-D arrays, SORT(X) sorts the along the first non-singleton
+    dimension of X. When X is a cell array of strings, SORT(X) sorts
+    the strings in ASCII dictionary order.
+ 
+    Y = SORT(X,DIM,MODE)
+    has two optional parameters.  
+    DIM selects a dimension along which to sort.
+    MODE selects the direction of the sort
+       'ascend' results in ascending order
+       'descend' results in descending order
+    The result is in Y which has the same shape and type as X.
+ 
+    [Y,I] = SORT(X,DIM,MODE) also returns an index matrix I.
+    If X is a vector, then Y = X(I).  
+    If X is an m-by-n matrix and DIM=1, then
+        for j = 1:n, Y(:,j) = X(I(:,j),j); end
+ 
+    When X is complex, the elements are sorted by ABS(X).  Complex
+    matches are further sorted by ANGLE(X).
+ 
+    When more than one element has the same value, the order of the
+    elements are preserved in the sorted result and the indexes of
+    equal elements will be ascending in any index matrix.
+ 
+    Example: If X = [3 7 5
+                     0 4 2]
+ 
+    then sort(X,1) is [0 4 2  and sort(X,2) is [3 5 7
+                       3 7 5]                   0 2 4];
+ 
+    See also ISSORTED, SORTROWS, MIN, MAX, MEAN, MEDIAN, UNIQUE.
+
+    Overloaded methods:
+       codistributed/sort
+       ordinal/sort
+       nominal/sort
+       sym/sort
+
+    Reference page in Help browser
+       doc sort
+
+ ERRORBAR Error bar plot.
+    ERRORBAR(X,Y,L,U) plots the graph of vector X vs. vector Y with
+    error bars specified by the vectors L and U.  L and U contain the
+    lower and upper error ranges for each point in Y.  Each error bar
+    is L(i) + U(i) long and is drawn a distance of U(i) above and L(i)
+    below the points in (X,Y).  The vectors X,Y,L and U must all be
+    the same length.  If X,Y,L and U are matrices then each column
+    produces a separate line.
+ 
+    ERRORBAR(X,Y,E) or ERRORBAR(Y,E) plots Y with error bars [Y-E Y+E].
+    ERRORBAR(...,'LineSpec') uses the color and linestyle specified by
+    the string 'LineSpec'.  The color is applied to the data line and
+    error bars while the linestyle and marker are applied to the data
+    line only.  See PLOT for possibilities.
+ 
+    ERRORBAR(AX,...) plots into AX instead of GCA.
+ 
+    H = ERRORBAR(...) returns a vector of errorbarseries handles in H.
+ 
+    For example,
+       x = 1:10;
+       y = sin(x);
+       e = std(y)*ones(size(x));
+       errorbar(x,y,e)
+    draws symmetric error bars of unit standard deviation.
+
+    Reference page in Help browser
+       doc errorbar
+
+ NANMEAN Mean value, ignoring NaNs.
+    M = NANMEAN(X) returns the sample mean of X, treating NaNs as missing
+    values.  For vector input, M is the mean value of the non-NaN elements
+    in X.  For matrix input, M is a row vector containing the mean value of
+    non-NaN elements in each column.  For N-D arrays, NANMEAN operates
+    along the first non-singleton dimension.
+ 
+    NANMEAN(X,DIM) takes the mean along dimension DIM of X.
+ 
+    See also MEAN, NANMEDIAN, NANSTD, NANVAR, NANMIN, NANMAX, NANSUM.
+
+    Overloaded methods:
+       fints/nanmean
+
+    Reference page in Help browser
+       doc stats/nanmean
+
+ ODE45  Solve non-stiff differential equations, medium order method.
+    [TOUT,YOUT] = ODE45(ODEFUN,TSPAN,Y0) with TSPAN = [T0 TFINAL] integrates 
+    the system of differential equations y' = f(t,y) from time T0 to TFINAL 
+    with initial conditions Y0. ODEFUN is a function handle. For a scalar T
+    and a vector Y, ODEFUN(T,Y) must return a column vector corresponding 
+    to f(t,y). Each row in the solution array YOUT corresponds to a time 
+    returned in the column vector TOUT.  To obtain solutions at specific 
+    times T0,T1,...,TFINAL (all increasing or all decreasing), use TSPAN = 
+    [T0 T1 ... TFINAL].     
+    
+    [TOUT,YOUT] = ODE45(ODEFUN,TSPAN,Y0,OPTIONS) solves as above with default
+    integration properties replaced by values in OPTIONS, an argument created
+    with the ODESET function. See ODESET for details. Commonly used options 
+    are scalar relative error tolerance 'RelTol' (1e-3 by default) and vector
+    of absolute error tolerances 'AbsTol' (all components 1e-6 by default).
+    If certain components of the solution must be non-negative, use
+    ODESET to set the 'NonNegative' property to the indices of these
+    components.
+    
+    ODE45 can solve problems M(t,y)*y' = f(t,y) with mass matrix M that is
+    nonsingular. Use ODESET to set the 'Mass' property to a function handle 
+    MASS if MASS(T,Y) returns the value of the mass matrix. If the mass matrix 
+    is constant, the matrix can be used as the value of the 'Mass' option. If
+    the mass matrix does not depend on the state variable Y and the function
+    MASS is to be called with one input argument T, set 'MStateDependence' to
+    'none'. ODE15S and ODE23T can solve problems with singular mass matrices.  
+ 
+    [TOUT,YOUT,TE,YE,IE] = ODE45(ODEFUN,TSPAN,Y0,OPTIONS) with the 'Events'
+    property in OPTIONS set to a function handle EVENTS, solves as above 
+    while also finding where functions of (T,Y), called event functions, 
+    are zero. For each function you specify whether the integration is 
+    to terminate at a zero and whether the direction of the zero crossing 
+    matters. These are the three column vectors returned by EVENTS: 
+    [VALUE,ISTERMINAL,DIRECTION] = EVENTS(T,Y). For the I-th event function: 
+    VALUE(I) is the value of the function, ISTERMINAL(I)=1 if the integration 
+    is to terminate at a zero of this event function and 0 otherwise. 
+    DIRECTION(I)=0 if all zeros are to be computed (the default), +1 if only 
+    zeros where the event function is increasing, and -1 if only zeros where 
+    the event function is decreasing. Output TE is a column vector of times 
+    at which events occur. Rows of YE are the corresponding solutions, and 
+    indices in vector IE specify which event occurred.    
+ 
+    SOL = ODE45(ODEFUN,[T0 TFINAL],Y0...) returns a structure that can be
+    used with DEVAL to evaluate the solution or its first derivative at 
+    any point between T0 and TFINAL. The steps chosen by ODE45 are returned 
+    in a row vector SOL.x.  For each I, the column SOL.y(:,I) contains 
+    the solution at SOL.x(I). If events were detected, SOL.xe is a row vector 
+    of points at which events occurred. Columns of SOL.ye are the corresponding 
+    solutions, and indices in vector SOL.ie specify which event occurred. 
+ 
+    Example    
+          [t,y]=ode45(@vdp1,[0 20],[2 0]);   
+          plot(t,y(:,1));
+      solves the system y' = vdp1(t,y), using the default relative error
+      tolerance 1e-3 and the default absolute tolerance of 1e-6 for each
+      component, and plots the first component of the solution. 
+    
+    Class support for inputs TSPAN, Y0, and the result of ODEFUN(T,Y):
+      float: double, single
+ 
+    See also ODE23, ODE113, ODE15S, ODE23S, ODE23T, ODE23TB, ODE15I,
+             ODESET, ODEPLOT, ODEPHAS2, ODEPHAS3, ODEPRINT, DEVAL,
+             ODEEXAMPLES, RIGIDODE, BALLODE, ORBITODE, FUNCTION_HANDLE.
+
+</pre><h2>For more information<a name="12"></a></h2><pre class="codeinput"><span class="comment">% http://cns.bu.edu/~cnso/matlabtutorials.html</span>
+<span class="comment">% http://math.bu.edu/people/mak/MA665/1_MATLAB_Tutorial.m</span>
+<span class="comment">% Matlab for Neuroscientists</span>
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+%% CELEST Matlab Tutorial
+
+%% Comments, Variables, Vectors and Matrices
+
+% Comments
+
+% Green text preceded by a percent sign % are comments.  Matlab
+% ignores comments REPLACE_WITH_DASH_DASH that is, any text with a percent sign before it will
+% result in Matlab doing nothing.  Try it out by copying and pasting the
+% following:
+
+% a = 5
+
+% Comments are useful to put in your code so that you remember why are you
+% writing a particular line of code.  It also helps other people understand
+% your code should they have to use it.
+
+% Often it is more useful and clear to assign a value to a variable name.
+% This makes your code more readable and understandable.  For example, what
+% is more readable? 
+
+% firingRate * 10 
+
+% OR 
+
+% 5 * 10.  
+
+% Here is how you assign a
+% value to a variable in Matlab:
+
+firingRate = 5
+
+% You can assign more than one value to a variable.  The following code
+% makes a 2 x 1 vector:
+
+b = [3; 4]
+
+% You can verify this is a 2 x 1 vector by the following command:
+size(b)
+
+% size is a built-in matlab function.  It tells you how many elements are
+% in a vector of matrix.
+
+% You can also make a 2 x 1 vector.  Notice that omitting the semi-colon
+% makes this vector "horizontal":
+
+c = [3 4]
+
+size(c)
+
+% If you don't want to see the output in the command window each time, you
+% can supress the output by ending the statement with a semi-colon:
+
+c = [3 4];
+
+% You can also make a matrix.  Here is a 2x2 matrix:
+
+d = [1 2; 3 4]
+
+d = [1 2; ...
+     3 4]
+
+size(d)
+
+% Typing in each number for a vector or matrix can be a pain in the ass.
+% Luckily, you can tell Matlab to assign a consecutive sequence of numbers
+% to a variable:
+
+vec = 1:10
+
+% The "step-size" of the consecutive sequence of numbers doesn't have to be
+% one.  You can also step by larger or smaller numbers:
+
+vec = 1:.25:10
+
+% Sometimes you just want to access and change a single elmement of a
+% vector.  You can access the fourth element of a vector by:
+
+vec(4)
+
+% And you can change the fourth element by:
+
+vec(4) = 33
+
+% Sometimes you don't want to have all the output in the command window.
+% You can clear the command window by typing:
+
+clc
+
+% Similarly, you might want to clear variables from your workspace to
+% reduce clutter:
+
+clear all
+
+% A helpful way to learn about built-in matlab functions is to type help
+% before the function:
+
+help clc
+help clear
+
+clc
+%% Mathematical Operations
+
+% You can use Matlab as a calculator.  For example, here is how you
+% multiply, add, divide, and exponentiate:
+
+3 * 4
+3 + 4
+3 / 4
+3 ^ 4
+
+% You can also use mathematical operations on vectors and matrices.
+% Element-wise operations (multipying each element of a vector or matrix
+% individually) are performed by using the period . before a mathematical
+% operator such as times *:
+
+vector = [2 2]
+vector .* 5
+matrix = [2 2; 2 2]
+matrix .* 3
+
+% If you want to multiply matrices as in linear algebra (which is not element-wise)
+% you omit the period before the mathematical operator:
+
+matrix * matrix
+
+[3 1; 9 2; 3 7] * [1; 2]
+
+%% Logical operations
+
+% Sometimes you want to know whether two variables are equal or if one
+% variable is larger than the other.  This is achieved by logical operators.
+% In Matlab, 1 stands for True and 0 stands for False.  For example, say you 
+% want to know if the firing rate from neuron1 is greater than the firing 
+% rate from neuron2:
+
+% First let's give the neurons' firing rates
+neuronFiringRate1 = 4
+neuronFiringRate2 = 3
+
+% Now you can test whether the two variables are equal:
+neuronFiringRate1 == neuronFiringRate2
+
+% or if neuron1 has a greater firing rate than neuron2?
+neuronFiringRate1 > neuronFiringRate2
+
+% These operations also work on vectors and matrices element-wise, so you
+% can determine whether a number is greater than each element in a matrix:
+
+% Here is our original matrix
+
+matrix
+
+% And here is the result of comparing the matrix to the number 6:
+
+6 > matrix
+
+% Logical operators such as AND and OR are also useful.  For example, say
+% that you had had a data set that consisted of animals and whether they
+% were fast and big.  Suppose you only wanted the animals that were fast
+% and big.  Using logical operators, you can select only the fast and big
+% animals:
+
+% Here we define the properties of one animal
+isBig = 1; %  isBig = true
+isFast = 0; % isFast = false
+
+% Is it both big and fast?  The ampersand & indicates AND
+isBig & isFast
+
+% Suppose you only cared if the animal is big or fast, but either one would
+% do.  You could then use the OR operator | :
+
+isBig | isFast
+
+% Finally, suppose you wanted animals that were small and slow.  You can
+% use the negation operator, the tilde ~:
+
+~isBig | ~isFast
+
+% If you want to find out if they are not equal, then use the tilde and
+% equal sign:
+
+isBig ~= isFast
+
+
+%% Selective Indexing
+
+% You can combine what you've learned with assigning elements to variables
+% and logical operators.  One of the more useful things you can learn is to
+% use logical operators to access and change elements in vectors and
+% matrices. Suppose you have a vector that goes from 1 to 10:
+
+vec = 1:10
+
+% Remember you could access each individual element of vec by typing:
+
+vec(1)
+vec(2)
+vec(3)
+
+% Suppose that you wanted to only access the elements of vec greater than
+% five.  From before, you know that
+
+vec > 5
+
+% is a vector with zeros for each element in vec that is not greater than
+% five and ones for each element that is.  Now, if you type:
+
+vec(vec > 5)
+
+% You get only the elements of vec greater than 5.
+% This can be useful if you want to set all elements of a vector or matrix
+% to a certain value.  For instance, if you wanted the values of vec
+% greater than 5 to be zero, then:
+
+vec(vec > 5) = 0
+
+% Some other examples of this are:
+
+vec(vec == 5)
+vec(vec ~= 5)
+
+% Some useful functions that we will not cover that also use logical
+% operators and are often useful when comparing two vectors or matrices
+% are:
+
+help ismember
+help intersect
+help find
+help setdiff
+help unique
+
+%% Control Loops - For and If
+
+% For loops are useful if you need to repeat a section of code several
+% times.  A simple example would be:
+
+for ind = 1:20
+    
+    ex(ind) = ind
+    
+end
+
+% Notice that this is the same as
+
+ex = 1:20;
+
+% Often in Matlab, for loops can be avoided and their vector
+% representations (like above) will be faster and easier to use.  When
+% possible, you should always try to use the vector representation.
+% However, you shouldn't waste a whole lot of time trying to figure out the
+% vector representation if a quick and easy for loop will do.
+
+% If statements are also useful in Matlab.  There are occasions when you
+% will want to execute a section of code only if a certain condition is
+% fulfilled.
+
+% isBig is true
+isBig = 1;
+
+% What does the if statement display?
+if isBig
+   display('I will crush you')  
+else
+    display('Please do not hurt me');
+end
+
+% isBig is false
+isBig = 0;
+
+% Now what does the if statement display?
+if isBig
+   display('I will crush you')  
+else
+    display('Please do not hurt me');
+end
+%% Graphics
+
+% Matlab has the ability to allow you to visualize your data.  The most
+% common way of visualizing your data is by using the plot command.  For
+% example if you wanted a straight line going from (0,0) to (10,10) in x-y
+% coordinates you would type
+
+figure; % opens a blank new figure window
+x = 1:10; % x-values for the plot
+y = 1:10; % y-values for the plot
+
+plot(x, y) % Plots the x-y values
+
+% If you want to add another line to your plot in the same color, you type
+hold on
+plot(x, sin(x))
+
+% Normally if you type plot twice, the second plot will erase the first.
+% Hold keeps you on the same plot. If you want to keep plotting on the same
+% plot but in different colors, you would type:
+hold all;
+
+
+% You can also change the color of your plots by adding an additional
+% argument:
+
+% For instance, if you want a black line you would add 'k' to the plot
+% inputs like so
+figure;
+plot(x, sin(x), 'k');
+% If you want a red line, you would add 'r' 
+figure;
+plot(x, cos(x), 'r');
+
+% There are several other ways to plot data in Matlab.  Here are a few that
+% come up frequently:
+
+help bar
+help hist
+help stem
+help surfc
+
+%% Functions vs Scripts
+
+% Scripts and functions are not the same.  Functions are given inputs and
+% they produce outputs.  Scripts, on the other hand, have no inputs and
+% outputs.  This m-file CELEST_matlab.m is a script because it contains a
+% bunch of commands, but you cannot give the script inputs.  For example,
+% you can run this whole file by typing its name:
+
+% CELEST_matlab
+
+% This will execute every line of code in this document.  You cannot give
+% this script specific inputs like:
+
+input1 = 5;
+input2 = 10;
+
+% CELEST_matlab(input1, input2);
+
+% This will not do anything.  However, functions do have this property.  I
+% have written an example function called myFirstFunction.  You can give it
+% two inputs.  The function will simply multiply those two inputs and
+% return a single output:
+
+output = myFirstFunction(input1, input2)
+
+% Some functions can have more than one output.  Many built-in Matlab
+% functions have this feature.  You can assign variables to the outputs for
+% a function by using the form [first_output, second_output] == myFunction(input).
+% For example, with the Matlab function size, it returns both the number of
+% rows and the number of columns
+
+[row, col] = size(matrix);
+
+% Compare
+size(matrix)
+
+% to
+
+row
+col
+
+%% Saving and Loading Data
+
+% To save all the variables in your workspace, simply type the name that 
+% you want to use followed by .mat:
+save('myFile.mat')
+
+% To selectively save variables in your workspace, you follow the same
+% format as above, except you also type the name of the variable you want
+% to save in quotes:
+
+save('myFile.mat', 'output');
+
+% Loading a file works in the same way:
+clear all; clc; close all;
+
+load('myFile.mat')
+
+
+%% Loading Audio Files
+
+% Use wavread to load in the waveform "fox" and the sampling frequency "fs"
+[fox, fs] = wavread('quickBrownFox.wav');
+
+% Play the sound
+sound(fox, fs);
+
+% Plot the sound
+figure;
+plot(fox);
+
+% Alter the playback speed of the sound by changing its sampling frequency
+sound(fox, 50000);
+
+%% Loading Image Files
+
+% Load in an animated GIF using imread
+mj = imread('gotMJ.gif');
+
+% Show only one frame
+imshow(mj(:, :, :, 1));
+
+% Play the animated GIF as a movie
+implay(mj);
+
+
+%% Other Useful Built-in Matlab Functions and Miscellany
+help max
+help min
+help repmat
+help ones
+help zeros
+help nan
+help mean
+help sort
+help errorbar
+help nanmean
+help ode45
+
+%% For more information
+
+% http://cns.bu.edu/~cnso/matlabtutorials.html
+% http://math.bu.edu/people/mak/MA665/1_MATLAB_Tutorial.m
+% Matlab for Neuroscientists
+
+##### SOURCE END #####
+--></body></html>
