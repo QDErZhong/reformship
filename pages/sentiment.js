@@ -42,5 +42,5 @@ function getSentiment() {
 
 function modelReady() {
   // model is ready
-  statusEl.html('Model Loaded');
+  statusEl.html('加载模型');
 }
