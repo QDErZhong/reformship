@@ -1,10 +1,10 @@
 <!-- This file shows how to import TensorFlow.js in HTML web page from a load balanced CDN server provided by Google.  -->
 <!-- This project shows how to do Linear Regression using TensorFlow.js -->
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang=""zh-Hans"></html>" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Linear Regression using TensorFlow.js</title>
+    <title>线性回归</title>
     <!-- ********************************************************************* -->
     <!-- Load TensorFlow.js from a load balanced CDN server provided by Google. -->
     <!-- Loading P5.js and P5.dom.js libraries for interactive Visualizations. -->
@@ -29,13 +29,16 @@
   <!-- Print out on the screen the status of TF.js library -->
   <body>
     <!-- HTML File Heading. -->
-    <h1 align="center">Linear Regression using TensorFlow.js</h1>
-    <h3 align="center">Click anywhere on the Canvas. Each dot represents a (X,y) value which is the input data points.</h3>
-    <h3 align="center">The optimizer tries to minimize the loss function and get the Best-Fit line for the data points.</h3>
-
+    <div>
+    <h1 style="text-align: center;">线性回归(TensorFlow.js)</h1>
+    <h3 style="text-align: center;">单击画布上的任何位置。 每个点代表一个输入数据(X,y)</h3>
+    <h3 style="text-align: center;">优化器试图最小化损失函数并获得数据点的最佳拟合线</h3>
+  </div>
     <!-- ********************************************************************** -->
     <!-- Code to Create the Dataset using Canvas and perform Linear Regression. -->
     <!-- ********************************************************************** -->
+    <hr>
+    <div>
     <script>
     // Canvas Variable
     var cnv;
@@ -167,5 +170,6 @@
       line(x1, y1, x2, y2);
     }
     </script>
+    </div>
   </body>
 </html>
