@@ -14604,20 +14604,6 @@ dijkstra_path_length() 的返回值是最短加权路径的长度（路径中的
                             <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
                             <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">4</span><span class="p">)])</span>  <span class="c1"># 向图中添加多条赋权边: (node1,node2,weight)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nx.info:&#39;</span><span class="p">,</span><span class="n">G1</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>  <span class="c1"># 返回图的基本信息</span>
-
-<span class="c1"># 两个指定顶点之间的最短加权路径</span>
-<span class="n">minWPath_v1_v11</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">dijkstra_path</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>  <span class="c1"># 顶点 1 到 顶点 11 的最短加权路径</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;顶点 v1 到 顶点 v11 的最短加权路径: &quot;</span><span class="p">,</span> <span class="n">minWPath_v1_v11</span><span class="p">)</span>
-<span class="c1"># 两个指定顶点之间的最短加权路径的长度</span>
-<span class="n">lMinWPath_v1_v11</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">dijkstra_path_length</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>  <span class="c1"># 最短加权路径长度</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;顶点 v1 到 顶点 v11 的最短加权路径长度: &quot;</span><span class="p">,</span> <span class="n">lMinWPath_v1_v11</span><span class="p">)</span>
-
-<span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">4</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-       <span class="mi">8</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">9</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">10</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="mi">11</span><span class="p">:</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">4</span><span class="p">)}</span>  <span class="c1"># 指定顶点位置</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>  <span class="c1"># 设置边的 labels 为 ‘weight&#39;</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># 绘制无向图</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>  <span class="c1"># 显示边的权值</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14638,11 +14624,79 @@ dijkstra_path_length() 的返回值是最短加权路径的长度（路径中的
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>nx.info: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-顶点 v1 到 顶点 v11 的最短加权路径:  [1, 2, 5, 6, 3, 7, 10, 9, 11]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 两个指定顶点之间的最短加权路径</span>
+<span class="n">minWPath_v1_v11</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">dijkstra_path</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>  <span class="c1"># 顶点 1 到 顶点 11 的最短加权路径</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;顶点 v1 到 顶点 v11 的最短加权路径: &quot;</span><span class="p">,</span> <span class="n">minWPath_v1_v11</span><span class="p">)</span>
+<span class="c1"># 两个指定顶点之间的最短加权路径的长度</span>
+<span class="n">lMinWPath_v1_v11</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">dijkstra_path_length</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>  <span class="c1"># 最短加权路径长度</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;顶点 v1 到 顶点 v11 的最短加权路径长度: &quot;</span><span class="p">,</span> <span class="n">lMinWPath_v1_v11</span><span class="p">)</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">4</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+       <span class="mi">8</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="mi">9</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">10</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="mi">11</span><span class="p">:</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">4</span><span class="p">)}</span>  <span class="c1"># 指定顶点位置</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>  <span class="c1"># 设置边的 labels 为 ‘weight&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>顶点 v1 到 顶点 v11 的最短加权路径:  [1, 2, 5, 6, 3, 7, 10, 9, 11]
 顶点 v1 到 顶点 v11 的最短加权路径长度:  13
 </pre>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># 绘制无向图</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G1</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>  <span class="c1"># 显示边的权值</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
@@ -14714,19 +14768,13 @@ bellman_ford_path_length() 的返回值是最短加权路径的长度（路径�
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="4.3-bellman_ford_path()-&#31639;&#27861;&#20363;&#31243;">4.3 bellman_ford_path() &#31639;&#27861;&#20363;&#31243;<a class="anchor-link" href="#4.3-bellman_ford_path()-&#31639;&#27861;&#20363;&#31243;">&#182;</a></h3>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel16_v1.py</span>
-<span class="c1"># Demo16 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of shortest path with NetworkX</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-07-07</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>  <span class="c1"># 导入 NetworkX 工具包</span>
 
@@ -14740,8 +14788,20 @@ bellman_ford_path_length() 的返回值是最短加权路径的长度（路径�
                       <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span><span class="mi">55</span><span class="p">],</span>
                       <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 <span class="n">G2</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_adjacency</span><span class="p">(</span><span class="n">dfAdj</span><span class="p">)</span>  <span class="c1"># 由 pandas 顶点邻接矩阵 创建 NetworkX 图</span>
+</pre></div>
 
-<span class="c1"># 计算最短路径：注意最短路径与最短加权路径的不同</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算最短路径：注意最短路径与最短加权路径的不同</span>
 <span class="c1"># 两个指定顶点之间的最短路径</span>
 <span class="n">minPath03</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">shortest_path</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 顶点 0 到 顶点 3 的最短路径</span>
 <span class="n">lMinPath03</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">shortest_path_length</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1">#最短路径长度</span>
@@ -14818,19 +14878,11 @@ bellman_ford_path_length() 的返回值是最短加权路径的长度（路径�
 对于稀疏的图推荐使用列表形式添加赋权边，对于稠密图、完全图建议使用 DtaFrame 读取数据文件后再转换为 NetworkX 格式。</p>
 
 </div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>

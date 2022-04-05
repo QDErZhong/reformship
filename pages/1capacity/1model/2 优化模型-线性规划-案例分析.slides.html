@@ -14501,10 +14501,10 @@ $$
 <p>$a$ 反映了投资者对风险的偏好程度，从 $a = 0$ 开始，以步长为0.001进行循环搜索，使用python编写代码如下</p>
 
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#导入相关库</span>
@@ -14517,9 +14517,20 @@ $$
 <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">profit_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#记录最大收益</span>
 <span class="n">a_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#记录a的取值</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
 
-<span class="k">while</span> <span class="n">a</span><span class="o">&lt;</span><span class="mf">0.05</span><span class="p">:</span>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="n">a</span><span class="o">&lt;</span><span class="mf">0.05</span><span class="p">:</span>
     <span class="c1">#定义决策变量取值范围</span>
     <span class="n">x1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
 
@@ -14539,8 +14550,20 @@ $$
     <span class="n">profit_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
     <span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mf">0.001</span>
+</pre></div>
 
-<span class="c1">#绘制风险偏好a与最大收益的曲线图    </span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#绘制风险偏好a与最大收益的曲线图    </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_list</span><span class="p">,</span><span class="n">profit_list</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Profit&#39;</span><span class="p">)</span>
@@ -14590,7 +14613,7 @@ $$
 
 </div>
 
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>从上图中可以看出</strong></p>
@@ -14655,20 +14678,12 @@ s.t.&amp;\left\{\begin{array}{ll}
 \end{aligned}
 $$
 </div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
-<li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 

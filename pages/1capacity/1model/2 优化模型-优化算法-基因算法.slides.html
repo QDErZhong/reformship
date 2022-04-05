@@ -14404,11 +14404,21 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>遗传算法（Genetic Algorithm）是模拟达尔文生物进化论的自然选择和遗传学机理的生物进化过程的计算模型，是一种通过模拟自然进化过程搜索最优解的方法。遗传算法是在20世纪六七十年代由美国密歇根大学的 Holland教授创立。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>遗传算法是一种仿生算法，最主要的思想是<strong>物竞天择，适者生存</strong>。这个算法很好的模拟了生物的进化过程，保留好的物种，同样一个物种中的佼佼者才会幸运的存活下来。转换到数学问题中，这个思想就可以很好的转化为优化问题，在求解方程组的时候，好的解视为好的物种被保留，坏的解视为坏的物种而淘汰，设置好进化次数以后开始迭代，记录下这些解里面最好的那个，就是要求解的方程组的解。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>遗传算法是从代表问题可能潜在的解集的一个<strong>种群</strong>（population）开始的，而一个种群则由经过<strong>基因</strong>（gene）编码的一定数目的<strong>个体</strong>(individual)组成。每个个体实际上是<strong>染色体</strong>(chromosome)带有特征的实体。染色体作为遗传物质的主要载体，即多个基因的集合，其内部表现（即基因型）是某种基因组合，它决定了个体的形状的外部表现，如黑头发的特征是由染色体中控制这一特征的某种基因组合决定的。</p>
 
 </div>
-</div></section><section>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#27169;&#22411;&#24341;&#20837;:&#20989;&#25968;&#23547;&#20248;&#38382;&#39064;">&#27169;&#22411;&#24341;&#20837;:&#20989;&#25968;&#23547;&#20248;&#38382;&#39064;<a class="anchor-link" href="#&#27169;&#22411;&#24341;&#20837;:&#20989;&#25968;&#23547;&#20248;&#38382;&#39064;">&#182;</a></h3><p>例子：已知一元函数：
@@ -14501,7 +14511,7 @@ $$</p>
 </blockquote>
 
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#25968;&#23398;&#21407;&#29702;/&#23454;&#29616;&#36807;&#31243;">&#25968;&#23398;&#21407;&#29702;/&#23454;&#29616;&#36807;&#31243;<a class="anchor-link" href="#&#25968;&#23398;&#21407;&#29702;/&#23454;&#29616;&#36807;&#31243;">&#182;</a></h3><p>这里我们先回顾几个生物学概念</p>
@@ -14528,6 +14538,11 @@ $$</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>既然我们把函数曲线理解成一个一个山峰和山谷组成的山脉。那么我们可以设想所得到的<strong>每一个解就是一只袋鼠</strong>，我们希望它们不断的向着更高处跳去，直到跳到最高的山峰。所以求<strong>最大值</strong>的过程就转化成一个“<strong>袋鼠跳</strong>”的过程。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>我们假设，在这个故事中，有很多袋鼠，它们被随机分配到喜玛拉雅山脉的任意地方。每过几年，就在一些<strong>海拔高度较低的地方射杀一些袋鼠</strong>，那些存活下来的袋鼠在它们所处的地方生儿育女。<strong>结果</strong>就这样经过许多年，这些袋鼠们竟然都不自觉地聚拢到了一个个的山峰上，可是在所有的袋鼠中，只有聚拢到珠穆朗玛峰的袋鼠被带回了美丽的澳洲（最优解）。</p>
 
 </div>
@@ -14535,6 +14550,11 @@ $$</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>遗传算法的实现过程实际上就像自然界的进化过程那样。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>首先寻找一种对问题潜在解进行<strong>“数字化”编码</strong>的方案。（建立表现型和基因型的映射关系）</li>
 <li>然后用<strong>随机数初始化</strong>一个种群（那么第一批袋鼠就被随意地分散在山脉上），种群里面的个体就是这些数字化的编码。</li>
@@ -14542,12 +14562,22 @@ $$</p>
 <li>用选择函数按照某种规定<strong>择优选择</strong>（我们要每隔一段时间，在山上射杀一些所在海拔较低的袋鼠，以保证袋鼠总体数目持平）。</li>
 <li>让<strong>个体基因变异</strong>（让袋鼠随机地跳一跳）。然后<strong>产生子代</strong>（希望存活下来的袋鼠是多产的，并在那里生儿育女）。</li>
 </ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>遗传算法并不保证你能获得问题的最优解，但是使用遗传算法的最大优点在于你不必去了解和操心如何去“找”最优解。（你不必去指导袋鼠向那边跳，跳多远。）而只要简单的“否定”一些表现不好的个体就行了。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <blockquote><p>把那些总是爱走下坡路的袋鼠射杀，这就是遗传算法的精粹！</p>
 </blockquote>
 
 </div>
-</div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#32534;&#21046;&#34955;&#40736;&#30340;&#26579;&#33394;&#20307;----&#22522;&#22240;&#30340;&#32534;&#30721;&#26041;&#24335;">&#32534;&#21046;&#34955;&#40736;&#30340;&#26579;&#33394;&#20307;----&#22522;&#22240;&#30340;&#32534;&#30721;&#26041;&#24335;<a class="anchor-link" href="#&#32534;&#21046;&#34955;&#40736;&#30340;&#26579;&#33394;&#20307;----&#22522;&#22240;&#30340;&#32534;&#30721;&#26041;&#24335;">&#182;</a></h3>
@@ -14565,7 +14595,7 @@ $$
 010010011011011110111110
 $$
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#28014;&#28857;&#25968;&#32534;&#30721;">&#28014;&#28857;&#25968;&#32534;&#30721;<a class="anchor-link" href="#&#28014;&#28857;&#25968;&#32534;&#30721;">&#182;</a></h3>
@@ -14579,7 +14609,7 @@ $$
 $$</p>
 
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#21482;&#32534;&#30721;&#20027;&#35201;&#29305;&#24449;">&#21482;&#32534;&#30721;&#20027;&#35201;&#29305;&#24449;<a class="anchor-link" href="#&#21482;&#32534;&#30721;&#20027;&#35201;&#29305;&#24449;">&#182;</a></h3>
@@ -14587,7 +14617,19 @@ $$</p>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>那么我们如何利用这两种编码方式来为袋鼠的染色体编码呢？因为编码的目的是建立表现型到基因型的映射关系，而表现型一般就被理解为个体的特征。比如人的基因型是46条染色体所描述的却能解码成一个眼，耳，口，鼻等特征各不相同的活生生的人。所以我们要想为“袋鼠”的染色体编码，我们必须先来考虑“袋鼠”的“个体特征”是什么。也许有的人会说，袋鼠的特征很多，比如性别，身长，体重，也许它喜欢吃什么也能算作其中一个特征。但具体在解决这个问题的情况下，我们应该进一步思考：无论这只袋鼠是长短，肥瘦，黑白，<strong>只要它在低海拔就会被射杀</strong>，同时也没有规定身长的袋鼠能跳得远一些，身短的袋鼠跳得近一些。当然它爱吃什么就更不相关了。</p>
+<p>那么我们如何利用这两种编码方式来为袋鼠的染色体编码呢？</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>因为编码的目的是建立表现型到基因型的映射关系，而表现型一般就被理解为个体的特征。比如人的基因型是46条染色体所描述的却能解码成一个眼，耳，口，鼻等特征各不相同的活生生的人。所以我们要想为“袋鼠”的染色体编码，我们必须先来考虑“袋鼠”的“个体特征”是什么。也许有的人会说，袋鼠的特征很多，比如性别，身长，体重，也许它喜欢吃什么也能算作其中一个特征。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>但具体在解决这个问题的情况下，我们应该进一步思考：无论这只袋鼠是长短，肥瘦，黑白，<strong>只要它在低海拔就会被射杀</strong>，同时也没有规定身长的袋鼠能跳得远一些，身短的袋鼠跳得近一些。当然它爱吃什么就更不相关了。</p>
 
 </div>
 </div></div></section><section>
@@ -14620,8 +14662,23 @@ $$</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>自然界生物竞争过程往往包含两个方面：生物相互间的搏斗与及生物与客观环境的搏斗过程。但在我们这个实例里面，你可以想象到，袋鼠相互之间是非常友好的，它们并不需要互相搏斗以争取生存的权利。它们的生死存亡更多是取决于你的判断。因为你要衡量哪只袋鼠该杀，哪只袋鼠不该杀，所以你必须制定一个衡量的标准。而对于这个问题，这个衡量的标准比较容易制定：</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>袋鼠所在的海拔高度。（因为你单纯地希望袋鼠爬得越高越好）</strong></p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>所以我们直接用袋鼠的海拔高度作为它们的适应性评分。即适应度函数直接返回函数值就行了。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>一般在我们的优化问题中，目标函数就是适应度函数。</p>
 
 </div>
@@ -14643,20 +14700,30 @@ $$</p>
 <p>所以累计总适应度为：</p>
 $$
 F=\sum_{i=1}^{n} f_{i}=5+7+10+13+15=50
-$$<p>所以各个个体被选中的概率分别为：</p>
 $$
-\begin{array}{l}{P_{1}=\frac{f_{1}}{F} \times 100 \%=\frac{5}{50} \times 100 \%=10 \%} \\ {P_{2}=\frac{f_{2}}{F} \times 100 \%=\frac{7}{50} \times 100 \%=14 \%} \\ {P_{3}=\frac{f_{3}}{F} \times 100 \%=\frac{10}{50} \times 100 \%=20 \%} \\ {P_{4}=\frac{f_{4}}{F} \times 100 \%=\frac{13}{50} \times 100 \%=26 \%} \\ {P_{5}=\frac{f_{5}}{F} \times 100 \%=\frac{15}{50} \times 100 \%=30 \%}\end{array}
-$$<p><img src="https://cdn.kesci.com/upload/image/q0ls7hac6t.png?imageView2/0/w/960/h/960" alt="Image Name"></p>
-
 </div>
 </div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>所以各个个体被选中的概率分别为：</p>
+$$
+\begin{array}{l}{P_{1}=\frac{f_{1}}{F} \times 100 \%=\frac{5}{50} \times 100 \%=10 \%} \\ {P_{2}=\frac{f_{2}}{F} \times 100 \%=\frac{7}{50} \times 100 \%=14 \%} \\ {P_{3}=\frac{f_{3}}{F} \times 100 \%=\frac{10}{50} \times 100 \%=20 \%} \\ {P_{4}=\frac{f_{4}}{F} \times 100 \%=\frac{13}{50} \times 100 \%=26 \%} \\ {P_{5}=\frac{f_{5}}{F} \times 100 \%=\frac{15}{50} \times 100 \%=30 \%}\end{array}
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://cdn.kesci.com/upload/image/q0ls7hac6t.png?imageView2/0/w/960/h/960" alt="Image Name"></p>
+
+</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>适应度评分越高的个体被选中的概率越大，也就是繁殖后代的概率越大。</p>
 <p>当然，我们也可以使用其他的选择方式，比如不引入概率选择，只保留那些性状最好的个体。</p>
 
 </div>
-</div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#36951;&#20256;&#21464;&#24322;&#8213;&#8213;&#22522;&#22240;&#37325;&#32452;&#65288;&#20132;&#21449;&#65289;&#19982;&#22522;&#22240;&#31361;&#21464;">&#36951;&#20256;&#21464;&#24322;&#8213;&#8213;&#22522;&#22240;&#37325;&#32452;&#65288;&#20132;&#21449;&#65289;&#19982;&#22522;&#22240;&#31361;&#21464;<a class="anchor-link" href="#&#36951;&#20256;&#21464;&#24322;&#8213;&#8213;&#22522;&#22240;&#37325;&#32452;&#65288;&#20132;&#21449;&#65289;&#19982;&#22522;&#22240;&#31361;&#21464;">&#182;</a></h3>
@@ -14759,14 +14826,14 @@ $$</p>
 <p>现在我们用 Python 来实现遗传算法</p>
 
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>1.种群初始化</p>
 <p>(1)随机生成若干个数的二进制染色体。</p>
 
 </div>
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14777,6 +14844,7 @@ $$</p>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="c1">#初始化生成chromosome_length大小的population_size个个体的二进制基因型种群</span>
 <span class="k">def</span> <span class="nf">species_origin</span><span class="p">(</span><span class="n">population_size</span><span class="p">,</span><span class="n">chromosome_length</span><span class="p">):</span>
     <span class="n">population</span><span class="o">=</span><span class="p">[[]]</span>
@@ -14836,7 +14904,19 @@ $$</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>2.适应度计算</p>
-<p>个体适应度与其对应的个体表现型$x$的目标函数值相关联，$x$越接近于目标函数的最优点，其适应度越大，从而其存活的概率越大。反之适应度越小，存活概率越小。这就引出一个问题关于适应度函数的选择，本例中，函数值总取非负值，<strong>以函数最大值为优化目标，故直接将目标函数作为适应度函数</strong>。这里我们直接将目标函数$2x\sin(x)+\cos(x)$作为个体适应度。如果，你想优化的是多元函数的话，需要将个体中基因型的每个变量提取出来，分别带入目标函数。比如说：我们想求$x_1+\ln(x_2)$的最大值。基因编码为4位编码，其中前两位是$x_1$，后两位是$x_2$。那么我们在求适应度的时候，需要将这两个值分别带入$f(x_1)=x$,$f(x_2)=\ln x$。再对$f(x_1)$和$f(x_2)$求和得到此个体的适应度。在本篇中，虽然染色体长度为10,但是实际上只有一个变量。</p>
+<p>个体适应度与其对应的个体表现型$x$的目标函数值相关联，$x$越接近于目标函数的最优点，其适应度越大，从而其存活的概率越大。反之适应度越小，存活概率越小。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>这就引出一个问题关于适应度函数的选择，本例中，函数值总取非负值，<strong>以函数最大值为优化目标，故直接将目标函数作为适应度函数</strong>。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>这里我们直接将目标函数$2x\sin(x)+\cos(x)$作为个体适应度。如果，你想优化的是多元函数的话，需要将个体中基因型的每个变量提取出来，分别带入目标函数。比如说：我们想求$x_1+\ln(x_2)$的最大值。基因编码为4位编码，其中前两位是$x_1$，后两位是$x_2$。那么我们在求适应度的时候，需要将这两个值分别带入$f(x_1)=x$,$f(x_2)=\ln x$。再对$f(x_1)$和$f(x_2)$求和得到此个体的适应度。在本篇中，虽然染色体长度为10,但是实际上只有一个变量。</p>
 
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14942,7 +15022,7 @@ $$</p>
 <p>(3).再产生一个0到1之间的随机数，依据随机数出现在上述哪个概率区域内来确定各个个体被选中的次数。</p>
 
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -14964,7 +15044,6 @@ $$</p>
     <span class="n">population_length</span><span class="o">=</span><span class="n">pop_len</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">population</span><span class="p">)</span>
     <span class="c1">#求出种群长度</span>
     <span class="c1">#根据随机数确定哪几个能存活</span>
- 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pop_len</span><span class="p">):</span>
         <span class="n">ms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
     <span class="c1"># 产生种群个数的随机值</span>
@@ -14973,7 +15052,6 @@ $$</p>
     <span class="n">fitin</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">newin</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">new_population</span><span class="o">=</span><span class="n">new_pop</span><span class="o">=</span><span class="n">population</span>
- 
     <span class="c1">#轮盘赌方式</span>
     <span class="k">while</span> <span class="n">newin</span><span class="o">&lt;</span><span class="n">pop_len</span><span class="p">:</span>
         <span class="k">if</span><span class="p">(</span><span class="n">ms</span><span class="p">[</span><span class="n">newin</span><span class="p">]</span><span class="o">&lt;</span><span class="n">new_fitness</span><span class="p">[</span><span class="n">fitin</span><span class="p">]):</span>
@@ -14989,7 +15067,7 @@ $$</p>
 </div>
 </div>
 
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>4.交叉</p>
@@ -15083,7 +15161,7 @@ $$</p>
     <span class="n">total</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
         <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-    <span class="c1">#从第一位开始，每一位对2求幂，然后求和，得到十进制数？</span>
+    <span class="c1">#从第一位开始，每一位对2求幂，然后求和，得到十进制数</span>
     <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">*</span><span class="n">max_value</span><span class="o">/</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">chromosome_length</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">total</span>
  
@@ -15503,20 +15581,12 @@ $$</p>
 <p>因为爬山法只对“邻近”的点作比较，所以目光比较“短浅”，常常只能收敛到离开初始位置比较近的局部最优解上面。对于存在很多局部最优点的问题，通过一个简单的迭代找出全局最优解的机会非常渺茫。（在爬山法中，袋鼠最有希望到达最靠近它出发点的山顶，但不能保证该山顶是珠穆朗玛峰，或者是一个非常高的山峰。因为一路上它<strong>只顾上坡，没有下坡</strong>。）</p>
 
 </div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
-<li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 

@@ -14411,8 +14411,18 @@ div.jp-OutputPrompt {
 <h3 id="1.1-&#35774;&#26045;">1.1 &#35774;&#26045;<a class="anchor-link" href="#1.1-&#35774;&#26045;">&#182;</a></h3><p>选址问题中所说的设施，在具体题目中可以是工厂、仓库、服务站等形式。</p>
 <h3 id="1.2-&#21306;&#22495;">1.2 &#21306;&#22495;<a class="anchor-link" href="#1.2-&#21306;&#22495;">&#182;</a></h3><p>选址问题中所说的区域，在具体题目中可以是工厂、车间的内部布局，也可以是给定的某个地区、甚至空间范围。</p>
 <p>按照规划区域的特征，可以分为连续选址问题和离散选址问题。连续选址问题，设施可以布局在区域内的任意位置，就要求出最优选址的坐标；离散选址问题，只能从若干候选位置中进行选择，运筹学中的选址问题通常是这类离散选址问题。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="1.3-&#36317;&#31163;">1.3 &#36317;&#31163;<a class="anchor-link" href="#1.3-&#36317;&#31163;">&#182;</a></h3><p>选址问题中所说的距离，是指设施到服务对象之间的距离，在具体题目中也可以是某个选址位置的服务时间、成本、覆盖范围。如果用图论方法求解，通常就是连接顶点的边的权值。</p>
 <p>当问题所关注的是设施到服务对象之间的距离时，如果问题给出的不是顶点之间的距离，而是设施的位置坐标，要注意不是只有欧式距离，对于不同问题也可能是球面距离、曼哈顿距离、切比雪夫距离。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="1.4-&#20248;&#21270;&#30446;&#26631;">1.4 &#20248;&#21270;&#30446;&#26631;<a class="anchor-link" href="#1.4-&#20248;&#21270;&#30446;&#26631;">&#182;</a></h3><p>选址问题要求选择最好的选址位置，但选址位置只是决策变量，选择的最终目的通常是实现加权距离最短、费用最小、利润最大、时间最短，这才是优化问题的目标函数。</p>
 <p>按照目标函数的特点，可以分为：中位问题，要求总成本最小；中心问题，服务于每个客户的最大成本最小；反中心问题：服务于每个客户的最小成本最大。</p>
 
@@ -14454,6 +14464,11 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="2.3-&#38598;&#21512;&#35206;&#30422;&#38382;&#39064;">2.3 &#38598;&#21512;&#35206;&#30422;&#38382;&#39064;<a class="anchor-link" href="#2.3-&#38598;&#21512;&#35206;&#30422;&#38382;&#39064;">&#182;</a></h3><p>覆盖模型适用于一些特殊场景，例如消防中心、救护车、巡逻车等应急设施的区位选址问题。覆盖问题分为集合覆盖问题（Set covering problem）和最大覆盖问题（Maximal covering problem）。</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>集合覆盖问题研究满足覆盖所有需求点顾客的前提下，服务站的最少个数或建设费用最小的问题。假设有 N 个候选服务站和 M 个需求点，已知每个服务站的服务范围（或服务容量），要从 N个候选服务站中选择若干个，使所有需求点得到服务（到所属服务站的距离或时间小于给定的临界值），服务站的个数最少或成本最小。</p>
 <p>定义参数 ​ 为每个服务站的覆盖范围：
 <img src="https://www.zhihu.com/equation?tex=a_%7Bij%7D+%3D++%5Cbegin%7Bcases%7D+1%EF%BC%8C%26+%E6%9C%8D%E5%8A%A1%E7%AB%99%5C+j%5C+%E5%8F%AF%E4%BB%A5%E8%A6%86%E7%9B%96%E9%9C%80%E6%B1%82%E7%82%B9%5C+i%5C%5C+0%EF%BC%8C%26+%E6%9C%8D%E5%8A%A1%E7%AB%99%5C+j%5C+%E4%B8%8D%E8%83%BD%E8%A6%86%E7%9B%96%E9%9C%80%E6%B1%82%E7%82%B9%5C+i+%5Cend%7Bcases%7D" alt="Problem1"></p>
@@ -14681,23 +14696,12 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel08_v1.py</span>
-<span class="c1"># Demo08 of mathematical modeling algorithm</span>
-<span class="c1"># Solving assignment problem with PuLP.</span>
-<span class="c1"># Copyright 2021 Youcans, XUPT</span>
-<span class="c1"># Crated：2021-06-02</span>
-<span class="c1"># Python小白的数学建模课 @ Youcans</span>
-
-<span class="kn">import</span> <span class="nn">pulp</span>      <span class="c1"># 导入 pulp 库</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pulp</span>      <span class="c1"># 导入 pulp 库</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># 主程序</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="c1"># 问题建模：</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        决策变量：</span>
 <span class="sd">            x(i,j) = 0, 第 i 个人不游第 j 种姿势</span>
 <span class="sd">            x(i,j) = 1, 第 i 个人游第 j 种姿势</span>
@@ -14709,8 +14713,47 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
 <span class="sd">            sum(x(i,j),i=1,4)=1, j=1,4</span>
 <span class="sd">        变量取值范围：</span>
 <span class="sd">            x(i,j) = 0,1 </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+    
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;\n        决策变量：\n            x(i,j) = 0, 第 i 个人不游第 j 种姿势\n            x(i,j) = 1, 第 i 个人游第 j 种姿势\n            i=1,4, j=1,4\n        目标函数：\n            min time = sum(sum(c(i,j)*x(i,j))), i=1,4, j=1,4\n        约束条件：\n            sum(x(i,j),j=1,4)=1, i=1,4\n            sum(x(i,j),i=1,4)=1, j=1,4\n        变量取值范围：\n            x(i,j) = 0,1 \n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 主程序</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># 问题建模：</span>
     <span class="c1"># 游泳比赛的指派问题 (assignment problem)</span>
     <span class="c1"># 1.建立优化问题 AssignLP: 求最小值(LpMinimize)</span>
     <span class="n">AssignLP</span> <span class="o">=</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Assignment_problem_for_swimming_relay_race&quot;</span><span class="p">,</span> <span class="n">sense</span><span class="o">=</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>  <span class="c1"># 定义问题，求最小值</span>
@@ -14741,8 +14784,20 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;预测最好成绩为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pulp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">AssignLP</span><span class="o">.</span><span class="n">objective</span><span class="p">)))</span>
 
     <span class="k">return</span>
+</pre></div>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># Copyright 2021 YouCans, XUPT</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># Copyright 2021 YouCans, XUPT</span>
     <span class="n">main</span><span class="p">()</span>  <span class="c1"># Python小白的数学建模课 @ Youcans</span>
 </pre></div>
 
@@ -15042,23 +15097,13 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel09_v1.py</span>
-<span class="c1"># Demo08 of mathematical modeling algorithm</span>
-<span class="c1"># Solving set covering problem with PuLP.</span>
-<span class="c1"># Copyright 2021 Youcans, XUPT</span>
-<span class="c1"># Crated：2021-06-06</span>
-<span class="c1"># Python小白的数学建模课 @ Youcans</span>
-
-<span class="kn">import</span> <span class="nn">pulp</span>      <span class="c1"># 导入 pulp 库</span>
-
-<span class="c1"># 主程序</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pulp</span>      <span class="c1"># 导入 pulp 库</span>
 
     <span class="c1"># 问题建模：</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        决策变量：</span>
 <span class="sd">            x(j) = 0, 不选择第 j 个消防站</span>
 <span class="sd">            x(j) = 1, 选择第 j 个消防站, j=1,8</span>
@@ -15068,8 +15113,45 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
 <span class="sd">            sum(x(j)*R(i,j),j=1,8) &gt;=1, i=1,8</span>
 <span class="sd">        变量取值范围：</span>
 <span class="sd">            x(j) = 0,1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;\n        决策变量：\n            x(j) = 0, 不选择第 j 个消防站\n            x(j) = 1, 选择第 j 个消防站, j=1,8\n        目标函数：\n            min fx = sum(x(j)), j=1,8\n        约束条件：\n            sum(x(j)*R(i,j),j=1,8) &gt;=1, i=1,8\n        变量取值范围：\n            x(j) = 0,1\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 主程序</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="c1"># 消防站的选址问题 (set covering problem, site selection of fire station)</span>
     <span class="c1"># 1.建立优化问题 SetCoverLP: 求最小值(LpMinimize)</span>
     <span class="n">SetCoverLP</span> <span class="o">=</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;SetCover_problem_for_fire_station&quot;</span><span class="p">,</span> <span class="n">sense</span><span class="o">=</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>  <span class="c1"># 定义问题，求最小值</span>
@@ -15103,8 +15185,20 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;需要建立 </span><span class="si">{}</span><span class="s2"> 个消防站。&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pulp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">SetCoverLP</span><span class="o">.</span><span class="n">objective</span><span class="p">)))</span>
 
     <span class="k">return</span>
+</pre></div>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># Copyright 2021 YouCans, XUPT</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># Copyright 2021 YouCans, XUPT</span>
     <span class="n">main</span><span class="p">()</span>  <span class="c1"># Python小白的数学建模课 @ Youcans</span>
 </pre></div>
 
@@ -15152,19 +15246,11 @@ if pulp.LpStatus[AssignLP.status] == "Optimal":  # 获得最优解
 【本节完】</p>
 
 </div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>

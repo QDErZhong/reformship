@@ -14398,18 +14398,8 @@ div.jp-OutputPrompt {
 </section></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.-&#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;">1. &#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;<a class="anchor-link" href="#1.-&#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;">&#182;</a></h2><p>本系列的开篇我们介绍了线性规划 （Linear Programming） 并延伸到整数规划、0-1规划，以及相对复杂的固定费用问题、选址问题。这些问题的共同特点是，目标函数与约束条件都是线性函数。如果目标函数或约束条件中包含非线性函数，则是非线性规划。</p>
+<h2 id="1.-&#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;">1. &#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;<a class="anchor-link" href="#1.-&#20174;&#32447;&#24615;&#35268;&#21010;&#21040;&#38750;&#32447;&#24615;&#35268;&#21010;">&#182;</a></h2><p>线性规划 （Linear Programming）的特点是，目标函数与约束条件都是线性函数。如果目标函数或约束条件中包含非线性函数，则是非线性规划。</p>
 <p>通常，非线性问题都比线性问题复杂得多，困难得多，非线性规划也是这样。非线性规划没有统一的通用方法、算法来解决，各种方法都有特定的应用范围和适用条件。另一方面，很多非线性规划问题在实践中不能获得全局最优解，只能得到局部最优解或近似最优解。</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>这意味着什么？对于数学研究来说，这也许意味着存在新的课题和挑战，可以研究更有效的算法。确实如此，即便线性规划问题的研究也在不断前进，非线性规划问题的研究更是丰富多彩。但热闹是他们的，我什么也没有。</p>
-<p>我所想到的，是数学建模学习/课程/竞赛的根本目的是什么？是掌握各种算法的推演，努力编程以实现，还是练习分析问题建立模型的能力，使用软件和工具求解问题的能力？显然是后者。可是，为什么培训课上老师讲的都是算法呢？到了例题例程，不是一带而过，就是跳步骤讲。听课时津津有味，下课了题目还是不会做，程序还是调不通。于是，...</p>
-<p>不过，到了非线性规划这一课，我们发现老师也不再不厌其烦地讲算法了，不知道是讲不下去还是讲不过来了： 20世纪50年代，H.W.Kuhn 和 A.W.Tucker 提出了非线性规划的基本定理，为非线性规划奠定了理论基础 ；50、60 年代出现了许多解非线性规划问题的有效算法；80年代后，随着计算机技术的快速发展，非线性规划方法取得了长足进步，在信赖域法、稀疏拟牛顿法、并行计算、内点法和有限存储法等领域取得了丰硕的成果。</p>
-<p>所以，没关系的，都一样——参见章北海文集。</p>
-<p>这意味着什么呢？这意味着对于学习数学建模的小白，学会把问题简化为非线性规划的标准方程，学会按照本文的方法使用求解工具包的函数，才能求解非线性规划问题，才能完赛。</p>
 
 </div>
 </div></section></section><section><section>
@@ -14526,141 +14516,19 @@ xOpt=-0.7391	 fxOpt=-7.4195
 <p>fmin() 函数是 SciPy.optimize 模块中求解多变量无约束优化问题（最小值）的首选方法，采用下山单纯性方法。下山单纯性方法又称 Nelder-Mead 法，只使用目标函数值，不需要导数或二阶导数值，是最重要的多维无约束优化问题数值方法之一。</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
-<span class="n">help</span><span class="p">(</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">)</span>
+<span class="c1">#help(optimize.fmin)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Help on function fmin in module scipy.optimize.optimize:
-
-fmin(func, x0, args=(), xtol=0.0001, ftol=0.0001, maxiter=None, maxfun=None, full_output=0, disp=1, retall=0, callback=None, initial_simplex=None)
-    Minimize a function using the downhill simplex algorithm.
-    
-    This algorithm only uses function values, not derivatives or second
-    derivatives.
-    
-    Parameters
-    ----------
-    func : callable func(x,*args)
-        The objective function to be minimized.
-    x0 : ndarray
-        Initial guess.
-    args : tuple, optional
-        Extra arguments passed to func, i.e., ``f(x,*args)``.
-    xtol : float, optional
-        Absolute error in xopt between iterations that is acceptable for
-        convergence.
-    ftol : number, optional
-        Absolute error in func(xopt) between iterations that is acceptable for
-        convergence.
-    maxiter : int, optional
-        Maximum number of iterations to perform.
-    maxfun : number, optional
-        Maximum number of function evaluations to make.
-    full_output : bool, optional
-        Set to True if fopt and warnflag outputs are desired.
-    disp : bool, optional
-        Set to True to print convergence messages.
-    retall : bool, optional
-        Set to True to return list of solutions at each iteration.
-    callback : callable, optional
-        Called after each iteration, as callback(xk), where xk is the
-        current parameter vector.
-    initial_simplex : array_like of shape (N + 1, N), optional
-        Initial simplex. If given, overrides `x0`.
-        ``initial_simplex[j,:]`` should contain the coordinates of
-        the jth vertex of the ``N+1`` vertices in the simplex, where
-        ``N`` is the dimension.
-    
-    Returns
-    -------
-    xopt : ndarray
-        Parameter that minimizes function.
-    fopt : float
-        Value of function at minimum: ``fopt = func(xopt)``.
-    iter : int
-        Number of iterations performed.
-    funcalls : int
-        Number of function calls made.
-    warnflag : int
-        1 : Maximum number of function evaluations made.
-        2 : Maximum number of iterations reached.
-    allvecs : list
-        Solution at each iteration.
-    
-    See also
-    --------
-    minimize: Interface to minimization algorithms for multivariate
-        functions. See the &#39;Nelder-Mead&#39; `method` in particular.
-    
-    Notes
-    -----
-    Uses a Nelder-Mead simplex algorithm to find the minimum of function of
-    one or more variables.
-    
-    This algorithm has a long history of successful use in applications.
-    But it will usually be slower than an algorithm that uses first or
-    second derivative information. In practice, it can have poor
-    performance in high-dimensional problems and is not robust to
-    minimizing complicated functions. Additionally, there currently is no
-    complete theory describing when the algorithm will successfully
-    converge to the minimum, or how fast it will if it does. Both the ftol and
-    xtol criteria must be met for convergence.
-    
-    Examples
-    --------
-    &gt;&gt;&gt; def f(x):
-    ...     return x**2
-    
-    &gt;&gt;&gt; from scipy import optimize
-    
-    &gt;&gt;&gt; minimum = optimize.fmin(f, 1)
-    Optimization terminated successfully.
-             Current function value: 0.000000
-             Iterations: 17
-             Function evaluations: 34
-    &gt;&gt;&gt; minimum[0]
-    -8.8817841970012523e-16
-    
-    References
-    ----------
-    .. [1] Nelder, J.A. and Mead, R. (1965), &#34;A simplex method for function
-           minimization&#34;, The Computer Journal, 7, pp. 308-313
-    
-    .. [2] Wright, M.H. (1996), &#34;Direct Search Methods: Once Scorned, Now
-           Respectable&#34;, in Numerical Analysis 1995, Proceedings of the
-           1995 Dundee Biennial Conference in Numerical Analysis, D.F.
-           Griffiths and G.A. Watson (Eds.), Addison Wesley Longman,
-           Harlow, UK, pp. 191-208.
-
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section><section>
@@ -14923,10 +14791,10 @@ minimize() 函数对约束条件按照字典格式： {'type': 'ineq', 'fun': fu
 Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brent</span><span class="p">,</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">minimize</span>
@@ -14947,8 +14815,20 @@ Python 例程：</p>
     <span class="k">return</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="k">def</span> <span class="nf">constraint4</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  <span class="c1"># 等式约束</span>
     <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span>
+</pre></div>
 
-<span class="c1"># 定义边界约束</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 定义边界约束</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 <span class="n">bnds</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
@@ -15010,10 +14890,10 @@ min f(x) = 13.8790
 Python 例程 2：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brent</span><span class="p">,</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">minimize</span>
@@ -15031,8 +14911,20 @@ Python 例程 2：</p>
             <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;eq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)},</span>  <span class="c1"># 等式约束</span>
             <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;eq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)})</span>  <span class="c1"># 等式约束</span>
     <span class="k">return</span> <span class="n">cons</span>
+</pre></div>
 
-<span class="c1"># 定义边界约束</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 定义边界约束</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 <span class="n">bnds</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="c1"># 定义约束条件</span>
@@ -15086,10 +14978,10 @@ min f(x) = 13.8790
 Python 例程 3：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brent</span><span class="p">,</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">minimize</span>
@@ -15111,8 +15003,20 @@ Python 例程 3：</p>
             <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ineq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xmin1</span><span class="p">)},</span>  <span class="c1"># x1 &gt;= xmin1</span>
             <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ineq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">xmin2</span><span class="p">)})</span>  <span class="c1"># x2 &gt;= xmin2</span>
     <span class="k">return</span> <span class="n">cons</span>
+</pre></div>
 
-<span class="c1"># 求解优化问题</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 求解优化问题</span>
 <span class="n">args1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>  <span class="c1"># 定义目标函数中的参数</span>
 <span class="n">args2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># xmin0, xmin1, xmin2</span>
 <span class="n">cons2</span> <span class="o">=</span> <span class="n">constraint2</span><span class="p">(</span><span class="n">args2</span><span class="p">)</span>
@@ -15160,21 +15064,12 @@ min f(x) = 13.8790
 <p>minimize() 函数对于等式约束、不等式约束条件的编程定义了标准形式和输入格式，通过对比 4.2～4.4 的 3个例程可以帮助读者理解有关的格式要求。</p>
 
 </div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 
 </div>

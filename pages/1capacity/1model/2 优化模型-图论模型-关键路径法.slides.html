@@ -14419,19 +14419,34 @@ NetworkX 提供了拓扑序列和关键路径的函数，但没有给出计划�
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>关键路径法将项目分解成为多个独立的活动并确定每个活动的工期，然后用逻辑关系（结束-开始、结束-结束、开始-开始和开始-结束）将活动连接。首先使用正推法（Forward pass），从起点开始向后计算，依次计算每个顶点（事件）的最早开始时间 ES；然后再使用逆推法（Backward pass），从终点开始向前计算，依次计算每个顶点（事件）的最迟结束时间 LF。进而可以求出每条边（工序）的最早结束时间 EF 和最迟开始时间 LS。最早开始时间 ES 和最晚开始时间 LS 相等的边，就是关键路径上的边，对应的工序是关键工序。</p>
+<p>关键路径法将项目分解成为多个独立的活动并确定每个活动的工期，然后用逻辑关系（结束-开始、结束-结束、开始-开始和开始-结束）将活动连接。首先使用正推法（Forward pass），从起点开始向后计算，依次计算每个顶点（事件）的<strong>最早开始时间 ES</strong>；然后再使用逆推法（Backward pass），从终点开始向前计算，依次计算每个顶点（事件）的<strong>最迟结束时间 LF</strong>。进而可以求出每条边（工序）的最早结束时间 EF 和最迟开始时间 LS。最早开始时间 ES 和最晚开始时间 LS 相等的边，就是关键路径上的边，对应的工序是关键工序。</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>ES：最早开始时间（Earliest Start），指某项活动能够开始的最早时间，取决于该项活动的所有紧前工作的结束时间，由顺推法计算 ES = max{EF(preceding activities)}。
-EF：最早结束时间（Earliest Finish），指某项活动能够完成的最早时间。EF = ES+DU， DU为该活动的持续时间。
-LF：最迟结束时间（Latest Finish），指为了保证整个项目按期完成的某项活动必须完成的最晚时间，取决于该项活动的所有紧后工作的最迟开始时间，由逆推法计算 LF = min{LS(successor activities)}。
-LS：最迟开始时间（Latest Start），指为了保证整个项目按期完成的某项活动必须开始的最迟时间。LS = LF -DU，DU为该活动的持续时间。
-TF：总时差（Total float time），指在不影响总工期的条件下，一个活动可以利用的机动时间。TF = LF - EF。
-FF：自由时差（Free float time），指在不影响紧后工作最早开始时间的条件下，一个活动可能被延迟的时间。FF = min{ES(successor activities)} - EF。
-由关键路径法得到的最早/最晚的开始/结束时间并不一定就是项目进度计划，而是把既定的参数（活动持续时间、逻辑关系、提前量、滞后量和其它制约条件）输入进度模型后所得到的结果，表明活动可以在该时段内实施。</p>
+<ul>
+<li>ES：最早开始时间（Earliest Start），指某项活动能够开始的最早时间，取决于该项活动的所有紧前工作的结束时间，由顺推法计算 ES = max{EF(preceding activities)}。</li>
+<li>EF：最早结束时间（Earliest Finish），指某项活动能够完成的最早时间。EF = ES+DU， DU为该活动的持续时间。</li>
+<li>LF：最迟结束时间（Latest Finish），指为了保证整个项目按期完成的某项活动必须完成的最晚时间，取决于该项活动的所有紧后工作的最迟开始时间，由逆推法计算 LF = min{LS(successor activities)}。</li>
+<li>LS：最迟开始时间（Latest Start），指为了保证整个项目按期完成的某项活动必须开始的最迟时间。LS = LF -DU，DU为该活动的持续时间。</li>
+<li>TF：总时差（Total float time），指在不影响总工期的条件下，一个活动可以利用的机动时间。TF = LF - EF。</li>
+<li>FF：自由时差（Free float time），指在不影响紧后工作最早开始时间的条件下，一个活动可能被延迟的时间。FF = min{ES(successor activities)} - EF。  </li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>ES：最早开始时间（Earliest Start），指某项活动能够开始的最早时间，取决于该项活动的所有紧前工作的结束时间，由顺推法计算 ES = max{EF(preceding activities)}。</li>
+<li>EF：最早结束时间（Earliest Finish），指某项活动能够完成的最早时间。EF = ES+DU， DU为该活动的持续时间。</li>
+<li>LF：最迟结束时间（Latest Finish），指为了保证整个项目按期完成的某项活动必须完成的最晚时间，取决于该项活动的所有紧后工作的最迟开始时间，由逆推法计算 LF = min{LS(successor activities)}。</li>
+<li>LS：最迟开始时间（Latest Start），指为了保证整个项目按期完成的某项活动必须开始的最迟时间。LS = LF -DU，DU为该活动的持续时间。</li>
+<li>TF：总时差（Total float time），指在不影响总工期的条件下，一个活动可以利用的机动时间。TF = LF - EF。</li>
+<li>FF：自由时差（Free float time），指在不影响紧后工作最早开始时间的条件下，一个活动可能被延迟的时间。FF = min{ES(successor activities)} - EF。  </li>
+</ul>
+<p>由关键路径法得到的最早/最晚的开始/结束时间并不一定就是项目进度计划，而是把既定的参数（活动持续时间、逻辑关系、提前量、滞后量和其它制约条件）输入进度模型后所得到的结果，表明活动可以在该时段内实施。</p>
 <p>早期关键路径法的表示方法都是箭线法（ADM），随着计算机的发展，前导图（PDM）逐渐成为主流方法。</p>
 
 </div>
@@ -14515,7 +14530,6 @@ dag_longest_path_length() 的返回值是 DG 最长路径的组成边的加权�
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>本案例问题来自：司守奎、孙兆亮，数学建模算法与应用（第2版），P62-68，例4.16-4.18，国防工业出版社。</p>
 <p>问题分析： 用如下图所示的计划网络图表示问题描述的各项作业及作业间的相互关系。图中的顶点表示作业开始或结束的事件，顶点之间的边（箭线）表示一项作业，边的权值表示该项作业的完成时间。虚线边表示虚拟作业。 该计划网络图的关键路径长度，即为完成该项目的最短时间。</p>
 
 </div>
@@ -14525,13 +14539,7 @@ dag_longest_path_length() 的返回值是 DG 最长路径的组成边的加权�
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel23_v1.py</span>
-<span class="c1"># Demo23 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of critical path method (CPM)  with NetworkX</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-07-25</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>  <span class="c1"># 导入 NetworkX 工具包</span>
@@ -14892,21 +14900,13 @@ for e in DG.out_edges(revSeq[i]) 表示遍历顶点revSeq[i] 的出边，由此�
 
 </div>
 
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
+<li>司守奎、孙兆亮，数学建模算法与应用（第2版）</li>
 </ul>
 
 </div>

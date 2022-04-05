@@ -14403,12 +14403,17 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>回忆优化算法三要素：</p>
+<p>优化算法三要素：</p>
 <ul>
 <li><strong>变量</strong>（Decision Variable）</li>
 <li><strong>约束条件</strong>（Constraints）</li>
 <li><strong>目标函数</strong>（Objective function）</li>
 </ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>采用最优化算法解决实际问题主要分为下列两步：</p>
 <ol>
 <li>建立数学模型。对可行方案进行编码（就是确定变量），约束条件以及目标函数的构造。</li>
@@ -14416,7 +14421,7 @@ div.jp-OutputPrompt {
 </ol>
 
 </div>
-</div></section><section>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>例如，对于一组可以用列向量表示的变量</p>
@@ -14445,7 +14450,12 @@ $$
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>此外，根据自变量的情况，也可以将最优化问题分为<strong>函数优化问题</strong>和<strong>组合优化问题</strong>两大类，其中函数优化的对象是一定区间的连续变量，而组合优化的对象则是解空间中的离散状态。其中典型的组合优化问题有。</p>
+<p>此外，根据自变量的情况，也可以将最优化问题分为<strong>函数优化问题</strong>和<strong>组合优化问题</strong>两大类，其中函数优化的对象是一定区间的连续变量，而组合优化的对象则是解空间中的离散状态。其中典型的组合优化问题有:</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>旅行商(Traveling salesman problem,TSP)问题</li>
 <li>加工调度问题(Scheduling problem,如Flow-shop,Job-shop)</li>
@@ -14456,7 +14466,7 @@ $$
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="TSP&#38382;&#39064;">TSP&#38382;&#39064;<a class="anchor-link" href="#TSP&#38382;&#39064;">&#182;</a></h2>
@@ -14467,6 +14477,11 @@ $$
 <p>已知敌方100个目标的经度、纬度如下表所示。</p>
 <p><img src="https://cdn.kesci.com/upload/image/q3w4cm6jo6.png?imageView2/0/w/960/h/960" alt="Image Name"></p>
 <p><img src="https://cdn.kesci.com/upload/image/q3w4ctq050.png?imageView2/0/w/960/h/960" alt="Image Name"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>我方有一个基地，经度和纬度为$(70,40)$。假设我方飞机的速度为$1000公里/小时$。我方派一架飞机从基地出发，侦察完敌方所有目标，再返回原来的基地。在敌方每一目标点的侦察时间不计，求该架飞机所花费的时间（假设我方飞机巡航时间可以充分长）。我们依次给基地编号为$1$，敌方目标依次编号为$2,3,\cdots,101$，最后我方基地再重复编号为 $102$。</p>
 
 </div>
@@ -14484,12 +14499,27 @@ $$<p>其中，$d_{ij}$表示$i,j$两点之间的距离$(i, j=1,2, \cdots, 102)$�
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>将上述问题抽象为即为<strong>旅行商问题 ( TSP,Traveling Salesman Problem )</strong> ：有N个城市，要求从其中某个城市出发，唯一遍历所有城市，再回到出发的城市，求最短的路线。</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>旅行商问题属于所谓的<strong>NP完全问题</strong>（是世界七大数学难题之一。NP的英文全称是Non-deterministic Polynomial的问题，即多项式复杂程度的非确定性问题），<strong>精确的解决TSP只能通过穷举所有的路径组合</strong>，其时间复杂度是$O(N!)$ 。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>也就是说，针对以上问题，如果我们使用穷举的方法，需要计算$A_{102}^{102} = 102!$种情况，然后选择一个最好的解，但这种方法的计算量显然是无法接受的。我们称类似的问题为NP-hard 组合优化问题。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>针对这类问题，我们可以考虑采用现代优化算法进行求解。</p>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#29616;&#20195;&#20248;&#21270;&#31639;&#27861;&#30340;&#20998;&#31867;">&#29616;&#20195;&#20248;&#21270;&#31639;&#27861;&#30340;&#20998;&#31867;<a class="anchor-link" href="#&#29616;&#20195;&#20248;&#21270;&#31639;&#27861;&#30340;&#20998;&#31867;">&#182;</a></h2>
@@ -14516,81 +14546,61 @@ $$<p>其中，$d_{ij}$表示$i,j$两点之间的距离$(i, j=1,2, \cdots, 102)$�
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>启发式算法包含的算法很多，例如解决复杂优化问题的蚁群算法。有些启发式算法是根据实际问题而产生的，如解空间分解、解空间的限制等；另一类算法是集成算法，这些算法是诸多启发式算法的合成。</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>我们通常把启发式算法分为以下四类：</p>
 <ul>
-<li><p>基于随机选择</p>
-<ul>
+<li>基于随机选择<ul>
 <li>通过随机选择之后进行筛选</li>
 </ul>
 </li>
-<li><p>基于贪心算法</p>
+</ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>基于贪心算法<ul>
 <li>通过每一步尝试最优策略</li>
 </ul>
 </li>
-<li><p>基于元启发式算法</p>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>基于元启发式算法<ul>
 <li>通过已有的较优解迭代</li>
 <li>基于禁忌搜索、基于遗传算法、基于遗传编程、基于蚁群算法</li>
 </ul>
 </li>
-<li><p>基于学习</p>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>基于学习<ul>
 <li>通过构造参数学习函数或特征匹配</li>
 <li>深度学习、机器学习</li>
 </ul>
 </li>
 </ul>
-<p>今天，我们将会学习启发式算法中的两个最经典的算法：<strong>遗传算法和模拟退火算法</strong>。</p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#21551;&#21457;&#24335;&#20248;&#21270;&#26041;&#27861;&#24635;&#32467;">&#21551;&#21457;&#24335;&#20248;&#21270;&#26041;&#27861;&#24635;&#32467;<a class="anchor-link" href="#&#21551;&#21457;&#24335;&#20248;&#21270;&#26041;&#27861;&#24635;&#32467;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>模拟退火算法</strong></p>
-<p>迭代搜索效率高，并且可以并行化；</p>
-<p>算法中有一定概率接受比当前解较差的解，因此一定程度上可以跳出局部最优；</p>
-<p>算法求得的解与初始解状态S无关，因此有一定的鲁棒性；</p>
-<p>具有渐近收敛性，已在理论上被证明是一种以概率l收敛于全局最优解的全局优化算法。</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>遗传算法</strong></p>
-<p>优点：</p>
-<ul>
-<li>可以解决复杂的实际问题</li>
-<li>求解思路比较简单（与纯数学方法比较）</li>
-<li>算法计算时间与问题相关性不大</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>算法要根据问题调整</li>
-<li>求出的解是满意解，只能接近最优解</li>
-<li>存在算法不适用的情况，并且难以判断原因</li>
-</ul>
-
-</div>
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
-<li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
 <li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 

@@ -14477,10 +14477,10 @@ y(t+\Delta t) = y(t) + \Delta t\left[-dy(t) + bx(t)y(t)\right]\\
 \end{cases}
 $$
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14502,8 +14502,20 @@ $$
 <span class="n">xlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
 <span class="n">ylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span>
 <span class="n">TimeList</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">deltaT</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">timeStep</span><span class="p">))]</span>
+</pre></div>
 
-<span class="c1"># 递推地求解差分方程</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 递推地求解差分方程</span>
 <span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">TimeList</span><span class="p">:</span>
     <span class="n">xlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="n">deltaT</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
     <span class="n">ylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="n">deltaT</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="n">d</span> <span class="o">*</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
@@ -14690,10 +14702,10 @@ $$
 \end{aligned}
 $$
 </div>
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 加入logistic项的Volterra模型</span>
@@ -14715,8 +14727,20 @@ $$
 <span class="n">xlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
 <span class="n">ylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span>
 <span class="n">TimeList</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">deltaT</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">timeStep</span><span class="p">))]</span>
+</pre></div>
 
-<span class="c1"># 递推地求解差分方程</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 递推地求解差分方程</span>
 <span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">TimeList</span><span class="p">:</span>
     <span class="n">xlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="n">deltaT</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N1</span> <span class="o">-</span> <span class="n">sigma1</span> <span class="o">*</span> <span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N2</span><span class="p">))</span>
     <span class="n">ylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="n">deltaT</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span><span class="n">sigma2</span><span class="o">*</span> <span class="n">xlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N1</span> <span class="o">-</span>  <span class="n">ylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N2</span><span class="p">))</span>
@@ -14771,21 +14795,12 @@ $$
 
 </div>
 
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
-<li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 
 </div>

@@ -14418,8 +14418,9 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>插值，是在离散数据的基础上补插连续函数，使得插值函数通过全部给定的离散数据点。 插值是离散函数逼近的重要方法，利用它可通过函数在有限个点处的取值状况，估算出函数在其他点处的近似值。简单地说，插值是求过一组已知点的近似函数。
-拟合，是用一个连续函数（曲线）靠近给定的离散数据，使其与给定的数据相吻合。拟合也是根据一组已知点求近似函数，但不要求过已知点。
+<p>插值，是在离散数据的基础上补插连续函数，使得插值函数通过全部给定的离散数据点。</p>
+<p>插值是离散函数逼近的重要方法，利用它可通过函数在有限个点处的取值状况，估算出函数在其他点处的近似值。简单地说，插值是求过一组已知点的近似函数。</p>
+<p>拟合，是用一个连续函数（曲线）靠近给定的离散数据，使其与给定的数据相吻合。拟合也是根据一组已知点求近似函数，但不要求过已知点。
 因此，插值和拟合都是根据一组已知数据点，求变化规律和特征相似的近似曲线的过程。但是插值要求近似曲线完全经过所有的给定数据点，而拟合只要求近似曲线在整体上尽可能接近数据点，并反映数据的变化规律和发展趋势。</p>
 
 </div>
@@ -14547,19 +14548,13 @@ interp1d 允许通过参数 bounds_error、fill_value 设置外推时的边界�
 <p>Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel24_v1.py</span>
-<span class="c1"># Demo24 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of interpolate with Scipy.interpolate</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-01</span>
-
-<span class="c1"># 2. 一维插值方法(内插)比较</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. 一维插值方法(内插)比较</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># 导入 Matplotlib 工具包</span>
 <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>  <span class="c1"># 导入 scipy 中的一维插值工具 interp1d</span>
@@ -14569,8 +14564,20 @@ interp1d 允许通过参数 bounds_error、fill_value 设置外推时的边界�
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 生成已知数据点集的 x</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># 生成已知数据点集的 y</span>
 <span class="n">xnew</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># 指定需插值的数据点集 xnew</span>
+</pre></div>
 
-<span class="c1"># 使用不同插值方法，由给定数据点集 (x,y) 求插值函数 fx</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用不同插值方法，由给定数据点集 (x,y) 求插值函数 fx</span>
 <span class="n">f1</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>  <span class="c1"># 线性插值</span>
 <span class="n">f2</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zero&quot;</span><span class="p">)</span>  <span class="c1"># 零阶样条插值</span>
 <span class="n">f3</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;slinear&quot;</span><span class="p">)</span>  <span class="c1"># 一次样条插值</span>
@@ -14580,8 +14587,20 @@ interp1d 允许通过参数 bounds_error、fill_value 设置外推时的边界�
 <span class="c1"># f7 = interp1d(x, y, kind=&quot;nearest-up&quot;)  # 临近点插值，向上舍入</span>
 <span class="n">f8</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;previous&quot;</span><span class="p">)</span>  <span class="c1"># 前点插值</span>
 <span class="n">f9</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;next&quot;</span><span class="p">)</span>  <span class="c1"># 后点插值</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Data interpolate&quot;</span><span class="p">)</span>  <span class="c1"># 全局标题</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
@@ -14606,7 +14625,20 @@ interp1d 允许通过参数 bounds_error、fill_value 设置外推时的边界�
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">f9</span><span class="p">(</span><span class="n">xnew</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;next&quot;</span><span class="p">)</span>  <span class="c1"># 后点插值</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">,</span> <span class="s2">&quot;youcans-xupt&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gainsboro&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14704,10 +14736,10 @@ UnivariateSpline 可以外插值，允许通过设置参数 ext= 0 或 "extrapol
 <h3 id="3.2-Python-&#20363;&#31243;&#65306;&#19968;&#32500;&#25554;&#20540;&#65288;UnivariateSpline&#65289;">3.2 Python &#20363;&#31243;&#65306;&#19968;&#32500;&#25554;&#20540;&#65288;UnivariateSpline&#65289;<a class="anchor-link" href="#3.2-Python-&#20363;&#31243;&#65306;&#19968;&#32500;&#25554;&#20540;&#65288;UnivariateSpline&#65289;">&#182;</a></h3><p>Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3. 一维插值方法(外插)</span>
@@ -14729,8 +14761,20 @@ UnivariateSpline 可以外插值，允许通过设置参数 ext= 0 或 "extrapol
 
 <span class="n">fSpl2</span><span class="o">.</span><span class="n">set_smoothing_factor</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># 设置光滑因子 sf</span>
 <span class="n">y3</span> <span class="o">=</span> <span class="n">fSpl2</span><span class="p">(</span><span class="n">xnew</span><span class="p">)</span>   <span class="c1"># 由插值函数 fSpl2(sf=0.1) 计算插值点的函数值 y3</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;3rd spline interpolate&quot;</span><span class="p">)</span>
@@ -14824,19 +14868,13 @@ kind：字符串或整数，可选项，指定使用的样条曲线的种类或�
 <h3 id="4.2-Python-&#20363;&#31243;&#65306;&#20108;&#32500;&#25554;&#20540;&#65288;interp2d&#65289;">4.2 Python &#20363;&#31243;&#65306;&#20108;&#32500;&#25554;&#20540;&#65288;interp2d&#65289;<a class="anchor-link" href="#4.2-Python-&#20363;&#31243;&#65306;&#20108;&#32500;&#25554;&#20540;&#65288;interp2d&#65289;">&#182;</a></h3><p>使用示例：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel24_v1.py</span>
-<span class="c1"># Demo24 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of interpolate with Scipy.interpolate</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-01</span>
-
-<span class="c1"># 4. 二维插值方法</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 4. 二维插值方法</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp2d</span>  <span class="c1"># 导入 scipy 中的二维插值工具 interp2d</span>
@@ -14856,8 +14894,20 @@ kind：字符串或整数，可选项，指定使用的样条曲线的种类或�
 <span class="n">ynew</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># ynew 是一维数组</span>
 <span class="n">znew</span> <span class="o">=</span> <span class="n">fInterp</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">ynew</span><span class="p">)</span>  <span class="c1"># 计算插值函数 fInterp 在 (xnew, ynew) 所描述网格点集的函数值</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shape of interpolation dataset:</span><span class="se">\n\t</span><span class="s2">xnew:</span><span class="si">{}</span><span class="s2">,ynew:</span><span class="si">{}</span><span class="s2">,znew:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xnew</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">ynew</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">znew</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;2-D original data&quot;</span><span class="p">)</span>
@@ -14871,7 +14921,20 @@ kind：字符串或整数，可选项，指定使用的样条曲线的种类或�
 <span class="n">ax2</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xxnew</span><span class="p">,</span> <span class="n">yynew</span><span class="p">,</span> <span class="n">znew</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">surf2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xxnew</span><span class="p">,</span> <span class="n">yynew</span><span class="p">,</span> <span class="n">znew</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;zInterp&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14934,19 +14997,13 @@ shape of interpolation dataset:
 <p>Python 例程：</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mathmodel24_v1.py</span>
-<span class="c1"># Demo24 of mathematical modeling algorithm</span>
-<span class="c1"># Demo of interpolate with Scipy.interpolate</span>
-<span class="c1"># Copyright 2021 YouCans, XUPT</span>
-<span class="c1"># Crated：2021-08-01</span>
-
-<span class="c1"># 5. 二维插值方法</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 5. 二维插值方法</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp2d</span>  <span class="c1"># 导入 scipy 中的二维插值工具 interp2d</span>
@@ -14962,16 +15019,40 @@ shape of interpolation dataset:
 <span class="n">f1</span> <span class="o">=</span> <span class="n">interp2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>  <span class="c1"># 线性插值</span>
 <span class="n">f2</span> <span class="o">=</span> <span class="n">interp2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>  <span class="c1"># 三阶样条插值</span>
 <span class="n">f3</span> <span class="o">=</span> <span class="n">interp2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;quintic&#39;</span><span class="p">)</span>  <span class="c1"># 五阶样条插值</span>
+</pre></div>
 
-<span class="c1"># 由插值函数 fInterp 计算需插值的网格点集 ynew,xnew 的函数值</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由插值函数 fInterp 计算需插值的网格点集 ynew,xnew 的函数值</span>
 <span class="n">xnew</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>  <span class="c1"># xnew 是一维数组</span>
 <span class="n">ynew</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># ynew 是一维数组</span>
 <span class="n">z1</span> <span class="o">=</span> <span class="n">f1</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">ynew</span><span class="p">)</span>  <span class="c1"># 根据线性插值函数 f1 计算需插值的网格点集的函数值</span>
 <span class="n">z2</span> <span class="o">=</span> <span class="n">f2</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">ynew</span><span class="p">)</span>  <span class="c1"># 根据三阶样条插值函数 f2 计算需插值的网格点集的函数值</span>
 <span class="n">z3</span> <span class="o">=</span> <span class="n">f3</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">ynew</span><span class="p">)</span>  <span class="c1"># 根据五阶样条插值函数 f3 计算需插值的网格点集的函数值</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shape of interpolation dataset:</span><span class="se">\n\t</span><span class="s2">xnew:</span><span class="si">{}</span><span class="s2">,ynew:</span><span class="si">{}</span><span class="s2">,znew:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xnew</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">ynew</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">z1</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</pre></div>
 
-<span class="c1"># 绘图</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘图</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;2-D data interpolate&quot;</span><span class="p">)</span>  <span class="c1"># 全局标题</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
@@ -14990,7 +15071,20 @@ shape of interpolation dataset:
 <span class="n">plt</span><span class="o">.</span><span class="n">pcolor</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">ynew</span><span class="p">,</span> <span class="n">z3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">hsv</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;quintic&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15039,21 +15133,12 @@ shape of interpolation dataset:
 
 </div>
 
-</div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
-<li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
 </ul>
 
 </div>
