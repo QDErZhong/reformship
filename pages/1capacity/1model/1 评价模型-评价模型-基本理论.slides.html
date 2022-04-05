@@ -14408,50 +14408,45 @@ div.jp-OutputPrompt {
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>我们常常会遇到如下的综合评价问题：<strong>在若干个(同类)对象中，从多个维度对其进行评分，将这些评分综合后，给定一个最终排名</strong>。如好大学排名，运动员排名，城市排名等。</p>
+<p>综合评价问题指的是：<strong>在若干个(同类)对象中，从多个维度对其进行度量，综合这些度量后给出一个总分或总排名</strong>。如不同工作的舒适度排名、大学排名、教练的执教水平排名等等。很多外文文献将这类问题称为<strong>多属性决策问题</strong>或<strong>多准则决策问题</strong>（Multi-criteria decision making or Multi-attribute decision making)。</p>
 
 </div>
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>这时候我们就需要用到评价模型，评价模型是数学建模比赛中最基础也是最常用的模型, 例如<a href="https://www.comap.com/highschool/contests/himcm/2018problems.html">2018年HiMCM A题</a> 就专门考察了评价模型。</p>
+<p>这种问题的困难之处在于多个指标之间会相互“竞争”，如何合理权衡指标的重要性并将其整合起来是关键。</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>综合评价模型是数学建模比赛中最基础也是最常用的模型之一。</p>
 
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>There are several Roller Coaster rating/ranking sites online that, while taking some objective measures into account, heavily rely on subjective input to determine the rating or ranking of a particular roller coaster (e.g., an "excitement"or "experience" score of an "expert" rider to measure "thrill").</p>
-<p>In addressing this HiMCM problem, consider only roller coasters currently in operation. We have provided data for a subset of operating roller coasters whose height, speed, and/or drop are above the average of worldwide operating coasters. Therefore, we have not included family or kiddie coasters, nor have we included bobsled or mountain type coasters.</p>
-<p><a href="https://www.comap.com/highschool/contests/himcm/COMAP_RollerCoasterData_2018.xlsx">点我下载</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>Create an objective quantitative algorithm or set of algorithms to develop a descriptive roller coaster rating/ranking system based only on roller coaster numerical and descriptive specification data (e.g., speed, duration of ride, steel or wood, drop).</li>
-<li>Use your algorithm(s) to develop your "Top 10 Roller Coasters in the World" list. Compare and discuss the rating/ranking results and descriptions from your team's algorithm(s) with at least two other rating/ranking systems found online.</li>
-<li>Describe the concept and design for a user-friendly app that uses your algorithm(s) to help a potential roller coaster rider find a roller coaster that she or he would want to ride. NOTE: You DO NOT need to program and/or write code for the app. You are developing the concept and design for the app only.</li>
-<li>Write a one-page non-technical News Release describing your new algorithm, results, and app.</li>
-</ol>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>如何去思考综合评价问题的建模呢？通常有如下五个角度</p>
+<p>我们通过评价系统来是对评价问题进行解决。一个评价系统含如下5个要素：</p>
 <ul>
-<li><strong>评价对象</strong>：评价对象就是综合评价问题中所研究的对象，或称为系统。通常情况下，在一个问题中评价对象是属于同一类的，且个数要大于1，不妨假设一个综合评价问题中有$n$个评价对象，分别记为</li>
+<li><strong>评价对象</strong>：即评价问题中所研究的对象。假设一个综合评价问题中有$n$个评价对象，分别将其记为</li>
 </ul>
 $$
 S_{1}, S_{2}, \cdots, S_{n}(n&gt;1)
 $$
 </div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>评价者</strong> 评价者是对评价对象进行评价的个人或团体。</li>
+</ul>
+
+</div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><strong>评价指标</strong>：评价指标是反映评价对象的运行（或发展）状况的基本要素。通常的问题都是有多项指标构成，每一项指标都是从不同的侧面刻画系统所具有某种特征大小的一个度量。一个综合评价问题的评价指标一般可用一个向量$x$表示，称为评价指标问题，其中每一个分量就是从一个侧面反映系统的状态，即称为综合评价的指标体系。不失一般性，设系统有$m$个评价指标，分别记为</li>
+<li><strong>评价指标</strong>：评价指标用于度量评价对象的属性或状况。通常的问题都是有多项指标构成，每一项指标都是从不同的侧面刻画系统所具有某种特征大小的一个度量。一个综合评价问题的评价指标一般可用一个向量$\vec{x}$表示，其中每一个分量反映评价对象某一侧面的状态。假设系统有$m$个评价指标，分别记为</li>
 </ul>
 $$
 x_{1}, x_{2}, \cdots, x_{m}(m&gt;1)
@@ -14461,7 +14456,7 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><strong>权重系数</strong>： 每一个综合评价问题都有相应的评价目的，针对某种评价目的，各评价指标之间的相对重要性是不同的，评价指标之间的这种相对重要性的大小，可用权重系数来刻画。当各评价对象和评价指标值都确定以后，综合评价结果就依赖于权重系数的取值了，即<strong>权重系数确定的合理与否，直接关系到综合评价结果的可信度，甚至影响到最后决策的正确性</strong>。因此，权重系数的确定要特别谨慎，应按一定的方法和原则来确定。如果用$w_{j}(j=1,2, \cdots, m)$来表示评价指标$x_j$的权重系数，一般应满足</li>
+<li><strong>权重系数</strong>： 权重系数是对评价指标的相对重要性的量化表示。当各评价对象和评价指标值都确定以后，综合评价结果就依赖于权重系数的取值了，即<strong>权重系数确定的合理与否，直接关系到综合评价结果的可信度，甚至影响到最后决策的正确性</strong>。因此，权重系数的确定要特别谨慎，应按一定的方法和原则来确定。如果用$w_{j}(j=1,2, \cdots, m)$来表示评价指标$x_j$的权重系数，一般应满足</li>
 </ul>
 $$
 w_{j} \geq 0, j=1,2, \cdots, m
@@ -14473,80 +14468,56 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p><strong>综合模型</strong> 对于多指标（或多因素）的综合评价问题，就是要通过建立一定的数学模型将多个评价指标值综合成为一个整体的综合评价值，作为综合评价的依据，从而得到相应的评价结果。</p>
-</li>
-<li><p><strong>评价者</strong> 评价者是直接参与评价的人，可以是一个人，也可以是一个团体。对于评价目的选择、评价指标体系确定、权重系数的确定和评价模型的建立都与评价者有关。因此，评价者在评价过程中的作用是不可小视的。</p>
-</li>
+<li><strong>综合模型</strong> 综合模型是要通过建立一定的数学模型将多个评价指标值进行合理地量化综合打分，作为评价最终结果的依据。</li>
 </ul>
 
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>目前国内外综合评价方法有数十种之多，其中主要使用的评价方法有</p>
+<p>关于综合评价的研究，具体可以参考如下书籍：</p>
+<ul>
+<li>Tzeng, Gwo-Hshiung, and Jih-Jeng Huang. Multiple attribute decision making: methods and applications. CRC press, 2011.</li>
+<li>Alinezhad, Alireza, and Javad Khalili. New methods and applications in multiple attribute decision making (MADM). Vol. 277. Cham: Springer, 2019.  </li>
+</ul>
+<p>当然很多优秀的学术论文解决的也是评价类问题，学习者也可以“综合评价模型”“多准则评价”“multi-criteria decision making”为关键词进行检索。</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>比较较经典且常用的评价模型包括：</p>
 <ul>
-<li>主成分分析法</li>
-<li>因子分析</li>
 <li><strong>TOPSIS</strong></li>
 <li>秩和比法</li>
 <li>灰色关联法</li>
 <li><strong>熵权法</strong></li>
 <li><strong>层次分析法</strong></li>
 <li>模糊评价法</li>
-<li>物元分析法</li>
-<li>聚类分析法</li>
-<li>价值工程法</li>
-<li>神经网络法等</li>
 </ul>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>方法多样，各自有其适用场景。本次课程，我们重点展开讲其中较为常用的<strong>TOPSIS、熵权法和层次分析法</strong>。</p>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="&#35780;&#20215;&#27169;&#22411;&#24635;&#32467;">&#35780;&#20215;&#27169;&#22411;&#24635;&#32467;<a class="anchor-link" href="#&#35780;&#20215;&#27169;&#22411;&#24635;&#32467;">&#182;</a></h1>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>评价问题的流程：</p>
-<ol>
-<li>筛选指标</li>
-<li>指标一致化和无量纲化</li>
-<li>确定权重</li>
-<li>使用合适的综合评价方法，加权综合求评分,得到结果</li>
-</ol>
+<p>当然，我们除了要关注评价模型选择以外，也要注意：</p>
 <ul>
-<li>优先选择客观方法，但也具有其局限性</li>
-<li>如果选用了主观方法（AHP）,需要做一致性检验和敏感性分析</li>
+<li>指标的筛选。挑选出合理的、有代表性的且可进行测量的属性或指标</li>
+<li>数据的预处理。为了适应后续模型的要求以及指标之间的可比性、一致性，对原始数据进行转换</li>
+<li>模型的适合度。不同模型有不同的特点，有的模型简单且常用，有的模型复杂、考虑全面，但操作难度大，还有的模型是在其他模型基础上构建的，建模者需要根据自身和问题的情况进行选择，不必贪求高难度。 </li>
+<li>结果的检验和比较。对评价模型得到的结果进行敏感性、稳健性分析，确保模型的可用性</li>
 </ul>
 
 </div>
-</div></div></section></section><section><section><image>
-</section>
-<section data-background="#0093C9" data-state="no-title-footer">
-  <div class="divider_h1">
-    <h1>Questions???</h1>
-  </div>
-</section>
-</image></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
 <ul>
+<li>维基百科 <a href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></li>
 <li>ThomsonRen 的 github <a href="https://github.com/ThomsonRen/mathmodels">https://github.com/ThomsonRen/mathmodels</a></li>
 <li>youcans Python小白的数学建模课 <a href="https://www.zhihu.com/column/c_1381900867424075776">https://www.zhihu.com/column/c_1381900867424075776</a></li>
-<li>司守奎 的 《Python数学实验与建模》</li>
+<li>司守奎 《Python数学实验与建模》</li>
 </ul>
 
 </div>
