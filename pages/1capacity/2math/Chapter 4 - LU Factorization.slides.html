@@ -14382,7 +14382,20 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="slides"><section><section><head>
+<meta charset="UTF-8">
+</head>
+<section  data-state="no-title-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
+    <p>&nbsp;</p>
+    <h3 style="text-align:center;">模型知识点</h3>
+    <h3 style="color:tomato;text-align:center;">高等数学-线性代数-矩阵</h3>
+    <p>&nbsp;</p>
+    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
+    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
+</section></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
@@ -14400,7 +14413,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -14421,20 +14434,20 @@ div.jp-OutputPrompt {
 <h1><font face="gotham" color="purple"> LU Factorization</h1>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>LU factorization rises because of computational efficiency, it mainly facilitates solving the system of linear equations, though the flops (number of floating operations) of LU is still higher than Guassian-Jordon. Nonetheless LU factorization is particularly handy if you are computing multiple solutions of $A x =b$.</p>
 <p>For intance, if you have a set of $\{b_i,\ i \in \mathbb Z\}$ to substitute in the system, we only have to decompose $A$ once, but Guassian-Jordon requires the same amount of flops each time.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2><font face="gotham" color="purple"> LU Algorithm</h2>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We aim to decompose a matrix $A$ into $L$ and $U$, which are lower and upper triangular matrix respectively. And $L$ must have $1$'s on its principal diagonal.</p>
@@ -14442,7 +14455,7 @@ $$
 A = LU
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The reason why $A$ can be decomposed is that $A$ can be converted into a upper triangular matrix after a series of row operations, i.e.</p>
@@ -14450,7 +14463,7 @@ $$E_p...E_2E_1  A = U$$<p>Then</p>
 $$A = (E_p...E_2E_1)^{-1}U = LU$$<p>where</p>
 $$L = (E_p...E_2E_1)^{-1}$$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We will hand calculate an example here:</p>
@@ -14461,7 +14474,7 @@ A =
 \end{bmatrix}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14480,7 +14493,7 @@ $$
 \end{bmatrix}}_{E_1A}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14499,7 +14512,7 @@ $$
 \end{bmatrix}}_{E_2E_1A=U}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14518,7 +14531,7 @@ L^{-1} = E_2E_1 =
 \end{bmatrix}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can compute $E_1^{-1}$ and $E_2^{-1}$, because
@@ -14527,7 +14540,7 @@ L = E_1^{-1}E_2^{-1}
 $$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Construct augmented matrix for $E_2$ and $E_1$
@@ -14563,7 +14576,7 @@ $$
 =[I|E_2^{-1}]
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>And we get the inverse of $E_1$ and $E_2$:
@@ -14573,7 +14586,7 @@ E_2^{-1} = \left[\begin{array}{ccc|ccc} 1&amp; 0&amp; 0 \\ 1&amp; 1&amp; 0\\ 0&a
 $$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14584,7 +14597,7 @@ L = E_1^{-1}E_2^{-1}=
 \left[\begin{array}{ccc|ccc} 1&amp; 0&amp; 0 \\ \frac{4}{3}&amp;1&amp; 0\\ 0&amp; \frac{8}{3} &amp;1 \end{array}\right]
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We finished the LU decomposition
@@ -14599,13 +14612,13 @@ A = LU =
 $$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can take a look at SciPy results.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
@@ -14644,7 +14657,7 @@ $$</p>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
@@ -14718,7 +14731,7 @@ $$</p>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
@@ -14757,7 +14770,7 @@ $$</p>
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>It is easy to notice the SciPy <code>lu</code> function does not only provide $L$ and $U$, it also has $P$ which is a permutation matrix. Theoretically, we don't need row switches to convert $A$ into $U$, but in some situations we must make row switches before, otherwise decomposition will fail to materialize.</p>
@@ -14783,7 +14796,7 @@ $$
 PA = LU
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14844,7 +14857,7 @@ $$</p>
 <h1><font face="gotham" color="purple"> Solving Linear System by Using LU Factorization</h1>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Solve the linear system：
@@ -14896,7 +14909,7 @@ $$\underbrace{\left[\begin{array}{rrrr}
 0 &amp; 0 &amp; 0 &amp; -1
 \end{array}\right]}_{U}$$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Replace $A$ in the system, we have $L(Ux) = b$, solve this pair of equations</p>
@@ -14906,7 +14919,7 @@ Ux = y
 $$<p>Construct augmented matrix $[L|b]$ and $[U|y]$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14932,7 +14945,7 @@ y_4
 \end{array}\right]}_{b}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14950,7 +14963,7 @@ $$
 \end{array}\right]
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14968,13 +14981,13 @@ y_4
 \end{array}\right]
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Next we solve $Ux = y$, to show this in NumPy:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -15013,13 +15026,13 @@ $$
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>If the process is right, this is the solution of the system and we can verify results by invoking <code>np.linalg.solve()</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
