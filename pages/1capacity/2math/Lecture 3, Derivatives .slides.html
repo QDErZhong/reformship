@@ -14382,7 +14382,20 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="slides"><section><section><head>
+<meta charset="UTF-8">
+</head>
+<section  data-state="no-title-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
+    <p>&nbsp;</p>
+    <h3 style="text-align:center;">数学知识点</h3>
+    <h3 style="color:tomato;text-align:center;">高等数学-微积分-导数</h3>
+    <p>&nbsp;</p>
+    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
+    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
+</section></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14397,7 +14410,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In this lecture we will introduce the concept of derivative and introduce the basic rules of differentiation. the word differentiation comes from the word difference, meaning subtraction. The finite difference of a function $f(x)$ at a point $x$ given a step size of $\Delta x$ is simply the difference between the values of the function at those points:</p>
@@ -14406,24 +14419,19 @@ $$
 $$<p>In other words, the finite difference tels us how much the function changes when we move the $x$ coordinate by $\Delta x$:</p>
 $$
 f(x+\Delta x) = f(x) + \Delta f(x)
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Using this finite difference, we can cumpute the rate of change of the function by deviding the difference in its values by the difference in the $x$ coordinate:</p>
+$$<p>Using this finite difference, we can cumpute the rate of change of the function by deviding the difference in its values by the difference in the $x$ coordinate:</p>
 $$
 \dfrac{\Delta f(x)}{\Delta x} = \dfrac{f(x+\Delta x) - f(x)}{\Delta x}
 $$<p>This rate of change tels us huw fast the value of the function proportionally to the change in the input. If the rate of change is positive, the value of the function increases while, if it is negative, the value of the function decreases.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="https://www.math.hmc.edu/calculus/tutorials/limit_definition/gif/figure1.gif" alt="drawing" width="400"/></p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The concept of rate of change is commonly used in elementary physics. Consider a car moving in a highway. The position of the car at time $t_0$ is $q(t_0)$ while its position at time $t_0 + \Delta t$ is $q(t_0 + \delta t)$. The velocity of the car is defined as the ratio between space difference and time difference:</p>
@@ -14434,7 +14442,7 @@ $$<p>You can see that this is the finite difference of the position function $q(
 However, if the time step $\Delta t$ is very small this approximation should become better and better as the speed cannot change too much in a very small amount of time.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Derivative-as-the-limit-of-discrete-rate-of-change">Derivative as the limit of discrete rate of change<a class="anchor-link" href="#Derivative-as-the-limit-of-discrete-rate-of-change">&#182;</a></h3><p>The physical intuition concerning velocities suggest a possible definition for instantaneous rate of change. We define the instantaneous rate of change of the function as the limit of the discrete rate of change for smaller and smaller steps:</p>
@@ -14444,7 +14452,7 @@ $$<p>This limit is in a $\frac{0}{0}$ indeterminate form as both $\Delta t$ and 
 <p>We call the function $\frac{d f(x)}{d x}$ as the derivative of $f(x)$. The derivative function tells us the instantaneous rate of change for each value of $x$.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Derivative-in-geometry:-Slope-of-the-tangent-line">Derivative in geometry: Slope of the tangent line<a class="anchor-link" href="#Derivative-in-geometry:-Slope-of-the-tangent-line">&#182;</a></h3><p>The derivative function has a simple geometrical interpretation. if we have a function $f(x)$ and two pointx $x_0$ and $x_0 + \Delta x$, then there is a stright line intersecting with the function at Cartesian coordinates $(x_0,f(x_0))$ and $(x_0 + \Delta x,f(x_0 + \Delta x))$.
@@ -14452,7 +14460,7 @@ The slope of this straight line is the discrete rate of change of the function. 
 <p><img src="https://i.stack.imgur.com/5ezQF.png" alt="drawing" width="400"/></p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Derivative-as-best-local-linear-approximation">Derivative as best local linear approximation<a class="anchor-link" href="#Derivative-as-best-local-linear-approximation">&#182;</a></h3><p>Another way of interpreting the derivative of a function $f(x)$ at a point $x_0$ is as the angular coefficient of the best linear approximation of the function around the point.</p>
@@ -14464,7 +14472,7 @@ The slope of this straight line is the discrete rate of change of the function. 
 <p>around $x_0$. This constant approximation is visualized in the next figure:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
@@ -14527,7 +14535,7 @@ The slope of this straight line is the discrete rate of change of the function. 
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Let's now consider our original problem: finding the best linear approximation around $x_0$. This linear function should of course have the value $f(x_0)$ at $x_0$ in order to be at least as good as the constant approximation. Therefore, it will have the following form:</p>
@@ -14543,7 +14551,7 @@ $$
 f(x) \approx f(x_0) + \dfrac{df(x_0)}{dx} (x - x_0)
 $$
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
@@ -14604,11 +14612,6 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Derivatives-of-important-functions">Derivatives of important functions<a class="anchor-link" href="#Derivatives-of-important-functions">&#182;</a></h2><p>We can now derive formulas for the derivative of some simple functions. These formulas will be the elementary building blocks that we will use for taking derivatives of more complex functions, it is therefore important that you memorize all of them.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Constant-functions">Constant functions<a class="anchor-link" href="#Constant-functions">&#182;</a></h3>$$
 f(x) = c
 $$$$
@@ -14629,7 +14632,12 @@ $$
 f(x) = c + b x
 $$$$
 \dfrac{df}{dx} = b
-$$<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
 \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{(c + b(x + \Delta x)) - (c + b x)}{\Delta x} = \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{b\Delta x}{\Delta x} = b
 $$
 </div>
@@ -14640,26 +14648,46 @@ $$
 f(x) = x^2
 $$$$
 \dfrac{df}{dx} = 2x
-$$<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
 \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{(x + \Delta x)^2 - x^2}{\Delta x} = \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{x^2 - 2x \Delta x + (\Delta x)^2 - x^2}{\Delta x} = \displaystyle\lim_{\Delta x \rightarrow 0} 2x \dfrac{\Delta x}{\Delta x} + \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{(\Delta x)^2}{\Delta x} = 2x + 0 = 2x
-$$<h3 id="Power-function">Power function<a class="anchor-link" href="#Power-function">&#182;</a></h3>$$
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Power-function">Power function<a class="anchor-link" href="#Power-function">&#182;</a></h3>$$
 f(x) = x^p
 $$$$
 \dfrac{df}{dx} = p x^{p-1}
-$$<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
 <p>Hint: you need to use the famous binomial theorem:</p>
 $$
 (x+\Delta x)^p = \displaystyle\sum_{j=0}^p \displaystyle\binom{p}{j} x^j (\Delta x)^{p - j}
 $$
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exponential-function">Exponential function<a class="anchor-link" href="#Exponential-function">&#182;</a></h3>$$
 f(x) = \mathrm{e}^x
 $$$$
 \dfrac{df}{dx} = \mathrm{e}^x
-$$<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Proof">Proof<a class="anchor-link" href="#Proof">&#182;</a></h4>$$
 \dfrac{df}{dx} = \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{\mathrm{e}^{(x + \Delta x)} - \mathrm{e}^x}{\Delta x}  
 $$<p>We can use the most important property of the exponential:
 $$
@@ -14668,8 +14696,13 @@ $$
 We get:
 $$
 \dfrac{df}{dx} = \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{\mathrm{e}^x (\mathrm{e}^{\Delta x} - 1)}{\Delta x}  
-$$
-We can now use the known asymptotic relation of the exponential near zero:
+$$</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can now use the known asymptotic relation of the exponential near zero:
 $$
 e^{\Delta x} - 1 \sim \Delta x 
 $$
@@ -14690,12 +14723,7 @@ $$</p>
 f(x) = \sin(x)
 $$$$
 \dfrac{df}{dx} = \cos(x)
-$$
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
+$$<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
 <p>Hint: you need to use the sum angle trigonometric rule:</p>
 $$
 \sin(x + \Delta x) = \sin(x) \cos(\Delta x) + \cos(x) \sin(\Delta x)
@@ -14714,10 +14742,15 @@ $$
 f(x) = \cos(x)
 $$$$
 \dfrac{df}{dx} = -\sin(x)
-$$<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Bonus-exercise">Bonus exercise<a class="anchor-link" href="#Bonus-exercise">&#182;</a></h4><p>Prove this formula.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercise-(Very-important)">Exercise (Very important)<a class="anchor-link" href="#Exercise-(Very-important)">&#182;</a></h3><h4 id="3.1">3.1<a class="anchor-link" href="#3.1">&#182;</a></h4><p><strong>a)</strong>
@@ -14725,6 +14758,11 @@ Prove that the derivative of $f(x) = \dfrac{1}{x}$ is:</p>
 $$
 \dfrac{df}{dx} = -\dfrac{1}{x^2}
 $$<p>Hint: It just needs some algebra and some simple limits.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>b)</strong>
 Prove that the derivative of the sum of two functions is equal to the sum of their derivatives:</p>
 $$
@@ -14733,14 +14771,24 @@ $$<p>Hint: Start from the definition. Rearrange the terms. use the fact that the
 $$
 \displaystyle\lim_{\Delta x \rightarrow 0} \left( \dfrac{f(x + \Delta x) - f(x)}{\Delta x} + \dfrac{g(x + \Delta x) - g(x)}{\Delta x} \right)\\[1cm]
 = \displaystyle\lim_{\Delta x \rightarrow 0} \left( \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \right) + \lim_{\Delta x \rightarrow 0} \left(\dfrac{g(x + \Delta x) - g(x)}{\Delta x} \right)
-$$<p><strong>c)</strong>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>c)</strong>
 Prove that you can take a constant out of the derivative:</p>
 $$
 \dfrac{d (c f(x))}{dx} = c \dfrac{d f(x)}{dx}
-$$<p><strong>d)</strong> Use the previous two rules to compute the derivative of the following functions:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>d)</strong> Use the previous two rules to compute the derivative of the following functions:</p>
 
 </div>
-</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="3.2">3.2<a class="anchor-link" href="#3.2">&#182;</a></h4><p><strong>a)</strong> $f(x) = 2 x^3 + x $</p>
@@ -14749,7 +14797,7 @@ $$<p><strong>d)</strong> Use the previous two rules to compute the derivative of
 <p><strong>d)</strong> $f(x) = x^4 - 2 x^2 + x + 4$</p>
 
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="The-product-rule-of-differentiation">The product rule of differentiation<a class="anchor-link" href="#The-product-rule-of-differentiation">&#182;</a></h2><p>Now that we know how to differentiate (i.e. take derivative of) simple functions, we need to derive rules for differentiating more complex functions obtained by combining those simple ones.</p>
@@ -14761,7 +14809,7 @@ $$
 \dfrac{d \left(f(x) g(x)\right)}{d x} = f(x) \dfrac{d g(x)}{d x} + g(x) \dfrac{d f(x)}{d x}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Proof-(This-is-a-very-important-proof-that-I-could-ask-in-the-exam)">Proof (This is a very important proof that I could ask in the exam)<a class="anchor-link" href="#Proof-(This-is-a-very-important-proof-that-I-could-ask-in-the-exam)">&#182;</a></h3><p>We start the proof by writing down the definition of the derivative:</p>
@@ -14770,7 +14818,12 @@ $$
 $$<p>We can now use the definition of the finite difference:</p>
 $$
 f(x + \Delta x) = f(x) + \Delta f(x)
-$$<p>Using this formula we can rearrange the numerator:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Using this formula we can rearrange the numerator:</p>
 $$
 \displaystyle\lim_{\Delta x \rightarrow 0} \dfrac{\left(f(x) + \Delta f(x)\right)\left(g(x) + \Delta g(x)\right) - f(x) g(x)}{\Delta x} = \displaystyle\lim_{\Delta x \rightarrow 0} \left(f(x) \dfrac{\Delta g(x)}{\Delta x} + g(x) \dfrac{\Delta f(x)}{\Delta x} + \Delta f(x) \dfrac{\Delta g(x)}{\Delta x} \right)
 $$<p>The most important part of the prove is the realization that the limit of the third term is equal to zero:</p>
@@ -14786,7 +14839,7 @@ $$
 \end{aligned}
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="3.3">3.3<a class="anchor-link" href="#3.3">&#182;</a></h4><p>Use the product rule for computing the derivative of the following functions:</p>
@@ -14813,7 +14866,7 @@ h(x) = f(u(x))
 $$</p>
 
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1">&#182;</a></h4><p>Consider the following functions:</p>
@@ -14843,7 +14896,12 @@ $$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="The-chain-rule">The chain rule<a class="anchor-link" href="#The-chain-rule">&#182;</a></h3>$$
 \dfrac{dh(x)}{dx} = \dfrac{df(u(x))}{du} \dfrac{du(x)}{dx}
-$$<h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1">&#182;</a></h4><p>Let's take the derivative of:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1">&#182;</a></h4><p>Let's take the derivative of:</p>
 $$
 h(x) = \mathrm{e}^{x^2}
 $$<p>We have that:</p>
@@ -14871,7 +14929,7 @@ $$
 \dfrac{d u(x)}{dx} = \dfrac{d (3 x + 2)}{dx} = 3
 $$
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>therefore:</p>
@@ -14879,7 +14937,7 @@ $$
 \dfrac{dh(x)}{dx} = \dfrac{df(u(x))}{du} \dfrac{du(x)}{dx} = (-\sin(u(x)) + \cos(u(x))) 3 = 3 (\cos(3 x + 2)-\sin(3 x + 2))
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="3.4">3.4<a class="anchor-link" href="#3.4">&#182;</a></h4><p>Use the chain rule for computing the derivative of the following functions:</p>
@@ -14889,7 +14947,7 @@ $$
 <p><strong>d)</strong> $f(x) = \sin(3 x^3 + 2 x) $</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Use the chain rule twice in order to compute the derivative of the following functions:</p>
@@ -14904,7 +14962,7 @@ $$
 x^{8} = \left(\left(x^2 \right)^2\right)^2
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="3.5">3.5<a class="anchor-link" href="#3.5">&#182;</a></h4><p>Use all the rules you know to take the derivatives of the following functions:</p>

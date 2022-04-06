@@ -14382,7 +14382,20 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="slides"><section><section><head>
+<meta charset="UTF-8">
+</head>
+<section  data-state="no-title-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
+    <p>&nbsp;</p>
+    <h3 style="text-align:center;">数学知识点</h3>
+    <h3 style="color:tomato;text-align:center;">高等数学-微积分-积分与微分</h3>
+    <p>&nbsp;</p>
+    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
+    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
+</section></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14403,14 +14416,14 @@ div.jp-OutputPrompt {
 <h1 id="Integration">Integration<a class="anchor-link" href="#Integration">&#182;</a></h1><p>This lecture is about integration and its relation with differentiation. We will discuss the definition of integral, the concept of differetial and we will learn how to solve integrals using the foundamental theorem of caclulus.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Computing-the-area-under-a-curve">Computing the area under a curve<a class="anchor-link" href="#Computing-the-area-under-a-curve">&#182;</a></h2><p>Historically, the development of the concept of integral is motivated by a inportant geometrical problem: finding the area of the geometrical shape delimited from above by a function $f(x)$, from below by the $x$-axis and from left and right by two vertical straight lines located respectively at $x=a$ and $x=b$.</p>
 <p>For example, consider the function $f(x) = \mathrm{e}^x$ between $a = 0$ and $b = 1$. We can visualize the shape delimited by this function as the light blue shaded region in the following pythion plot:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -14427,7 +14440,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
@@ -14488,18 +14501,28 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We define the value of the integral of $f(x)$ from $a$ to $b$ as the area of this shaded region:</p>
 $$
 \displaystyle\int_a^b f(x) dx = \text{Area under the curve delimited by f(x)}
-$$<p>How can we define this concept in formulas?</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>How can we define this concept in formulas?</p>
 <p>In elementary geometry, we can often find the area of complex shapes by subdividing it into many non-overlapping simpler shapes whose area is easy to compute. It is not usually possible to subdivide the shape under a function into simpler shapes such as rectangles. However, we can use rectangles to approximate the shape with a similar one. Specifically, we can divide the interval between $a$ and $b$ into $N$ non-overlapping $\Delta x$ long segments and approximate the area under the function as a sum of the areas of rectagles with base equal to $\Delta x$ and height equal to $f(x_n)$, where $x_n$ is the leftmost $x$-coordinate of the $n$-th segment.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>These approximations are visualized in the following fugures:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
@@ -14558,7 +14581,7 @@ $$<p>How can we define this concept in formulas?</p>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
@@ -14617,7 +14640,7 @@ $$<p>How can we define this concept in formulas?</p>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
@@ -14676,7 +14699,7 @@ $$<p>How can we define this concept in formulas?</p>
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In formula, we can write this approximation as follows:
@@ -14689,13 +14712,13 @@ $$
 \displaystyle\int_a^b f(x) dx = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum^{N-1}_{n=0} f(x_n) \Delta x_{n} = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum^{N-1}_{n=0} f(x_n) \left(x_{n+1} - x_{n} \right)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In the following figure, you can see that the values of these approximated area converges quickly to the value of the integral.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
@@ -14713,7 +14736,7 @@ $$
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
@@ -14769,7 +14792,7 @@ $$
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Some-properties-of-integrals">Some properties of integrals<a class="anchor-link" href="#Some-properties-of-integrals">&#182;</a></h2><p>Integrals follow several very important properties. let's start with the sum rule. Consider two functions $f(x)$ and $g(x)$, the integral of their sum is equal to the sum of their integrals:</p>
@@ -14778,13 +14801,18 @@ $$
 $$<p>Furthermore,a constant $c$ can be "pulled out" from a integral:</p>
 $$
 \displaystyle\int_a^b (c \cdot f(x))dx = c \displaystyle\int_a^b f(x) dx
-$$<p>We also have a simple rule relating integrals for different boundary points. Consider three points $a &lt; b &lt; c$. the integral of a function $f(x)$ between $a$ and $c$ can be decomposed into two integrals:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We also have a simple rule relating integrals for different boundary points. Consider three points $a &lt; b &lt; c$. the integral of a function $f(x)$ between $a$ and $c$ can be decomposed into two integrals:</p>
 $$
 \displaystyle\int_a^c f(x) dx = \displaystyle\int_a^b f(x) dx + \displaystyle\int_b^c f(x) dx
 $$<p>This property is visualized in the following plot:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
@@ -14849,7 +14877,7 @@ $$<p>This property is visualized in the following plot:</p>
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Aslo, by definition the integral between $b$ and $a$ where $b &gt; a$ is equal to the negative of the integral between $a$ and $b$:</p>
@@ -14860,7 +14888,7 @@ $$
 \displaystyle\int_b^a f_{-}(x) dx = -1 \times \text{Area of the blue shaded area}
 $$
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
@@ -14921,7 +14949,7 @@ $$
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Therefore, integrals can assume both positive and negative values. A integral can also be equal to zero if the negative part has the same area of the positive part. A example is</p>
@@ -14930,7 +14958,7 @@ $$
 $$<p>This is visualized in the following figure:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
@@ -14995,7 +15023,7 @@ $$<p>This is visualized in the following figure:</p>
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Solving-integrals-in-the-hard-way">Solving integrals in the hard way<a class="anchor-link" href="#Solving-integrals-in-the-hard-way">&#182;</a></h2><p>Now that we know how to define a integral, we can try to compute the area under some simple functions. It is quite a challening task to solve a integral just by using the definition. However, it is very ionstructive. later we will learn some poerful tools for solving integrals that will make our life much easier.</p>
@@ -15004,7 +15032,7 @@ $$
 \displaystyle\int_0^b x^2 dx
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>using the definition, we can write:
@@ -15017,37 +15045,57 @@ $$
 $$<p>and the leftmost coordinate of the $n$-th segment is</p>
 $$ 
 x_n = n \Delta x = \dfrac{n}{N} b 
-$$<p>using these formulas, we can rewrite the sum as follows:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>using these formulas, we can rewrite the sum as follows:</p>
 $$ 
 \displaystyle\sum^{N-1}_{n=0} x_n^2 \Delta x = \displaystyle\sum^{N-1}_{n=0} \dfrac{n^2}{N^3} b^3 = \dfrac{b^3}{N^3} \displaystyle\sum^{N-1}_{n=0} n^2 
 $$<p>we can now use a well-known formula for the sum of the first $N$ squared numbers:</p>
 $$ 
 \displaystyle\sum^{N-1}_{n=0} n^2 = \dfrac{(N-1)N(2N -1)}{6} 
-$$<p>Using this formula, our sum becomes:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Using this formula, our sum becomes:</p>
 $$ 
 \displaystyle\sum^{N-1}_{n=0} x_n^2 \Delta x = b^3 \dfrac{(N-1)N(2N -1)}{6 N^3} = b^3 \dfrac{2N^3 -3 N^2 + 6}{6 N^3}
 $$<p>and we can finally take the limit for $N$ going to infinity!</p>
 $$
 \displaystyle\int_0^b x^2 dx = \displaystyle\lim_{N \rightarrow \infty} b^3 \dfrac{2N^3 -3 N^2 + 6}{6 N^3}= b^3 \displaystyle\lim_{N \rightarrow \infty} \dfrac{2N^3}{6 N^3} = \dfrac{1}{3} b^3 
-$$<p>Done! We just found that:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Done! We just found that:</p>
 $$
 \displaystyle\int_0^b x^2 dx = \dfrac{1}{3} b^3 
 $$<p>That was a lot of work!</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="5.1">5.1<a class="anchor-link" href="#5.1">&#182;</a></h4><p><strong>a)</strong> Show that:
 $$\displaystyle\int_0^b x dx = \dfrac{1}{2} b^2 $$</p>
 <p>using the following formula:</p>
-$$ \displaystyle\sum_{n=1}^{N-1} n = \dfrac{N (N-1)}{2} $$<p><strong>b)</strong> Show the same result using elementary geometry.</p>
+$$ \displaystyle\sum_{n=1}^{N-1} n = \dfrac{N (N-1)}{2} $$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>b)</strong> Show the same result using elementary geometry.</p>
 <p><strong>c)</strong> Show that:
 $$\displaystyle\int_0^b x^3 dx = \dfrac{1}{4} b^4 $$</p>
 <p>using the following formula:</p>
 $$ \displaystyle\sum_{n=1}^{N-1} n^3 = \left(\displaystyle\sum_{n=1}^{N-1} n\right)^2 = \left(\dfrac{N (N-1)}{2} \right)^2 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Differentials">Differentials<a class="anchor-link" href="#Differentials">&#182;</a></h2><p>Given a function $g(x)$, we can obtain a finite difference $\Delta g(x) = g(x + h) - g(x)$. Analogously, the <strong>differential</strong> $d g(x)$ which roguhly speaking represents an infinitesimally small difference in the value of $g(x)$.</p>
@@ -15055,18 +15103,18 @@ $$ \displaystyle\sum_{n=1}^{N-1} n^3 = \left(\displaystyle\sum_{n=1}^{N-1} n\rig
 <p>More generally, the integral of a function $f(x)$ with respect of the $dg(x)$ is defined as follows:</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$\displaystyle\int_a^b f(x) dg(x) = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum^{N-1}_{n=1} f(x_n) \Delta g(x_{n}) = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum^{N-1}_{n=1} f(x_n) \left(g(x_{n+1}) - g(x_{n}) \right)$$
 </div>
-</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Note that our previous definition of integral is a special case of this new definition with the differential of the identity function $g(x) = x$.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
@@ -15085,7 +15133,7 @@ $$\displaystyle\int_a^b f(x) dg(x) = \displaystyle\lim_{N \rightarrow \infty} \d
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
@@ -15141,7 +15189,7 @@ $$\displaystyle\int_a^b f(x) dg(x) = \displaystyle\lim_{N \rightarrow \infty} \d
 
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Some-simple-rules-for-differentials">Some simple rules for differentials<a class="anchor-link" href="#Some-simple-rules-for-differentials">&#182;</a></h2><p>Dofferentials follow rules very simular to the rules for the derivative.</p>
@@ -15149,34 +15197,34 @@ $$\displaystyle\int_a^b f(x) dg(x) = \displaystyle\lim_{N \rightarrow \infty} \d
 $$ d (c f(x)) = c df(x) $$</p>
 <h3 id="Sum-rule">Sum rule<a class="anchor-link" href="#Sum-rule">&#182;</a></h3>$$ d (f(x) + g(x)) = df(x) + dg(x) $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Product-rule">Product rule<a class="anchor-link" href="#Product-rule">&#182;</a></h3>$$ d \left(f(x) g(x) \right) = g(x) df(x) + f(x) dg(x) $$<h3 id="Chain-rule">Chain rule<a class="anchor-link" href="#Chain-rule">&#182;</a></h3>$$ d \left( f\big(y(x)\big) \right) = \dfrac{df (y(x))}{dy} dy(x)$$<p>As special case, if $y(x) = x$, we get:</p>
 $$ d f(x)  = \dfrac{df}{dx} dx$$<p>As we will see later, this is a statement of the foundamental theorem of calculus.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Some-properties-of-integrals-with-respect-to-differentials">Some properties of integrals with respect to differentials<a class="anchor-link" href="#Some-properties-of-integrals-with-respect-to-differentials">&#182;</a></h2><p>Integrals with respect to a differential have the same properties of regular integrals.</p>
 <h3 id="Sum-rule">Sum rule<a class="anchor-link" href="#Sum-rule">&#182;</a></h3>$$
 \displaystyle\int_a^b (g_1(x) df_1(x) + g_2(x) df_2(x)) = \displaystyle\int_a^b g_1(x) df_1(x) + \displaystyle\int_a^b g_2(x) df_2(x)
+$$<h3 id="Multiplication-by-a-constant">Multiplication by a constant<a class="anchor-link" href="#Multiplication-by-a-constant">&#182;</a></h3>$$
+\displaystyle\int_a^b (c \cdot g_1(x) df_1(x)) = c \displaystyle\int_a^b g_1(x) df_1(x)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Multiplication-by-a-constant">Multiplication by a constant<a class="anchor-link" href="#Multiplication-by-a-constant">&#182;</a></h3>$$
-\displaystyle\int_a^b (c \cdot g_1(x) df_1(x)) = c \displaystyle\int_a^b g_1(x) df_1(x)
-$$<h3 id="Splitting-domain-of-integration">Splitting domain of integration<a class="anchor-link" href="#Splitting-domain-of-integration">&#182;</a></h3><p>$a &lt; b &lt; c$</p>
+<h3 id="Splitting-domain-of-integration">Splitting domain of integration<a class="anchor-link" href="#Splitting-domain-of-integration">&#182;</a></h3><p>$a &lt; b &lt; c$</p>
 $$
 \displaystyle\int_a^c g(x) df(x) = \displaystyle\int_a^b g(x) df(x) + \displaystyle\int_b^c g(x) df(x)
 $$$$
 \displaystyle\int_b^a g(x) df(x) = -\displaystyle\int_a^b g(x) df(x)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises:">Exercises:<a class="anchor-link" href="#Exercises:">&#182;</a></h3><h4 id="5.2">5.2<a class="anchor-link" href="#5.2">&#182;</a></h4><p>Compute the following differentials using sum rule, product rule and chain rule:</p>
@@ -15191,38 +15239,38 @@ $$
 using the foundamental theorem of calculus.</p>
 
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Solving-integrals-in-the-easy-way:-The-foundamental-theorem-of-calculus">Solving integrals in the easy way: The foundamental theorem of calculus<a class="anchor-link" href="#Solving-integrals-in-the-easy-way:-The-foundamental-theorem-of-calculus">&#182;</a></h2>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The foundamental theory of calculus is a very powerful statement connecting the concept of derivative with the concept of integral. In practice, the foundamental theorem offers a simple way to solve the integral of a function $f(x)$ as far as we know a primitive function $F(x)$ such that:</p>
 $$
 \dfrac{dF(x)}{dx} = f(x)
 $$<p>Some people call the operation of finding the primitive $F(x)$ for a given $f(x)$ as anti-derivative as it is the inverse problem of finding the derivative of a function.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The foundamental theorem of caclculus can be stated as</p>
 $$
 f(x) dx = \dfrac{dF(x)}{dx} dx = d F(x) 
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>let's see how to use this theorem for solving integrals. Consider the following integral:</p>
+$$<p>let's see how to use this theorem for solving integrals. Consider the following integral:</p>
 $$
 \displaystyle\int_a^b f(x) dx
-$$<p>Assume that we know a function $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. Then we can use the foundamental theorem to transform our integral as follows:</p>
-$$
-\displaystyle\int_a^b f(x) dx = \displaystyle\int_a^b \dfrac{dF(x)}{dx} dx = \displaystyle\int_a^b dF(x) 
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We now need a way to solve a integral of this form:</p>
+<p>Assume that we know a function $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. Then we can use the foundamental theorem to transform our integral as follows:</p>
+$$
+\displaystyle\int_a^b f(x) dx = \displaystyle\int_a^b \dfrac{dF(x)}{dx} dx = \displaystyle\int_a^b dF(x) 
+$$<p>We now need a way to solve a integral of this form:</p>
 $$
 \displaystyle\int_a^b dF(x) 
 $$<p>To do so, we can try to directly use the definition:</p>
@@ -15230,7 +15278,7 @@ $$
 \displaystyle\int_a^b dF(x) = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum_{n=0}^{N-1} \left(F(x_{n+1}) - F(x_n)\right)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This is a telescopic sum, meaning that all but two terms in the sum exactly cancel out. In fact</p>
@@ -15241,18 +15289,23 @@ $$
  &amp;= \color{brown}{F(b)} - \color{blue}{F(a)}
 \end{aligned}
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This allows us to easily compute the limit and solve the integral:</p>
 $$
 \displaystyle\int_a^b dF(x) = \displaystyle\lim_{N \rightarrow \infty} \displaystyle\sum_{n=0}^{N-1} \left(F(x_{n+1}) - F(x_n)\right) = \displaystyle\lim_{N \rightarrow \infty} (F(b) - F(a)) = F(b) - F(a)
-$$<p>Summarising:</p>
+$$
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Summarising:</p>
 $$
 \displaystyle\int_a^b f(x) dx = \displaystyle\int_a^b \dfrac{dF(x)}{dx} dx = \displaystyle\int_a^b dF(x) = F(b) - F(a)
 $$
 </div>
-</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="How-to-solve-an-integral-using-the-foundamental-theorem">How to solve an integral using the foundamental theorem<a class="anchor-link" href="#How-to-solve-an-integral-using-the-foundamental-theorem">&#182;</a></h3><p>1) Find $F(x)$ such that:
@@ -15261,7 +15314,7 @@ $$ \dfrac{dF}{dx} = f(x) $$</p>
 $$ \displaystyle\int_a^b f(x) dx = F(b) - F(a) $$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1">&#182;</a></h4><p>Consider the following integral:
@@ -15286,7 +15339,7 @@ $$
 $$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example-2">Example 2<a class="anchor-link" href="#Example-2">&#182;</a></h4>$$ \dfrac{d \sin(x)}{dx} = \cos(x) $$$$ \displaystyle\int_0^{\pi/2} \cos(x) dx = \displaystyle\int_0^{\pi/2} d\sin(x) = \sin(\pi/2) - \sin(0) = 1 - 0 = 1$$<h4 id="Example-3">Example 3<a class="anchor-link" href="#Example-3">&#182;</a></h4>$$ \dfrac{d \mathrm{e}^{3x}}{dx} = 3 \mathrm{e}^x $$<p>Therefore $\dfrac{1}{3}\mathrm{e}^{3x}$ is a primitive of $\mathrm{e}^{3x}$. Hence:</p>
@@ -15294,7 +15347,7 @@ $$
 \int_0^{1} e^{3x} dx = \int_0^{1} d(\frac{1}{3}e^{3x}) = \frac{1}{3} e^3 - \frac{1}{3} e^0 = \frac{1}{3}(e^3 - 1)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="5.3">5.3<a class="anchor-link" href="#5.3">&#182;</a></h4><p>Compute the following integrals using the foundamental theorem</p>
@@ -15306,7 +15359,7 @@ $$
 <p><strong>f)</strong> $\displaystyle\int_{-1}^1 (\mathrm{e}^{5x} + \mathrm{e}^{3x} + \mathrm{e}^x) dx$</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="5.4">5.4<a class="anchor-link" href="#5.4">&#182;</a></h4><p>Compute the following integrals with respect of a differential using the foundamental theorem:</p>
@@ -15315,6 +15368,11 @@ $$
 <p><strong>c)</strong> $\displaystyle\int_0^1 x^2 d(x^2)$</p>
 <p><strong>d)</strong> $\displaystyle\int_0^1 x d(x^3)$</p>
 <p>Hint: $dF(x) = \dfrac{dF(x)}{dx} dx$</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="5.5">5.5<a class="anchor-link" href="#5.5">&#182;</a></h4><p>Solve the following integral using a symmetruy argument without using the foundamental theorem.</p>
 <p><strong>a)</strong> $\displaystyle\int_{-\pi/2}^{\pi/2} \sin(x) dx$</p>
 <p>Find two primitives for each of the following functions:</p>

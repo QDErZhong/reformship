@@ -14382,7 +14382,20 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="slides"><section><section><head>
+<meta charset="UTF-8">
+</head>
+<section  data-state="no-title-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
+    <p>&nbsp;</p>
+    <h3 style="text-align:center;">数学知识点</h3>
+    <h3 style="color:tomato;text-align:center;">高等数学-微积分-优化</h3>
+    <p>&nbsp;</p>
+    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
+    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
+</section></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14401,24 +14414,29 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Points-of-maxima-and-minima-of-a-function">Points of maxima and minima of a function<a class="anchor-link" href="#Points-of-maxima-and-minima-of-a-function">&#182;</a></h2><p>In this lecture we will learn how to use derivatives for finding the inputs that either minimize or maximize a function. This is extremely important in applied mathematics, statistics and machine learning as we can derive powerful algorithms by fitting the parameters of a function in a way that minimizes a error function. Therefore, a model fitting problem can be solved by finding the values of the parameters such at ther value of the error function is minimized.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Consider a function $f(x)$. A point of global minimum is defined as the value $\hat{x}$ such that</p>
 $$
 f(\hat{x}) \leq f(x)
 $$<p>for all $x$ in the domain of the function. If $\hat{x}$ is a point of global minimum, then we say that $f(\hat{x})$ is the minimum of the function.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can also define a points of local minimum as follows:</p>
 <p>$\tilde{x}$ is a point of local minimum when there is a number ch that $\tilde{x}$ is a global minimum of the restriction of $f(x)$ to the smalled domain ranging from $\tilde{x}-\delta$ to  $\tilde{x} + \delta$.</p>
 <p>This simply means that $\tilde{x}$ is a global minimum when we only consider a small enough region around it. Note that global minima are also local minima since in that case the definition is fulfilled for all values of $\delta$.</p>
+<p>Again, we say that $f(\tilde{x})$ is a local minimum of the function.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Again, we say that $f(\tilde{x})$ is a local minimum of the function.</p>
 <p>Local and global maxima can be defined in a analogous way by replacing $\leq$ with $\geq$.</p>
 <p>Global and local minima and maxima are visualized in the following figure</p>
 <p><img src="https://qph.fs.quoracdn.net/main-qimg-d7d568041ac03fadb262db316cafd79b.webp" alt="drawing" width="400"/></p>
@@ -14430,16 +14448,16 @@ $$<p>for all $x$ in the domain of the function. If $\hat{x}$ is a point of globa
 <h2 id="Critical-points-and-optimization">Critical points and optimization<a class="anchor-link" href="#Critical-points-and-optimization">&#182;</a></h2><p>When a function $f(x)$ is smooth (i.e. it has a well defined derivative everywhere), pints of maxima and points of minima anre examples of critical points.</p>
 <p>A critical point $x_c$ is a point where the derivative $\dfrac{df(x_c)}{dx}$ is equal to zero. Geometrically, this means that the tangent line of the graph of the funtion at $x_c$ is horizontal.</p>
 <p>Importantly, if a point is critical then it is either a point of maximum/minimum or a saddle point. A example of saddle point is visualized in the following figure.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Saddle_point_2.svg/1280px-Saddle_point_2.svg.png" alt="drawing" width="400"/></p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Saddle_point_2.svg/1280px-Saddle_point_2.svg.png" alt="drawing" width="400"/></p>
 <p>Near a saddle point, the magnitude of the rate of change of a faction gradually reduces until it vanishes completely. However, after the point the function "keeps moving" in the same direction it was "moving" before. Conversely, in points of maxima or minima the rete of change of the function changes sign after the critical point.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Finding-the-critical-points">Finding the critical points<a class="anchor-link" href="#Finding-the-critical-points">&#182;</a></h3><p>Finding critical points is very important as it allows us to find the points of minimum and maximum of a function.</p>
@@ -14448,7 +14466,7 @@ $$
 \dfrac{df(x)}{dx} = 0
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1">&#182;</a></h4><p>Consider the following quadratic function:</p>
@@ -14458,7 +14476,7 @@ $$
 \dfrac{df(x)}{dx} = -6 x + 1
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Therefore, the equation for the critical points is:</p>
@@ -14470,7 +14488,7 @@ x_c = \dfrac{1}{6}
 $$<p>Therefore, $x_c = \frac{1}{6}$ is the only critical point of the function. In this case, it is easy to see that this point is a point of local (and global) maximum. We can see this by plotting the function using python:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
@@ -14530,7 +14548,7 @@ $$<p>Therefore, $x_c = \frac{1}{6}$ is the only critical point of the function. 
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example-2">Example 2<a class="anchor-link" href="#Example-2">&#182;</a></h4><p>Consider the following quadratic function:</p>
@@ -14541,7 +14559,12 @@ $$
 $$<p>Therefore, the equation for the critical points is:</p>
 $$
 3x^2 - 4 x +1 = 0
-$$<p>Using the quadratic formula, we find the following two solutions:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Using the quadratic formula, we find the following two solutions:</p>
 $$
 x_{\pm} = \dfrac{4 \pm \sqrt{16 - 12}}{6} = \dfrac{4 \pm 2}{6} 
 $$<p>Hence, the critical points are:</p>
@@ -14553,7 +14576,7 @@ x_{-} = \dfrac{1}{3}
 $$<p>Again, we can see the nature of these critical points by plotting the function using python:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -14615,13 +14638,13 @@ $$<p>Again, we can see the nature of these critical points by plotting the funct
 
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>From this plot is clear that $x_+$ is a local maximum while $x_-$ is a local minimum.</p>
 
 </div>
-</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Excercises">Excercises<a class="anchor-link" href="#Excercises">&#182;</a></h3><h4 id="4.1">4.1<a class="anchor-link" href="#4.1">&#182;</a></h4><p>Find the critical points of the following functions:</p>
@@ -14639,25 +14662,25 @@ $$<p>Again, we can see the nature of these critical points by plotting the funct
 <p>As we saw in the previous lecture, the derivative gives information about the linear behavior of the function around a point. In a critical point, this linear behavior does not play a role as the derivative is zero. We can gain further information by looking athe the quadratic behaviopr around the point. This corresponds to the best (local) approximatiopn of the function with a parabola:</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Consider the function $f(x)$ and a point $x_0$. A quadradic (parabolic) approximation of the function around the point is given by the following expression:</p>
 $$
 f_p(x) = a (x - x_0)^2 + \dfrac{df(x_0)}{dx} (x - x_0) + f(x_0)
-$$<p>Note that we already know that the constant term should be $f(x_0)$ and that the linear slope should be $\dfrac{df(x_0)}{dx}$.</p>
-<p>How do we determine the coefficient $a$ of the quadratic term? In order to find the answer we need to introduce the concept of second derivative.</p>
-
+$$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Note that we already know that the constant term should be $f(x_0)$ and that the linear slope should be $\dfrac{df(x_0)}{dx}$.</p>
+<p>How do we determine the coefficient $a$ of the quadratic term? In order to find the answer we need to introduce the concept of second derivative.</p>
 <p>The second derivative of a function $f(x)$ is defined as the derivative of its derivative:</p>
 $$
 \dfrac{d^2 f(x)}{d x^2} = \dfrac{d}{dx}\left(\dfrac{df(x)}{dx} \right)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For example, consider the following quadratic function:</p>
@@ -14666,19 +14689,19 @@ q(x) = \alpha (x - x_0)^2 + \beta (x - x_0) + \gamma
 $$<p>Its derivative is:</p>
 $$
 \dfrac{q(x)}{dx} = 2 \alpha (x - x_0) + \beta 
-$$<p>We can now obtain the second derivative by taking the derivative of this expression:</p>
-$$
-\dfrac{d}{dx}\left(\dfrac{dq(x)}{dx} \right) = \dfrac{d (2 \alpha (x - x_0) + b)}{dx} = 2 \alpha
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Therefore, the second derivative of a quadratic function is equal to twice its quadratic coefficient $\alpha$.</p>
+<p>We can now obtain the second derivative by taking the derivative of this expression:</p>
+$$
+\dfrac{d}{dx}\left(\dfrac{dq(x)}{dx} \right) = \dfrac{d (2 \alpha (x - x_0) + b)}{dx} = 2 \alpha
+$$<p>Therefore, the second derivative of a quadratic function is equal to twice its quadratic coefficient $\alpha$.</p>
 <p>We can now find the parameter $a$ of our quadratic approximation by requiring that its second derivative at $x_0$ is equal to the second deriovative of the original funcion $f(x)$ at $x_0$.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Since we just saw that the second derivative of a quadratic function is equal to twice its quadratic coefficient, we conclude that:</p>
@@ -14690,7 +14713,7 @@ f_p(x) = \dfrac{1}{2}\dfrac{d^2 f(x_0)}{d x^2} (x - x_0)^2 + \dfrac{df(x_0)}{dx}
 $$<p>The following python plot show the linear and quadratic approximation of the sine function around a (non-critical) point:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
@@ -14758,7 +14781,7 @@ $$<p>The following python plot show the linear and quadratic approximation of th
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>What happens when we consider the best quadratic approximation around a critical point? In that case, the first derivative vanishes and we are left with a simpler approximation:</p>
@@ -14767,7 +14790,7 @@ f_p(x) = \dfrac{1}{2}\dfrac{d^2 f(x_0)}{d x^2} (x - x_0)^2 + f(x_0)
 $$<p>Using Python, we can see what happens when we approximate the function around a point of maximum:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
@@ -14831,14 +14854,14 @@ $$<p>Using Python, we can see what happens when we approximate the function arou
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>As expected, the linear approximation is a constant function. More interestingly, the quadratic approximation is a parabola "pointing down" with its point of maximum at the maximum iof the function $f(x)$. Note that the parabola "points down" because the second derivative is negative at $x_0$.</p>
 <p>Let's now consider the quadratic approximation around a point of minimum:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
@@ -14902,18 +14925,28 @@ $$<p>Using Python, we can see what happens when we approximate the function arou
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In this case, the second derivative is positive and the parabola "points up".</p>
 <p>This suggests a method for finding if a critical point is a point of maximum or a point of minimum. We simply need to look at the sign of the second derivative at the critical point. If the second derivative is positive we are in a point of minimum while if the second derivative is negative we are in a point of maximum.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h4><p>Consider the following function:</p>
 $$
 f(x) = x \mathrm{e}^x + 1
 $$<p>Its derivative is:</p>
 $$
 \frac{f(x)}{dx} = \mathrm{e}^x(1 + x)
-$$<p>Therefore, the critical points are determined by the following equation:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Therefore, the critical points are determined by the following equation:</p>
 $$
 \mathrm{e}^x (1 + x) = 0
 $$<p>Since $\mathrm{e}^x$ is never equal to zero, we can devide both sides by $\mathrm{e}^x$ to obtain:</p>
@@ -14922,7 +14955,12 @@ $$
 $$<p>which is clearly solved by</p>
 $$
 x_c = -1
-$$<p>We can now look at the value of the second derivative at this critical point. The second derivative is:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can now look at the value of the second derivative at this critical point. The second derivative is:</p>
 $$
 \dfrac{d(\mathrm{e}^x (1 + x))}{dx} = \mathrm{e}^x (2 + x)
 $$<p>the value of the second derivative at $x = x_c = -1$ is:</p>
@@ -14931,7 +14969,7 @@ $$
 $$<p>Since this value is positive, we can conclude that $x_c = -1$ is a point of minimum.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
@@ -14999,7 +15037,7 @@ $$<p>Since this value is positive, we can conclude that $x_c = -1$ is a point of
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="4.2">4.2<a class="anchor-link" href="#4.2">&#182;</a></h4><p>Find the critical points of the following functions and determine if they are points of maximum or points of minimum.</p>
@@ -15018,7 +15056,7 @@ $$<p>Since this value is positive, we can conclude that $x_c = -1$ is a point of
 " /></p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can use these higher order derivatives for finding better local approximations of the function. These approximations are called Taylor expansions. Our linear approximation is said to be a first order taylor expansion while the quadratic approximation is a second order expansion. The $k$-order expansion approximate the function $f(x)$ around $x_0$ with a $k$-th degree polynomial. it is defined by the following formula:</p>
@@ -15029,7 +15067,7 @@ $$
 \dfrac{d^0 f(x)}{d x^0} = f(x)
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Also note that $0!$ is equal to $1$ by definition.</p>
@@ -15037,16 +15075,11 @@ $$
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Sintay_SVG.svg" alt="drawing" width="400"/></p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="4.3">4.3<a class="anchor-link" href="#4.3">&#182;</a></h4><p><strong>a)</strong> Show that the first order taylor approximation is equal to the linear approximation we introduced in the previous lecture.</p>
 <p><strong>b)</strong> Show that the second order taylor approximation is equal to the quadratic approximation we introduced in the previous section.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>c)</strong> Find the 5-th order Taylor approximation of</p>
 <p>$f(x) = \mathrm{e}^x$</p>
 <p>around</p>
@@ -15057,11 +15090,16 @@ $$
 <p>$x_0$ = 1</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Fitting-a-straight-line">Fitting a straight line<a class="anchor-link" href="#Fitting-a-straight-line">&#182;</a></h3><p>Finding the minimum of a function is very useful in many important applications. Consider a simple data science problem. You are interested to know whether the amount of alchol people drink influences the amount of tobacco they smoke.</p>
 <p>You collected several data points in a survey, each data point is a pair of valued $(x_j, y_j)$. The value $x_j$ is the average amount of alchol the $j$-th participant drinks in a week while the value $y_j$ is the average amount of tobacco she smokes in a week.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The whole dataset is a collection of these data pairs:</p>
 <p>$\{ (x_1, y_1), (x_2, y_2), ... , (x_j, y_j), ... , (x_N, y_N) \}$</p>
 <p>where $N$ is the total number of participants.</p>
@@ -15069,6 +15107,11 @@ $$
 $$
 l_b(x) = x b
 $$<p>where $b$ is a parameter determining the slope of the straight line. The problem now is to find the best value of the parameter $b$ given our dataset?</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In order to do so, we need to define a measure of error between our linear model $l_b(x)$ and the data.</p>
 <p>A simple possibility is to look at the squared deviation between measured tobacco usage and the tobacco usege predicted using our linear model. For a single datapoint $(x_j, y_j)$, this deviation is:</p>
 $$
@@ -15078,10 +15121,20 @@ $$<p>The datapoints, the linear model and the deviations are shown in the follow
 <p>Unfortunately, the absolute value function in our definition of deviation is not easy to optimize. Therefore, it is better to use the square of the deviation:</p>
 $$
 (y_j - l_b(x_j))^2
-$$<p>we can now write down a error function for the parameter $b$ by summing this squared deviation over all the datapoints:</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>we can now write down a error function for the parameter $b$ by summing this squared deviation over all the datapoints:</p>
 $$
 E(b) = \dfrac{1}{2}\displaystyle\sum_j \left(l_b(x_j) - y_j \right)^2 = \dfrac{1}{2}\displaystyle\sum_j \left(b x_j - y_j \right)^2
 $$<p>Note that the factor of $1/2$ in this expression is not very important but it makes the formulas slightly easier.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can now find the critical points of this error function using the methods we discussed in the previous sections. let's start by computing the derivative with respect to $b$:</p>
 $$
 \dfrac{dE(b)}{d b} = \dfrac{d}{db}\dfrac{1}{2}\left( \displaystyle\sum_j \left(b x_j - y_j \right)^2 \right) = \dfrac{1}{2} \displaystyle\sum_j \dfrac{d \left(b x_j - y_j \right)^2}{db} = \dfrac{1}{2} \displaystyle\sum_j 2 \left(b x_j - y_j \right) \dfrac{d (b x_j)}{d b} = \displaystyle\sum_j \left(b x_j - y_j \right) x_j
@@ -15093,11 +15146,21 @@ $$
  \hat{b} \displaystyle\sum_j x_j = \displaystyle\sum_j y_j  x_j 
 $$$$
  \hat{b} = \dfrac{\displaystyle\sum_j y_j  x_j} {\displaystyle\sum_j x_j} 
-$$<p>We now have a ansewer for our problem of finding the value of the parameter $b$ that minimizes the error function. However, we need to make sure that this critical point is really a point of minimum!</p>
+$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We now have a ansewer for our problem of finding the value of the parameter $b$ that minimizes the error function. However, we need to make sure that this critical point is really a point of minimum!</p>
 <p>let's take the second derivative of the error function:</p>
 $$
 \dfrac{d^2 C(b)}{d b^2} = \dfrac{d}{d b} \left( \displaystyle\sum_j \left(b x_j - y_j \right) x_j \right) = \displaystyle\sum_j \frac{d b}{d b} x_j x_j = \displaystyle\sum_j x_j^2
 $$<p>This expression is a sum of squares and it is therefore always positive. Consequently, the critical point is indeed a point of minimum of the error function.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="4.4">4.4<a class="anchor-link" href="#4.4">&#182;</a></h4><p>Use the formula we just derived to find the optimal $b$ for the following dataset:</p>
 $$
 \{(x_1 = 1, y_1 = 2.2), (x_2 = 2, y_2 = 3.8), (x_3 = 3, y_3 = 6.2), (x_4 = 4, y_4 = 7.5)\}
@@ -15109,38 +15172,38 @@ $$
 <h2 id="Numerical-methods-for-optimization">Numerical methods for optimization<a class="anchor-link" href="#Numerical-methods-for-optimization">&#182;</a></h2><p>In most practical problems we cannot find the critical points using solely algebraic methods. For example, consider the following function:</p>
 $$
 f(x) = x \mathrm{e}^x + x
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The critical points equation is:</p>
+$$<p>The critical points equation is:</p>
 $$
 \mathrm{e}^x (1 + x) + 1 = 0
 $$<p>which we cannot solve using simple algebra.</p>
 <p>In this section we will introduce two methods for solving these problems approximatevely using a iterative approach. The basic idea is to start from a starting guess $x_0$ and to use a update rule that brings us closer to a critical point. We can then reach the critical point by iteratively apply the update rule.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Steepest-descent">Steepest descent<a class="anchor-link" href="#Steepest-descent">&#182;</a></h3><p>The simplest numerical method for finding local minima is the steepest descent method (gradient descent). Consider the function $f(x)$ and a initialization point $x_0$. If the derivative of $f(x)$ at $x_0$ is equal to zero then we already are in a critical point. Otherwise, we can use the value of the derivative for knowing if the funtion increses or decreses when we mode away from $x_0$.</p>
 <p>In fact, if the derivative $\dfrac{df (x_0)}{d x}$ is negative then the function $f(x)$ tends to become smaller when we move to the right of $x_0$. Conversely, if the derivative is positive we need to move to the left of $x_0$ if we want the function to become smaller. If we keep moving in this way the value of the function will become smaller and smaller and hopefully we will reach a point of minimum. Of course this is not garanteed as the function could keep decreasing forever.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can make this minimization approach precise with the following formula:</p>
 $$
 x_{t+1} = x_t - \eta \dfrac{d f(x_t)}{dx}
 $$<p>where $x_t$ is our current value, $x_{t+1}$ is the new value after applying the steepest descent update rule and $\eta$ is a small positive number determining our step size. As expected, this update rule makes us move right when the derivative is negative and left when the derivative is negative.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This iterative approach is visualized in the following figure:</p>
 <p><img src="https://i0.wp.com/1.bp.blogspot.com/-06p1QCE3GOY/XQAIeBNNA6I/AAAAAAAAEio/RdxPhBcnlSEiMc03_b-ClHat8s--XgImgCLcBGAs/s400/grada.png?resize=400%2C248&ssl=1" alt="drawing" width="400"/></p>
 <p>Note that the step size $\eta$ needs to be small enough since otherwise we risk to "jump over" the location of the local minimum.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h4><p>Consider the following function:</p>
@@ -15154,7 +15217,7 @@ $$
 x_{t+1} = x_t - \eta \mathrm{e}^{x_t} (1 + x_t) + 1
 $$
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><h4 id="4.5">4.5<a class="anchor-link" href="#4.5">&#182;</a></h4><p>Write down the steepest descent update rule for the following functions:</p>
