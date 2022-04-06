@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>6 模拟模型-排队论 - 多服务台案例 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>6 模拟模型-排队论 - 蒙特卡洛模拟 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14391,93 +14391,211 @@ div.jp-OutputPrompt {
     <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
     <p>&nbsp;</p>
     <h3 style="text-align:center;">模型知识点</h3>
-    <h3 style="color:tomato;text-align:center;">模拟模型-排队论模型-多服务台案例</h3>
+    <h3 style="color:tomato;text-align:center;">模拟模型-排队论模型-蒙特卡洛模拟</h3>
     <p>&nbsp;</p>
     <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
     <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
 </section></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>$M/M/c$模型计算案例
-某银行有三个出纳员，顾客的到达服从泊松分布，平均每小时达到30人，顾客排成一队。出纳员对顾客的服务时间服从负指数分布，平均每小时可以服务12人。试求</p>
-<ol>
-<li>三名出纳员都忙的概率以及该银行的主要运行指标</li>
-<li>若所有的顾客都排成三队，顾客平均每小时到达10人，计算该银行的主要运行指标。</li>
-<li>对比以上两个指标，你能得到什么结论？</li>
-</ol>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>解</strong>：</p>
-<p>(1) 根据题意，这是标准的$M/M/c$模型，$c=3$
-$\lambda = 30（人/小时）， \mu = 12 （人/小时）, \dfrac{\lambda}{\mu} =\dfrac{5}{2}, \rho = \dfrac{\lambda}{c\mu} = \dfrac{5}{6}$
-则有，</p>
-
+<h1 id="&#20351;&#29992;&#33945;&#29305;&#21345;&#27931;&#26041;&#27861;&#27169;&#25311;&#25490;&#38431;&#31995;&#32479;">&#20351;&#29992;&#33945;&#29305;&#21345;&#27931;&#26041;&#27861;&#27169;&#25311;&#25490;&#38431;&#31995;&#32479;<a class="anchor-link" href="#&#20351;&#29992;&#33945;&#29305;&#21345;&#27931;&#26041;&#27861;&#27169;&#25311;&#25490;&#38431;&#31995;&#32479;">&#182;</a></h1>
 </div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-P_{0}=\left[\frac{\left(\frac{5}{2}\right)^{0}}{0 !}+\frac{\left(\frac{5}{2}\right)^{1}}{1 !}+\frac{\left(\frac{5}{2}\right)^{2}}{2 !}+\frac{\left(\frac{5}{2}\right)^{3}}{3 !} \times \frac{1}{1-\frac{5}{6}}\right]^{-1}=0.0449
-$$
+<h2 id="&#23450;&#20041;&#24179;&#22343;&#38431;&#38271;&#20989;&#25968;">&#23450;&#20041;&#24179;&#22343;&#38431;&#38271;&#20989;&#25968;<a class="anchor-link" href="#&#23450;&#20041;&#24179;&#22343;&#38431;&#38271;&#20989;&#25968;">&#182;</a></h2>
 </div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-P(n \geq 3)=\frac{\left(\frac{5}{2}\right)^{3}}{3 !} \times 0.0449=0.117
-$$$$
-L_{q}=\frac{\left(\frac{5}{2}\right)^{3} \times \frac{5}{6}}{6 \times\left(1-\frac{5}{6}\right)} \times 0.0449=3.51
-$$
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">MM1</span><span class="p">(</span><span class="n">Lambda</span><span class="p">,</span><span class="n">mu</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Lambda</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="n">Lambda</span><span class="p">))</span>
+</pre></div>
+
+     </div>
 </div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-L_{s}=L_{q}+\frac{\lambda}{\mu}=3.51+2.5=6.01
-$$$$
-W_{s}=\frac{L_{s}}{\lambda}=\frac{6.01}{30}=0.2
-$$$$
-W_{q}=\frac{L_{q}}{\lambda}=\frac{3.51}{30}=0.12
-$$
 </div>
+</div>
+
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>(2) 该模型为三个标准的$M/M/1$模型</p>
+<h2 id="&#29983;&#25104;&#36127;&#20998;&#24067;&#25968;&#32452;">&#29983;&#25104;&#36127;&#20998;&#24067;&#25968;&#32452;<a class="anchor-link" href="#&#29983;&#25104;&#36127;&#20998;&#24067;&#25968;&#32452;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lambda1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">lambda1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+<span class="n">t1</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([5.50788039, 0.029529  , 2.51264253, 1.41151027, 0.93481392,
+       1.38565399, 0.91429906, 0.75492762, 2.8047894 , 1.62086484,
+       1.66645445, 1.11005362, 1.2791469 , 1.54915853, 0.5487299 ,
+       1.95536526, 0.11321381, 0.38170104, 0.48011385, 1.27379411])</pre>
+</div>
 
 </div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>$\lambda = 10（人/小时）， \mu = 12 （人/小时）,  \rho = \dfrac{\lambda}{\mu} = \dfrac{5}{6}$</p>
 
 </div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>则有，</p>
-$$
-P_{0}=1-\rho=\frac{1}{6} \quad P(n \geq 1)=1-P_{0}=\frac{5}{6}
-$$$$
-L_{s}=\frac{\lambda}{\mu-\lambda}=\frac{10}{12-10}=5
-$$$$
-L_{q}=L_{s}-\rho=\frac{25}{6}=4.17
-$$$$
-W_{s}=\frac{L_{s}}{\lambda}=\frac{5}{10}=0.5
-$$$$
-W_{q}=W_{s}-\frac{1}{\mu}=0.5-\frac{1}{12}=0.417
-$$
+
 </div>
+
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>(3) 比较前两问的结果，不难发现。单队列的排队系统比多队列的排队系统空闲概率低，而且单队列排队长度也比多队列长，逗留时间和等待时间也都比多队列长。可见，排队方式对排队系统的运行指标影响还是很大的。</p>
+<h2 id="&#21021;&#22987;&#21270;&#25968;&#25454;">&#21021;&#22987;&#21270;&#25968;&#25454;<a class="anchor-link" href="#&#21021;&#22987;&#21270;&#25968;&#25454;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1">#np.random.seed(4)</span>
+<span class="n">lambda1</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">mu1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">lambdalist</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span>
+<span class="n">MC</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">QC</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#29983;&#25104;&#21040;&#36798;&#19982;&#31561;&#24453;&#26102;&#38388;&#25968;&#25454;">&#29983;&#25104;&#21040;&#36798;&#19982;&#31561;&#24453;&#26102;&#38388;&#25968;&#25454;<a class="anchor-link" href="#&#29983;&#25104;&#21040;&#36798;&#19982;&#31561;&#24453;&#26102;&#38388;&#25968;&#25454;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">lambda1</span> <span class="ow">in</span> <span class="n">lambdalist</span><span class="p">:</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="mi">10000</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">lambda1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mu1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+    
+    <span class="n">ArrTime</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">LeaveTime</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">WaitingTime</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># 累计到达时间</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">t1</span><span class="p">:</span>
+        <span class="n">ArrTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ArrTime</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span>
+        
+    
+    <span class="c1">## 对于第一个顾客来说，可以直接接受服务,不需要等待</span>
+    <span class="n">LeaveTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">WaitingTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+        <span class="c1"># 更新到达时刻空闲队伍的个数</span>
+        <span class="n">CurrentTime</span> <span class="o">=</span> <span class="n">ArrTime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">CurrentTime</span> <span class="o">&gt;</span> <span class="n">LeaveTime</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">WaitingTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">LeaveTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CurrentTime</span><span class="o">+</span><span class="n">t2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">WaitingTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LeaveTime</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">CurrentTime</span><span class="p">)</span>
+            <span class="n">LeaveTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LeaveTime</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">MC</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">WaitingTime</span><span class="p">))</span>
+    <span class="n">QC</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MM1</span><span class="p">(</span><span class="n">lambda1</span><span class="p">,</span><span class="n">mu1</span><span class="p">)</span><span class="o">/</span><span class="n">lambda1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#32472;&#21046;&#22270;&#20687;">&#32472;&#21046;&#22270;&#20687;<a class="anchor-link" href="#&#32472;&#21046;&#22270;&#20687;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MC</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">QC</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\lambda$&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$W_q$&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
 
 </div>
-</div></section></section><section><section>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>结合蒙特卡洛模拟，可以避开繁杂的理论推导，直观且容易编程。</strong></p>
+
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>参考文献</strong></p>
