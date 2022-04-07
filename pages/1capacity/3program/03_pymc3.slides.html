@@ -14382,20 +14382,33 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section>
+<div class="slides"><section><section><head>
+<meta charset="UTF-8">
+</head>
+<section  data-state="no-title-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="intro_h1"><h1 style="text-align:center;">数学建模</h1></div>
+    <p>&nbsp;</p>
+    <h3 style="text-align:center;">编程知识点</h3>
+    <h3 style="color:tomato;text-align:center;">模型第三方库-Sympy</h3>
+    <p>&nbsp;</p>
+    <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
+    <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
+</section></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Bayesian-Statistical-Methods-with-PyMC3">Bayesian Statistical Methods with PyMC3<a class="anchor-link" href="#Bayesian-Statistical-Methods-with-PyMC3">&#182;</a></h2><p>While the models you have built (the ARIMA and Bayesian DLMs) have performed well on the <em>existing</em> data, this does not account for uncertainty and the fact that future observations may not necessarily follow the same pattern as that which is observed in the current set of data.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>They want you to use PyMC3 to generate a posterior distribution of hotel cancellations. This is of particular interest to your managers, as this allows for updating of the predicted probabilities through the incorporation of new information, for example, updating of prior beliefs.</p>
 <p>For instance, should your managers come across new information that would lead them to believe that the nature of cancellations will change (such as a global pandemic resulting in mass cancellations), the prior probabilities can be updated accordingly.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Specifically, your team is interested in investigating the following:</p>
@@ -14406,7 +14419,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="In-this-notebook">In this notebook<a class="anchor-link" href="#In-this-notebook">&#182;</a></h4><p><a id="top"></a></p>
@@ -14430,7 +14443,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
@@ -14470,43 +14483,7 @@ div.jp-OutputPrompt {
 <p>You have been tasked with generating a probability distribution of weekly cancellations for the hotel. This is necessary so that the hotel can allocate rooms more efficiently. Use the <code>h1weekly.csv</code> dataset.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head -n3 data/h1weekly.csv
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>&#39;head&#39; 不是内部或外部命令，也不是可运行的程序
-或批处理文件。
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -14551,7 +14528,7 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
@@ -14588,7 +14565,7 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
@@ -14633,12 +14610,17 @@ Name: IsCanceled, dtype: float64</pre>
 
 </div>
 
-</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The manager has told you that the <em>minimum</em> number of cancellations recorded in a week was 14,<br>
 while the <em>maximum</em> number of cancellations recorded in a week was 222.</p>
 <p>Using only this information, you have been instructed to make an assumption about the mean and standard deviation of the distribution, for example the manager is not allowing you to look at the dataset and compute these directly, as he/she believes that the sample size is not large enough to infer the true mean and standard deviation from the data available.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Your assumptions regarding the mean and standard deviation are known as your <strong>prior</strong> assumptions, and you are assuming that weekly hotel cancellations follow a normal distribution.</p>
 <p>With this information, you are required to do the following:</p>
 <ul>
@@ -14647,24 +14629,34 @@ while the <em>maximum</em> number of cancellations recorded in a week was 222.</
 </ul>
 
 </div>
-</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>PyMC3 documentation: <a href="https://docs.pymc.io/notebooks/api_quickstart.html">General API Quickstart</a></p>
 
 </div>
-</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Sampling">Sampling<a class="anchor-link" href="#Sampling">&#182;</a></h4><p><a id="sampling"></a>
 <a href="#top">To the Top</a></p>
 <p>Once we have defined our model, we have to perform inference to approximate the posterior distribution. PyMC3 supports two broad classes of inference: <em>sampling</em> and variational inference.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The main entry point to MCMC sampling algorithms is via the <code>pm.sample()</code> function. By default, this function tries to auto-assign the right sampler(s) and auto-initialize if you don’t pass anything.</p>
 <p>With PyMC3 version &gt;=3.9 the <code>return_inferencedata=True</code> kwarg makes the sample function return an <code>arviz.InferenceData</code> object instead of a <code>MultiTrace</code>.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><code>InferenceData</code> has many advantages, compared to a <code>MultiTrace</code>: For example it can be saved/loaded from a file, and can also carry additional (meta)data such as date/version, or posterior predictive distributions. Take a look at the <a href="https://arviz-devs.github.io/arviz/getting_started/Introduction.html">ArviZ Quickstart</a> to learn more.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
@@ -14753,7 +14745,7 @@ NUTS: [sd, mu]
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Analyze-sampling-results">Analyze sampling results<a class="anchor-link" href="#Analyze-sampling-results">&#182;</a></h4><p><a id="analyze-sampling-results"></a>
@@ -14761,7 +14753,7 @@ NUTS: [sd, mu]
 <p>The most common used plot to analyze sampling results is the so-called trace-plot:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -14800,13 +14792,13 @@ NUTS: [sd, mu]
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Another common metric to look at is R-hat, also known as the Gelman-Rubin statistic:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
@@ -14904,7 +14896,7 @@ NUTS: [sd, mu]
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
@@ -14945,7 +14937,7 @@ height=425
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
@@ -14986,7 +14978,7 @@ height=339
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Posterior-Predictive-Sampling">Posterior Predictive Sampling<a class="anchor-link" href="#Posterior-Predictive-Sampling">&#182;</a></h4><p><a id="posterior-predictive-sampling"></a>
@@ -14994,7 +14986,7 @@ height=339
 <p>The <code>sample_posterior_predictive()</code> function performs prediction on hold-out data and posterior predictive checks.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
@@ -15064,7 +15056,7 @@ height=339
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
@@ -15114,6 +15106,11 @@ height=380
 <h2 id="Milestone-2:-AR(1)-Time-Series-Analysis">Milestone 2: AR(1) Time Series Analysis<a class="anchor-link" href="#Milestone-2:-AR(1)-Time-Series-Analysis">&#182;</a></h2><p><a id="milestone-2"></a>
 <a href="#top">To the Top</a></p>
 <p>One of the members on your team suspects that weekly hotel cancellations follow an <em>AR(1) process</em>, for example a high degree of dependency between an observation at time <code>t</code> and its immediately preceding value at time <code>t-1</code>. However, they suspect that two years of time series data is not enough to prove this definitively. Therefore, the team decides to <em>use Bayesian methods</em> in lieu of classical statistical methods to determine if an AR(1) process exists.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>They have tasked you with using Bayesian methods to identify the mean value of the AR(1) term. You will generate a probability distribution to identify this which will show the mean as well as the approximate range of potential AR(1) values as indicated by the distribution.</p>
 <p>In addition, the team is also interested if a moving average of the data shows a stronger AR(1) process as opposed to the weekly data in its own right. They instruct you to form a moving average of the data and obtain an updated AR(1) value for this <em>smoothed time series</em>. You are given discretion as to which value you choose to use. (Does the mean value increase or decrease?)</p>
 <ul>
@@ -15121,14 +15118,14 @@ height=380
 </ul>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="AR(1)-model-for-ts">AR(1) model for <code>ts</code><a class="anchor-link" href="#AR(1)-model-for-ts">&#182;</a></h4><p><a id="ar1-model-for-ts"></a>
 <a href="#top">To the Top</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
@@ -15217,7 +15214,7 @@ NUTS: [tau, theta]
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
@@ -15258,7 +15255,7 @@ height=339
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
@@ -15356,14 +15353,14 @@ height=339
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="AR(1)-model-for-smoothed-ts">AR(1) model for smoothed <code>ts</code><a class="anchor-link" href="#AR(1)-model-for-smoothed-ts">&#182;</a></h4><p><a id="ar1-model-for-smoothed-ts"></a>
 <a href="#top">To the Top</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
@@ -15447,7 +15444,7 @@ height=288
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
@@ -15540,7 +15537,7 @@ There were 13 divergences after tuning. Increase `target_accept` or reparameteri
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
@@ -15664,11 +15661,16 @@ height=339
 <a href="#top">To the Top</a></p>
 <p>This part of the project is where you will model the volatility inherent in the time series in question.</p>
 <p>This is an important aspect of Bayesian time series analysis as the majority of time series will not follow a normal distribution (or at least not perfectly). Instead, it is necessary to model volatility in order to capture short-term fluctuations in the overall series.</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Use the <a href="https://docs.pymc.io/notebooks/getting_started#Case-study-1:-Stochastic-volatility">Case study 1: Stochastic volatility</a> as a template for modeling the weekly volatility. It is up to you to determine the best format for your data and judge whether the volatility process is being modeled properly by the algorithm that you invoke.</p>
 <p>Determine the proper format for your data. Such as in the stock returns example, daily returns are used instead of price. You should judge whether manipulation of the time series in this instance would be suitable or not.</p>
 
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Volatility-Model-1">Volatility Model 1<a class="anchor-link" href="#Volatility-Model-1">&#182;</a></h4><p><a id="volatility-model-1"></a>
@@ -15676,7 +15678,7 @@ height=339
 <p>Follow the example in the <a href="https://docs.pymc.io/notebooks/getting_started#Case-study-1:-Stochastic-volatility">Case study 1: Stochastic volatility</a> and build the model of Daily % changes.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
@@ -15743,7 +15745,7 @@ height=288
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The model is using</p>
@@ -15754,7 +15756,7 @@ height=288
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
@@ -15809,7 +15811,7 @@ height=288
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
@@ -15917,7 +15919,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
@@ -15984,7 +15986,7 @@ height=296
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
@@ -16036,7 +16038,7 @@ height=296
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>NOTE</strong> (2021-03-06): ↓ does not work 🙁</p>
@@ -16045,7 +16047,7 @@ height=296
 </pre></div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
@@ -16091,7 +16093,7 @@ height=386
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Volatility-Model-2">Volatility Model 2<a class="anchor-link" href="#Volatility-Model-2">&#182;</a></h4><p><a id="volatility-model-2"></a>
@@ -16099,7 +16101,7 @@ height=386
 <p>⇉ Given that significant volatility is inherent in weekly cancellations, the same model is being used to model the volatility of this time series.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
@@ -16220,7 +16222,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
@@ -16287,7 +16289,7 @@ height=296
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
