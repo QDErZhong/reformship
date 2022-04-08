@@ -14399,7 +14399,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#-Probability-Mass-Function" data-toc-modified-id="-Probability-Mass-Function-1"><span class="toc-item-num">1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Probability Mass Function</font></a></span><ul class="toc-item"><li><span><a href="#-Cumulative-Distribution-Function" data-toc-modified-id="-Cumulative-Distribution-Function-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Cumulative Distribution Function</font></a></span></li></ul></li><li><span><a href="#-Probability-Density-Function" data-toc-modified-id="-Probability-Density-Function-2"><span class="toc-item-num">2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Probability Density Function</font></a></span></li><li><span><a href="#Independent-Random-Variables" data-toc-modified-id="Independent-Random-Variables-3"><span class="toc-item-num">3&nbsp;&nbsp;</span><font face="gotham" color="purple">Independent Random Variables</font></a></span></li><li><span><a href="#-Expected-Value-and-Variances" data-toc-modified-id="-Expected-Value-and-Variances-4"><span class="toc-item-num">4&nbsp;&nbsp;</span><font face="gotham" color="purple"> Expected Value and Variances</font></a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#-Probability-Mass-Function" data-toc-modified-id="-Probability-Mass-Function-1"><span class="toc-item-num">1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Probability Mass Function</font></a></span><ul class="toc-item"><li><span><a href="#-Cumulative-Distribution-Function" data-toc-modified-id="-Cumulative-Distribution-Function-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Cumulative Distribution Function</font></a></span></li></ul></li><li><span><a href="#Independent-Random-Variables" data-toc-modified-id="Independent-Random-Variables-2"><span class="toc-item-num">2&nbsp;&nbsp;</span><font face="gotham" color="purple">Independent Random Variables</font></a></span></li><li><span><a href="#-Expected-Value-and-Variances" data-toc-modified-id="-Expected-Value-and-Variances-3"><span class="toc-item-num">3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Expected Value and Variances</font></a></span></li><li><span><a href="#References" data-toc-modified-id="References-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>References</a></span></li></ul></div>
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14409,6 +14409,7 @@ div.jp-OutputPrompt {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
      </div>
@@ -14420,18 +14421,13 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1><font face="gotham" color="purple"> Probability Mass Function</h1>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If $X$ is a discrete variable with a finite range $R_X = \{x_1,x_2,x_3...\}$, the probability mass function of $X$ is</p>
+<p>If $X$ is a discrete variable with a finite or discrete set $R_X = \{x_1,x_2,x_3...\}$, the probability mass function of $X$ is</p>
 $$
 P_X(x_k)=P(X=x_k),\ \text{for } k=1,2,3\ldots
 $$<p>which is a function which maps the possible values to the corresponding probabilities.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For instance, a discrete uniform distribution of a fair dice looks like,</p>
@@ -14440,7 +14436,7 @@ $$<p>which is a function which maps the possible values to the corresponding pro
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pmf</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -14470,7 +14466,7 @@ $$<p>which is a function which maps the possible values to the corresponding pro
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14485,18 +14481,13 @@ $$<p>which is a function which maps the possible values to the corresponding pro
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2><font face="gotham" color="purple"> Cumulative Distribution Function</h2>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The cumulative distribution function (CDF) of random variable $X$ is defined as
 $$
 F_{X}(x)=P(X \leq x), \text { for all } x \in \mathbb{R}
 $$</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The CDF of dice example is</p>
@@ -14555,7 +14546,7 @@ P(a&lt;X\leq b) = F_X(b)-F_X(a)
 $$<p>It is commonly used when we would like to know the probability of a range, for instace, what is the probability $P(2&lt;X\leq5)$?</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Using the formula,</p>
@@ -14563,25 +14554,15 @@ $$
 P(2&lt;X\leq5) = F_X(5) - F_X(2) = 5/6 - 2/6 = 1/2
 $$
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1><font face="gotham" color="purple"> Probability Density Function</h1>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Probability density function (PDF) is used for continuous distribution.</p>
 <p>We denote PDF as $f_X(x)$, however any realization of $x$ have $0$ probability, for instance $f_X(x = 1)= 0$. Therefore to obtain positive probability, we shall establish a span of the argument $(x,\ \Delta x)$</p>
 $$
 f_{X}(x)=\lim _{\Delta \rightarrow 0^{+}} \frac{P(x&lt;X \leq x+\Delta)}{\Delta}
-$$
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Furthermore, use CDF formula and definition of derivative, the relation of CDF and PDF</p>
+$$<p>Furthermore, use CDF formula and definition of derivative, the relation of CDF and PDF</p>
 $$
 f_{X}(x)=\lim _{\Delta \rightarrow 0} \frac{F_{X}(x+\Delta)-F_{X}(x)}{\Delta}=\frac{d F_{X}(x)}{d x}=F_{X}^{\prime}(x)
 $$
@@ -14590,61 +14571,36 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1><font face="gotham" color="purple">Independent Random Variables</h1>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Independent R.V.s are similar to independent events, recall that independent events have the property</p>
 $$
 p(A\cap B) =p (A)p(B)
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now consider two random variable $A$ and $B$, they are independent as long as</p>
 $$
 p(X=x,Y=y)=p(X=x)p(X=y)
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In general, independent variables have the property:</p>
+$$<p>In general, independent variables have the property:</p>
 $$
 p(X_1=x_1,X_2=x_2, ..., X_n = x_n)=p(X_1=x_1)p(X_2=x_2)...p(X_n=x_n)=\prod_{i=1}^np(X_i=x_i)
 $$
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1><font face="gotham" color="purple"> Expected Value and Variances</h1>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The expected value of discrete and continuous random variables are</p>
 $$
 \text{Discrete:}\qquad E(X)=\sum_{i=1}^k x_ip_X(x_i)=\sum_{i=1}^k x_i p(X_i = x_i)
-$$$$\text{Continuous:}\qquad E(X) = \int_{-\infty}^{\infty}xf_X(x)dx$$
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>They are expressing the same idea that weighting each possibilites equally, then sum up.</p>
+$$$$\text{Continuous:}\qquad E(X) = \int_{-\infty}^{\infty}xf_X(x)dx$$<p>They are expressing the same idea that weighting each possibilites equally, then sum up.</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The variance of discrete and continuous random variables are similar</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 \text{Discrete:}\qquad\operatorname{Var}(X)=E\left[\left(X-\mu_{X}\right)^{2}\right]=E (X^{2})-[E (X)]^{2}
 $$\begin{aligned}
@@ -14653,15 +14609,10 @@ $$\begin{aligned}
 &amp;=E (X^{2})-[E (X)]^{2}=\int_{-\infty}^{\infty} x^{2} f_{X}(x) d x-\mu_{X}^{2}
 \end{aligned}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>And a common method for manual calculation of variance</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 \begin{aligned}
 \operatorname{Var}(X) &amp;=E\left[\left(X-\mu_{X}\right)^{2}\right] \\
@@ -14672,7 +14623,15 @@ $$
 \end{aligned}
 $$
 </div>
-</div></div></section></section>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="References">References<a class="anchor-link" href="#References">&#182;</a></h1><ul>
+<li><a href="https://www.investopedia.com/terms/d/discrete-distribution.asp">https://www.investopedia.com/terms/d/discrete-distribution.asp</a></li>
+</ul>
+
+</div>
+</div></section></section>
 </div>
 </div>
 </body>
