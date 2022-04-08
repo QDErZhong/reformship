@@ -14410,58 +14410,33 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="-Joint-Distribution-and-Independence"><font face="gotham" color="purple"> Joint Distribution and Independence</font><a class="anchor-link" href="#-Joint-Distribution-and-Independence">&#182;</a></h1>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let $X_1, X_2,...X_n$ be discrete random variables, the PMF is defined as</p>
+<h1 id="-Joint-Distribution-and-Independence"><font face="gotham" color="purple"> Joint Distribution and Independence</font><a class="anchor-link" href="#-Joint-Distribution-and-Independence">&#182;</a></h1><p>Let $X_1, X_2,...X_n$ be discrete random variables, the PMF is defined as</p>
 $$
 P_{X_{1}, X_{2}, \ldots, X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=P\left(X_{1}=x_{1}, X_{2}=x_{2}, \ldots, X_{n}=x_{n}\right)
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The marginal PMF of $x_1$ is</p>
+$$<p>The marginal PMF of $x_1$ is</p>
 $$
 P_{X_1}=P(X=x_1)
 = \sum_{x_2\in R}\sum_{x_3\in R}...\sum_{x_n\in R}P\left(X_{1}=x_{1}, X_{2}=x_{2}, \ldots, X_{n}=x_{n}\right)
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>If $X_1, X_2,...X_n$ are continuous random variables, the PDF is defined as</p>
 $$
 P\left(\left(X_{1}, X_{2}, \cdots, X_{n}\right) \in A\right)=\int_A \int_{A} \cdots \int_A f_{X_{1} X_{2} \cdots X_{n}}\left(x_{1}, x_{2}, \cdots, x_{n}\right) d x_{1} d x_{2} \cdots d x_{n}
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The marginal PDF of $x_1$ is</p>
+$$<p>The marginal PDF of $x_1$ is</p>
 $$
 f_{X_{1}}\left(x_{1}\right)=\int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} f_{X_{1} X_{2} \cdots X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right) d x_{2} \cdots d x_{n}
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The joint CDF is</p>
+$$<p>The joint CDF is</p>
 $$
 F_{X_{1}, X_{2}, \ldots, X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=P\left(X_{1} \leq x_{1}, X_{2} \leq x_{2}, \ldots, X_{n} \leq x_{n}\right)
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="An-Example"><font face="gotham" color="purple">An Example</font><a class="anchor-link" href="#An-Example">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let $X, Y$ and $Z$ be three jointly continuous random variables with joint PDF</p>
+<h2 id="An-Example"><font face="gotham" color="purple">An Example</font><a class="anchor-link" href="#An-Example">&#182;</a></h2><p>Let $X, Y$ and $Z$ be three jointly continuous random variables with joint PDF</p>
 $$
 f_{X Y Z}(x, y, z)=\left\{\begin{array}{ll}
 cx+2 y+3 z &amp; 0 \leq x, y, z \leq 1 \\
@@ -14469,12 +14444,17 @@ cx+2 y+3 z &amp; 0 \leq x, y, z \leq 1 \\
 \end{array}\right.
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
 <li>Find out $c$.</li>
 </ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Use the property we get</p>
 \begin{align}
 \int_0^1\int_0^1\int_0^1(cx+2y+3z)dxdydz &amp;= 1\\
@@ -14493,7 +14473,7 @@ c&amp;=-3
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 \begin{align}
@@ -14502,31 +14482,16 @@ f_X(x)=\int_{-\infty}^\infty\int_{-\infty}^\infty f_{XYZ}(x,y,z)dydz &amp; = \in
 &amp; = \left[-3xz+z+3\frac{z^2}{2}\right]^1_0 = -3x+\frac{5}{2}
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Independence"><font face="gotham" color="purple"> Independence</font><a class="anchor-link" href="#-Independence">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If $X_1, X_2,...X_n$ are independent discrete random variables</p>
+<h2 id="-Independence"><font face="gotham" color="purple"> Independence</font><a class="anchor-link" href="#-Independence">&#182;</a></h2><p>If $X_1, X_2,...X_n$ are independent discrete random variables</p>
 $$
 P_{X_{1}, X_{2}, \ldots, X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=P_{X_{1}}\left(x_{1}\right) P_{X_{2}}\left(x_{2}\right) \cdots P_{X_{n}}\left(x_{n}\right)
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>And if $X_1, X_2,...X_n$ are independent continuous random variables 
+$$<p>And if $X_1, X_2,...X_n$ are independent continuous random variables 
 $$
 f_{X_{1}, X_{2}, \ldots, X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=f_{X_{1}}\left(x_{1}\right) f_{X_{2}}\left(x_{2}\right) \cdots f_{X_{n}}\left(x_{n}\right)
 $$</p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Their CDF and expections are</p>
 $$
 F_{X_{1}, X_{2}, \ldots, X_{n}}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=F_{X_{1}}\left(x_{1}\right) F_{X_{2}}\left(x_{2}\right) \cdots F_{X_{n}}\left(x_{n}\right)
@@ -14534,7 +14499,7 @@ $$$$
 E\left[X_{1} X_{2} \cdots X_{n}\right]=E\left[X_{1}\right] E\left[X_{2}\right] \cdots E\left[X_{n}\right]
 $$
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>One common setting for error term of regression model is <font face="gotham" color="red">independent identically distributed</font>.</p>
@@ -14544,22 +14509,17 @@ E\left[X_{1} X_{2} \cdots X_{n}\right] &amp;=E\left[X_{1}\right] E\left[X_{2}\ri
 &amp;=E\left[X_{1}\right]^{n}=E\left[X_{2}\right]^{n}=\cdots = E\left[X_{n}\right]^{n}
 \end{aligned}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Moment-Generating-Functions"><font face="gotham" color="purple"> Moment Generating Functions</font><a class="anchor-link" href="#-Moment-Generating-Functions">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Without formal definition, we call $E[X], E[X^2], E[X^k]$ the first moment, the second moment and the $k$th moment.</p>
+<h2 id="-Moment-Generating-Functions"><font face="gotham" color="purple"> Moment Generating Functions</font><a class="anchor-link" href="#-Moment-Generating-Functions">&#182;</a></h2><p>Without formal definition, we call $E[X], E[X^2], E[X^k]$ the first moment, the second moment and the $k$th moment.</p>
 <p>Another important concept is central moment, for instance $E[(X - E[X])^k]$ is called the $k$th moment.</p>
+<p>The moment generating function (MGF) is a convenient way of generating all moments that we need.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The moment generating function (MGF) is a convenient way of generating all moments that we need.</p>
 <p>If $X$ is discrete random variable, the MGF is</p>
 $$
 M_X(t) = E[e^{tX}] = \sum_0^\infty e^{tk}P_X(k)
@@ -14568,121 +14528,63 @@ $$
 M_X(t) = E[e^{tX}]  = \int_{-\infty}^\infty e^{tX} f_X(x) dx
 $$
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We obtain moments by taking derivatives of MGFs</p>
-$$
-E(X^n) = \frac{d^nM_x(t)}{dt^n}\bigg|_{t=0}
-$$
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-How-It-Works?"><font face="gotham" color="purple"> How It Works?</font><a class="anchor-link" href="#-How-It-Works?">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Perform Taylor expansion on $e^x$</p>
+<h3 id="-How-It-Works?"><font face="gotham" color="purple"> How It Works?</font><a class="anchor-link" href="#-How-It-Works?">&#182;</a></h3><p>Perform Taylor expansion on $e^x$</p>
 $$
  e^{x}=1+x+\frac{x^{2}}{2 !}+\frac{x^{3}}{3 !}+\ldots=\sum_{k=0}^{\infty} \frac{x^{k}}{k !}
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Suppose $X$ is a discrete random variable, therefore $e^{tX}$ is</p>
+$$<p>Suppose $X$ is a discrete random variable, therefore $e^{tX}$ is</p>
 $$
 e^{tX} = 1+tX+\frac{(tX)^{2}}{2 !}+\frac{(tX)^{3}}{3 !}+\ldots=\sum_{k=0}^{\infty} \frac{(tX)^{k}}{k !}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Take expectation, we obtain MGF</p>
 $$
 E[e^{tX}] =1+tE[X]+\frac{t^2E[X^{2}]}{2 !}+\frac{t^3E[X^{3}]}{3 !}+\ldots= \sum_{k=0}^{\infty} \frac{t^kE[X^{k}]}{k !}
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Take the first order derivative and evaluate at $t=0$</p>
+$$<p>Take the first order derivative and evaluate at $t=0$</p>
 $$
 \frac{d E[e^{tX}]}{dt}= 0 + E[X] + tE[X^2] + \frac{t^2E[X^3]}{2!}+\cdots = 0+ E[X]+ 0 + 0 +\cdots = E[X]
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Take the second order derivative and evaluate at $t=0$</p>
 $$
 \frac{d^2 E[e^{tX}]}{dt^2} = 0 + 0 + E[X^2]+ tE[X^3]+ \frac{t^2E[X^4]}{2!}+\cdots=E[X^2]
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Take the third order derivative and evaluate at $t=0$</p>
+$$<p>Take the third order derivative and evaluate at $t=0$</p>
 $$
 \frac{d^3 E[e^{tX}]}{dt^3} = 0+0+0+E[X^3]+tE[X^4] = E[X^3]
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-Example-1---Moments-of-Bernoulli"><font face="gotham" color="purple"> Example 1 - Moments of Bernoulli</font><a class="anchor-link" href="#-Example-1---Moments-of-Bernoulli">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's calculate the MGF of $X\sim Ber(p)$, we know $P_X(1) = p, P_X(0)= 1-p$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="-Example-1---Moments-of-Bernoulli"><font face="gotham" color="purple"> Example 1 - Moments of Bernoulli</font><a class="anchor-link" href="#-Example-1---Moments-of-Bernoulli">&#182;</a></h3><p>Let's calculate the MGF of $X\sim Ber(p)$, we know $P_X(1) = p, P_X(0)= 1-p$.</p>
 $$
  E[e^{tX}] = e^{0t}P_X(0)+e^{1t}P_X(1) = 1-p+pe^t
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we want to calculate the variance with formula $E(X^2)-(E[X])^2$, we need to generate the first and second moment.</p>
+$$<p>If we want to calculate the variance with formula $E(X^2)-(E[X])^2$, we need to generate the first and second moment.</p>
 $$
 E[X]=\frac{d E[e^{tX}]}{dt} \bigg|_{t=0}= p\\
 E[X^2]=\frac{d^2 E[e^{tX}]}{dt^2} \bigg|_{t=0}= p
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So the variance is $E(X^2)-(E[X])^2 = p - p^2$.</p>
+$$<p>So the variance is $E(X^2)-(E[X])^2 = p - p^2$.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-Example-2---Moments-of-Binomial-"><font face="gotham" color="purple"> Example 2 - Moments of Binomial </font><a class="anchor-link" href="#-Example-2---Moments-of-Binomial-">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If $X_1, X_2, \ldots ,X_n \stackrel{i.i.d.}{\sim} Ber(p)$,</p>
+<h3 id="-Example-2---Moments-of-Binomial-"><font face="gotham" color="purple"> Example 2 - Moments of Binomial </font><a class="anchor-link" href="#-Example-2---Moments-of-Binomial-">&#182;</a></h3><p>If $X_1, X_2, \ldots ,X_n \stackrel{i.i.d.}{\sim} Ber(p)$,</p>
 $$
 \sum^n_{i=1}X_i\ \sim\ B(n,p)
 $$<p>where $B(n,p)$ denotes binomial distribution.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The goal is to find the first moment $E(\sum^n_{i=1}X_i)$ and the second central moment $\text{Var}(\sum^n_{i=1}X_i)$.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Using MGF definition</p>
@@ -14693,7 +14595,7 @@ E[e^{t\sum^n_{i=1}X_i}] &amp;= E[e^{tX_1}e^{tX_2}\ldots e^{tX_n}]
 &amp; = (1-p+pe^t)^n
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The first moment is</p>
@@ -14701,7 +14603,7 @@ $$
 E\bigg(\sum^n_{i=1}X_i\bigg) = \frac{d}{dt}(1-p+pe^t)^n\bigg|_{t=0}=n(1-p+pe^t)^{n-1}pe^t\Big|_{t=0}=np
 $$
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The second moment requires product rule of differentiation</p>
@@ -14711,7 +14613,7 @@ E\bigg[\bigg(\sum^n_{i=1}X_i\bigg)^2 \bigg]=\frac{d}{dt}n(1-p+pe^t)^{n-1}pe^t
 &amp;=n(n-1)p^2+np=n^2p^2-np^2+np
 \end{align}
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Thereby</p>
@@ -14719,7 +14621,7 @@ $$
 \text{Var}\left(\sum^n_{i=1}X_i\right)= n^2p^2-np^2+np - n^2p^2 = np - np^2
 $$
 </div>
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 </body>
