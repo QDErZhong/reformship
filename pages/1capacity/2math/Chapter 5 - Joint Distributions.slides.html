@@ -14401,22 +14401,6 @@ div.jp-OutputPrompt {
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
 <div class="toc"><ul class="toc-item"><li><span><a href="#-Discrete-Distributions" data-toc-modified-id="-Discrete-Distributions-1"><span class="toc-item-num">1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Discrete Distributions</font></a></span><ul class="toc-item"><li><span><a href="#-Joint-PMF" data-toc-modified-id="-Joint-PMF-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Joint PMF</font></a></span></li><li><span><a href="#-Marginal-PMF" data-toc-modified-id="-Marginal-PMF-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Marginal PMF</font></a></span></li><li><span><a href="#-Joint-and-Marginal-CDF-" data-toc-modified-id="-Joint-and-Marginal-CDF--1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Joint and Marginal CDF </font></a></span></li><li><span><a href="#-Conditional-PMF-and-CDF" data-toc-modified-id="-Conditional-PMF-and-CDF-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span><font face="gotham" color="purple"> Conditional PMF and CDF</font></a></span></li><li><span><a href="#-Conditional-Expectation" data-toc-modified-id="-Conditional-Expectation-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span><font face="gotham" color="purple"> Conditional Expectation</font></a></span><ul class="toc-item"><li><span><a href="#-Conditional-Expectation-as-A-Function" data-toc-modified-id="-Conditional-Expectation-as-A-Function-1.5.1"><span class="toc-item-num">1.5.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Conditional Expectation as A Function</font></a></span></li><li><span><a href="#-Expectation-for-Independent-Variables" data-toc-modified-id="-Expectation-for-Independent-Variables-1.5.2"><span class="toc-item-num">1.5.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Expectation for Independent Variables</font></a></span></li></ul></li></ul></li><li><span><a href="#-Continuous-Distributions" data-toc-modified-id="-Continuous-Distributions-2"><span class="toc-item-num">2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Continuous Distributions</font></a></span><ul class="toc-item"><li><span><a href="#-Joint-PDF" data-toc-modified-id="-Joint-PDF-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Joint PDF</font></a></span><ul class="toc-item"><li><span><a href="#-An-Example-of-Joint-PDF-" data-toc-modified-id="-An-Example-of-Joint-PDF--2.1.1"><span class="toc-item-num">2.1.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> An Example of Joint PDF </font></a></span></li></ul></li><li><span><a href="#-Marginal-PDF-" data-toc-modified-id="-Marginal-PDF--2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Marginal PDF </font></a></span></li><li><span><a href="#-Joint-CDF-" data-toc-modified-id="-Joint-CDF--2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Joint CDF </font></a></span></li><li><span><a href="#-Conditional-PDF-and-CDF-" data-toc-modified-id="-Conditional-PDF-and-CDF--2.4"><span class="toc-item-num">2.4&nbsp;&nbsp;</span><font face="gotham" color="purple"> Conditional PDF and CDF </font></a></span></li><li><span><a href="#-Independence" data-toc-modified-id="-Independence-2.5"><span class="toc-item-num">2.5&nbsp;&nbsp;</span><font face="gotham" color="purple"> Independence</font></a></span></li></ul></li></ul></div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">mpl_toolkits.mplot3d.art3d</span> <span class="k">as</span> <span class="nn">art3d</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14431,70 +14415,54 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Joint-PMF"><font face="gotham" color="purple"> Joint PMF</font><a class="anchor-link" href="#-Joint-PMF">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The joint probability mass function of two discrete random variable is defined as</p>
+<h2 id="-Joint-PMF"><font face="gotham" color="purple"> Joint PMF</font><a class="anchor-link" href="#-Joint-PMF">&#182;</a></h2><p>The joint probability mass function of two discrete random variable is defined as</p>
 $$
 P_{XY}(x, y) = P(X = x, Y=y)
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It is convenient to define a finite range for $X$ and $Y$, $R_X = \{x_1, x_2, ...\}$ and $R_Y = \{y_1, y_2, ...\}$ and its <font face="gotham" color="red">cartesian product</font></p>
+$$<p>It is convenient to define a finite range for $X$ and $Y$, $R_X = \{x_1, x_2, ...\}$ and $R_Y = \{y_1, y_2, ...\}$ and its <font face="gotham" color="red">cartesian product</font></p>
 $$
 R_{XY}\subset R_X \times R_Y = \{(x_i, y_j)|x_i\in R_X, y_j \in R_Y\}
 $$<p>is the range for joint distribution.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The most common property for probability distribution is</p>
 $$
 \sum_{(x_i,y_j)\in R_{XY}}P_{XY}(x_i,y_j)=1
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Marginal-PMF"><font face="gotham" color="purple"> Marginal PMF</font><a class="anchor-link" href="#-Marginal-PMF">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's consider a probability mass function table.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="-Marginal-PMF"><font face="gotham" color="purple"> Marginal PMF</font><a class="anchor-link" href="#-Marginal-PMF">&#182;</a></h2><p>Let's consider a probability mass function table.</p>
 \begin{array}{|c|c|}
 \hline &amp; Y = 0 &amp; Y = 1 &amp; Y= 2 \\ \hline
   X = 0 &amp; 1/6  &amp; 1/4 &amp; 1/8  \\ \hline
   X = 1 &amp; 1/8  &amp; 1/6 &amp; 1/6  \\ \hline
-\end{array}
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li><p>Find $P(X=0, Y = 1)$. It is easy, just eyeball the table.
-$$P(X=0, Y = 1) = 1/4$$</p>
-</li>
-<li><p>Find $P(X=0| Y = 1)$ and $P(Y = 1| X =0)$
-$$
-P(X=0| Y = 1) = \frac{1/4}{1/4+1/6}=3/5\\
-P(Y = 1| X =0) = \frac{1/4}{1/6+1/4+1/8}= 6/13
-$$</p>
-</li>
+\end{array}<ol>
+<li>Find $P(X=0, Y = 1)$. </li>
 </ol>
 
 </div>
-</div></div></section><section>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>It is easy, just eyeball the table.
+$$P(X=0, Y = 1) = 1/4$$</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>Find $P(X=0| Y = 1)$ and $P(Y = 1| X =0)$</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$P(X=0| Y = 1) = \frac{1/4}{1/4+1/6}=3/5\\
+P(Y = 1| X =0) = \frac{1/4}{1/6+1/4+1/8}= 6/13
+$$
+</div>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14502,7 +14470,7 @@ $$</p>
 </ol>
 
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
@@ -14547,7 +14515,7 @@ Marginal PMF of pX are 13/24, 11/24.
 
 </div>
 
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The reason we call them marginal is because they are written at the margin of the table.</p>
@@ -14558,7 +14526,7 @@ Marginal PMF of pX are 13/24, 11/24.
  P_Y(y) &amp; 7/24  &amp; 5/12 &amp; 7/24  &amp;  \\ \hline
 \end{array}
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14566,7 +14534,7 @@ Marginal PMF of pX are 13/24, 11/24.
 </ol>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>If independent, a conditional probability should equal to marginal probability, for instance</p>
@@ -14576,7 +14544,7 @@ P_X(X=0)=13/24
 $$<p>They are not equal, which means they are not independent.</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The relationship of marginal PMF and conditional PMF is</p>
@@ -14587,51 +14555,16 @@ $$
 \text{Conditional PMF} = \frac{\text{Joint PMF}}{\text{Marginal PMF}}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Joint-and-Marginal-CDF-"><font face="gotham" color="purple"> Joint and Marginal CDF </font><a class="anchor-link" href="#-Joint-and-Marginal-CDF-">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The joint CDF of two random variables $X$ and $Y$ is defined as</p>
+<h2 id="-Joint-and-Marginal-CDF-"><font face="gotham" color="purple"> Joint and Marginal CDF </font><a class="anchor-link" href="#-Joint-and-Marginal-CDF-">&#182;</a></h2><p>The joint CDF of two random variables $X$ and $Y$ is defined as</p>
 $$
 F_{XY}(x,y)=P(X\leq x, Y\leq y)
 $$<p>where $0\leq F_{XY}(x,y) \leq 1$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For instance, the joint CDF of $P(X\leq 2, Y\leq 1)$ in range $(-6,\ 6)$ is the probability of the shaded area.</p>
 
 </div>
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">50</span><span class="p">),</span>
-           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">50</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=.</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="s1">&#39;$(1, 2)$&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14683,17 +14616,12 @@ $$
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Conditional-PMF-and-CDF"><font face="gotham" color="purple"> Conditional PMF and CDF</font><a class="anchor-link" href="#-Conditional-PMF-and-CDF">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If $A$ is a random event, the conditional PMF of $X$ given $A$ is denoted as</p>
+<h2 id="-Conditional-PMF-and-CDF"><font face="gotham" color="purple"> Conditional PMF and CDF</font><a class="anchor-link" href="#-Conditional-PMF-and-CDF">&#182;</a></h2><p>If $A$ is a random event, the conditional PMF of $X$ given $A$ is denoted as</p>
 $$
 P_{X|A}(X = x_i) = \frac{P(X=x_i,A)}{P(A)}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Consider a PMF as below</p>
@@ -14704,17 +14632,7 @@ $$
   Y = 0 &amp; 1/13  &amp; 1/13 &amp; 1/13 &amp; 1/13 &amp; 1/13  \\ \hline
   Y = -1 &amp; 0  &amp; 1/13 &amp; 1/13 &amp; 1/13 &amp; 0  \\ \hline
   Y = -2 &amp; 0  &amp; 0 &amp; 1/13 &amp; 0 &amp; 0  \\ \hline
-\end{array}
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Mathematically, it is defined as $G=\{(x, y)|x, y \in \mathbb{Z},| x|+| y | \leq 2\}$.</p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+\end{array}<p>Mathematically, it is defined as $G=\{(x, y)|x, y \in \mathbb{Z},| x|+| y | \leq 2\}$.</p>
 <ol>
 <li>Find the marginal PMFs of $X$ and $Y$.</li>
 </ol>
@@ -14791,7 +14709,7 @@ Marginal PMF of pX are 1/13, 3/13, 5/13, 3/13, 1/13.
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 \begin{array}{|c|c|}
@@ -14800,7 +14718,7 @@ Marginal PMF of pX are 1/13, 3/13, 5/13, 3/13, 1/13.
 \end{array}<p>It shows that given $Y=1$, $X$ is uniformly distributed over $\{-1,0,1\}$.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14808,15 +14726,10 @@ Marginal PMF of pX are 1/13, 3/13, 5/13, 3/13, 1/13.
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>No, for instance $P(X=0|Y=1) \neq P_X(X = 0)$</p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>If random event $A$ is replaced by a discrete random variable $Y$, the conditional density PMFs are defined as</p>
 $$
 \begin{array}{l}
@@ -14829,24 +14742,14 @@ $$<p>where $x_i$ and $y_j$ are realizations of $X$ and $Y$.</p>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Conditional-Expectation"><font face="gotham" color="purple"> Conditional Expectation</font><a class="anchor-link" href="#-Conditional-Expectation">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The expectation can be conditional on a random event or a realization of random variable.</p>
+<h2 id="-Conditional-Expectation"><font face="gotham" color="purple"> Conditional Expectation</font><a class="anchor-link" href="#-Conditional-Expectation">&#182;</a></h2><p>The expectation can be conditional on a random event or a realization of random variable.</p>
 $$\begin{align}
 E[X | A]&amp;=\sum_{x_{i}\in R_{X}}x_{i} P_{X | A}\left(x_{i}|A\right) \\
 E[X | Y=y_{j}]&amp;=\sum_{x_{i} \in R_{X}} x_{i} P_{X | Y}\left(x_{i} | Y=y_{j}\right)
-\end{align}$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Use the PMF example in last section, let's try to answer questions below.</p>
+\end{align}$$<p>Use the PMF example in last section, let's try to answer questions below.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14854,20 +14757,15 @@ E[X | Y=y_{j}]&amp;=\sum_{x_{i} \in R_{X}} x_{i} P_{X | Y}\left(x_{i} | Y=y_{j}\
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>To calculate the conditional expectation, we must use conditional probability as weight:</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 E[X|Y = 1]= -1 \left(\frac{1}{3}\right)+ 0  \left(\frac{1}{3}\right)+1 \left(\frac{1}{3}\right)=0
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14875,7 +14773,7 @@ $$
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>First, calculate the conditional PMF</p>
@@ -14883,21 +14781,16 @@ $$
 P_{X|-1&lt;Y&lt;2}(x_i |-1&lt;Y&lt;2) = -2\frac{1/13}{8/13}-\frac{2/13}{8/13}+0\frac{3/13}{8/13}+ \frac{2/13}{8/13} + 2\frac{1/13}{8/13}=0
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-Conditional-Expectation-as-A-Function"><font face="gotham" color="purple"> Conditional Expectation as A Function</font><a class="anchor-link" href="#-Conditional-Expectation-as-A-Function">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If you paid attention to the conditional expection expression</p>
+<h3 id="-Conditional-Expectation-as-A-Function"><font face="gotham" color="purple"> Conditional Expectation as A Function</font><a class="anchor-link" href="#-Conditional-Expectation-as-A-Function">&#182;</a></h3><p>If you paid attention to the conditional expection expression</p>
 $$
 E[X | Y=y_{j}]=\sum_{x_{i} \in R_{X}} x_{i} P_{X | Y}\left(x_{i} | Y=y_{j}\right)
 $$<p>you would find that it is actually a function of $Y$.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Consider a joint PMF below</p>
@@ -14910,7 +14803,7 @@ $$
 \end{array}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14918,7 +14811,7 @@ $$
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
@@ -14928,7 +14821,7 @@ P_{X|Y}(X= 0|Y = 1) = \frac{2/5}{2/5}=1\\
 P_{X|Y}(X= 1|Y = 1) = 0\\
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14936,7 +14829,7 @@ $$
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Remember that $Z$ is a function of $Y$. To calculate conditional expectation, we need to use conditional probability as well.</p>
@@ -14945,7 +14838,7 @@ E[X|Y = 0] = 0 \left(\frac{\frac{1}{5}}{\frac{1}{5}+\frac{2}{5}}\right)+1\left(\
 E[X|Y = 1]  = 0
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -14953,34 +14846,19 @@ $$
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Because $E[X|Y]$ itself is a variable, it must have an expectation as well</p>
 $$
 E[Z] = E[E[X|Y]] = P_Y(Y = 0)E[X|Y = 0]+ P_Y(Y = 1)E[X|Y = 1] = \frac{3}{5}\cdot\frac{2}{3}+\frac{2}{5}\cdot0=\frac{2}{5}
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Actually, $E[Z] = E[E[X|Y]] = E[X]$ must hold, it is the <font face="gotham" color="red">law of iterated expectation</font>.</p>
+$$<p>Actually, $E[Z] = E[E[X|Y]] = E[X]$ must hold, it is the <font face="gotham" color="red">law of iterated expectation</font>.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-Expectation-for-Independent-Variables"><font face="gotham" color="purple"> Expectation for Independent Variables</font><a class="anchor-link" href="#-Expectation-for-Independent-Variables">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>All the rules of expectation for independent variables are here, they are fairly straightforward, because conditioning on $Y$ does not provide any extra information</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="-Expectation-for-Independent-Variables"><font face="gotham" color="purple"> Expectation for Independent Variables</font><a class="anchor-link" href="#-Expectation-for-Independent-Variables">&#182;</a></h3><p>All the rules of expectation for independent variables are here, they are fairly straightforward, because conditioning on $Y$ does not provide any extra information</p>
 <ol>
 <li>$E[X | Y]=E[ X]$</li>
 <li>$E[g(X) | Y]=E[g(X)]$</li>
@@ -14989,50 +14867,35 @@ $$
 </ol>
 
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="-Continuous-Distributions"><font face="gotham" color="purple"> Continuous Distributions</font><a class="anchor-link" href="#-Continuous-Distributions">&#182;</a></h1>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Joint-PDF"><font face="gotham" color="purple"> Joint PDF</font><a class="anchor-link" href="#-Joint-PDF">&#182;</a></h2>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Joint PDF of $X$ and $Y$ is defined as</p>
+<h2 id="-Joint-PDF"><font face="gotham" color="purple"> Joint PDF</font><a class="anchor-link" href="#-Joint-PDF">&#182;</a></h2><p>Joint PDF of $X$ and $Y$ is defined as</p>
 $$
 P((X, Y) \in A)=\iint_{A} f_{X Y}(x, y) d x d y =1
 $$<p>where $f_{XY}(x, y)$ is a non-negative function, mapping $\mathbb{R}^2$ to $\mathbb{R}$.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>However, we are particularly interested in the case that $A$ is a rectangular,</p>
 $$
 P(a\geq X \geq b, c\geq Y \geq d) =\int_c^d\int_a^b f_{X Y}(x, y) d x d y
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>And within $A$, there are infinite amount of small rectangles</p>
+$$<p>And within $A$, there are infinite amount of small rectangles</p>
 $$
 P(a\geq X \geq a+\delta, c\geq Y \geq c+\delta )\approx f_{XY}(a,c)\delta^2
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="-An-Example-of-Joint-PDF-"><font face="gotham" color="purple"> An Example of Joint PDF </font><a class="anchor-link" href="#-An-Example-of-Joint-PDF-">&#182;</a></h3>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's consider an example other than normal distribution.</p>
+<h3 id="-An-Example-of-Joint-PDF-"><font face="gotham" color="purple"> An Example of Joint PDF </font><a class="anchor-link" href="#-An-Example-of-Joint-PDF-">&#182;</a></h3><p>Let's consider an example other than normal distribution.</p>
 $$
 f_{X Y}(x, y)=\left\{\begin{array}{ll}
 x+c y^{2} &amp; 0 \leq x \leq 1,\quad 0 \leq y \leq 1 \\
@@ -15040,7 +14903,7 @@ x+c y^{2} &amp; 0 \leq x \leq 1,\quad 0 \leq y \leq 1 \\
 \end{array}\right.
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -15048,7 +14911,7 @@ $$
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Use the property $\iint_{A} f_{X Y}(x, y) d x d y =1$</p>
@@ -15061,7 +14924,7 @@ $$
 c&amp;=\frac{3}{2}\\
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
@@ -15069,7 +14932,7 @@ c&amp;=\frac{3}{2}\\
 </ol>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Plug in $c$, perform double integration</p>
@@ -15081,34 +14944,13 @@ c&amp;=\frac{3}{2}\\
 &amp;=\frac{3}{32}
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The joint distribution is depicted as below, the volume between the curved plane and $xy$ plane is $1$.</p>
 
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">Z</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;coolwarm&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -15150,18 +14992,13 @@ c&amp;=\frac{3}{2}\\
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Marginal-PDF-"><font face="gotham" color="purple"> Marginal PDF </font><a class="anchor-link" href="#-Marginal-PDF-">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Maringal PDF of $X$ and $Y$ are</p>
+<h2 id="-Marginal-PDF-"><font face="gotham" color="purple"> Marginal PDF </font><a class="anchor-link" href="#-Marginal-PDF-">&#182;</a></h2><p>Maringal PDF of $X$ and $Y$ are</p>
 \begin{equation}
 f_{X}(x)=\int_{-\infty}^{\infty} f_{X Y}(x, y) d y,\quad \text { for all } x \\
 f_{Y}(y)=\int_{-\infty}^{\infty} f_{X Y}(x, y) d x,\quad \text { for all } y
 \end{equation}
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Let's use the same example as in last section to find out $f_X(x)$ and $f_Y(y)$.</p>
@@ -15170,21 +15007,16 @@ f_{X}(x)=\int_{0}^{1}\left(x+\frac{3}{2}y^2\right)  d y =x+\frac{1}{2}\\
 f_{Y}(y)=\int_{0}^{1}\left(x+\frac{3}{2}y^2\right)  d x =\frac{3}{2} y^{2}+\frac{1}{2}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Joint-CDF-"><font face="gotham" color="purple"> Joint CDF </font><a class="anchor-link" href="#-Joint-CDF-">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Joint CDF and joint PDF has relationship as follows:</p>
+<h2 id="-Joint-CDF-"><font face="gotham" color="purple"> Joint CDF </font><a class="anchor-link" href="#-Joint-CDF-">&#182;</a></h2><p>Joint CDF and joint PDF has relationship as follows:</p>
 $$
 F_{X Y}(x, y)=\int_{-\infty}^{y} \int_{-\infty}^{x} f_{X Y}(u, v) d u d v \\
 f_{X Y}(x, y)=\frac{\partial^{2}}{\partial x \partial y} F_{X Y}(x, y)
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The same PDF as above, find the CDF.</p>
@@ -15195,7 +15027,7 @@ x+\frac{3}{2} y^{2} &amp; 0 \leq x \leq 1,\quad 0 \leq y \leq 1 \\
 \end{array}\right.
 $$
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 \begin{align}
@@ -15206,36 +15038,26 @@ F_{XY}(x,y)=\int_{0}^{y} \int_{0}^{x} f_{X Y}(u, v) d u d v&amp;=\int_{0}^{y} \i
 &amp; =\frac{x^2y}{2}+\frac{y^3x}{2}
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Conditional-PDF-and-CDF-"><font face="gotham" color="purple"> Conditional PDF and CDF </font><a class="anchor-link" href="#-Conditional-PDF-and-CDF-">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Consider the conditional PDF of $X$ given that $X\in A$</p>
+<h2 id="-Conditional-PDF-and-CDF-"><font face="gotham" color="purple"> Conditional PDF and CDF </font><a class="anchor-link" href="#-Conditional-PDF-and-CDF-">&#182;</a></h2><p>Consider the conditional PDF of $X$ given that $X\in A$</p>
 \begin{align}
 P(x\leq X \leq x+\delta|X \in A)\approx f_{X|X\in A}(x)\cdot \delta &amp;= \frac{P(x\leq X \leq x+\delta,X \in A)}{P(A)}\\
 &amp;=\frac{P(x\leq X \leq x+\delta)}{P(A)}\\
 &amp;\approx\frac{f_X(x)\delta}{P(A)}
 \end{align}
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We have shown that</p>
 $$
 f_{X|X\in A}(x) = \frac{f_X(x)}{P(A)}
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You can imagin $P(A)$ as a scaling factor that normalize the conditional PDF into an area of $1$.</p>
+$$<p>You can imagin $P(A)$ as a scaling factor that normalize the conditional PDF into an area of $1$.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For two jointly continuous random variables $X$ and $Y$, we can
@@ -15262,12 +15084,7 @@ $$</li>
 <p>The intuition of the first expression, i.e. conditional PDF is</p>
 $$
 P(x\leq X \leq x+\delta| y\leq Y\leq y+\epsilon)\approx \frac{f_{XY}(xy)\delta\epsilon}{f_Y(y)\epsilon}=f_{X|Y}(x|y)\delta
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Conditional probability must satisfy the basic rule of probability as well,</p>
+$$<p>Conditional probability must satisfy the basic rule of probability as well,</p>
 $$
 \int_{-\infty}^\infty f_{X|Y}(x|y)dx = 1
 $$<p>because</p>
@@ -15275,7 +15092,7 @@ $$
 \frac{\int_{-\infty}^\infty f_{XY}(xy)dx}{f_Y(y)} = 1
 $$
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Rearrange the conditional PDF, we obtain the multiplication rule</p>
@@ -15283,23 +15100,13 @@ $$
 f_{XY}(xy)=f_{X|Y}(x|y)f_Y(y)
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Independence"><font face="gotham" color="purple"> Independence</font><a class="anchor-link" href="#-Independence">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If continuous variables $X$ and $Y$ are independent, then knowing either of them does not provide information for the other. That is</p>
+<h2 id="-Independence"><font face="gotham" color="purple"> Independence</font><a class="anchor-link" href="#-Independence">&#182;</a></h2><p>If continuous variables $X$ and $Y$ are independent, then knowing either of them does not provide information for the other. That is</p>
 $$
 f_{X|Y}(x|y) = f_X(x),\qquad \text{or} \qquad f_{Y|X}(y|x) = f_Y(y)
-$$
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Thus the multiplication rule for independent distribution</p>
+$$<p>Thus the multiplication rule for independent distribution</p>
 $$
 f_{XY}(xy)=f_X(x)f_Y(y)
 $$<p>Other rules derived from this are</p>
@@ -15309,7 +15116,7 @@ E[XY]&amp;= E[X]E[Y]\\
 E[g(X)h(Y)]&amp;=E[g(X)]E[h(Y)]
 \end{align}
 </div>
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 </body>
