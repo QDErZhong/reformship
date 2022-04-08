@@ -14395,27 +14395,7 @@ div.jp-OutputPrompt {
     <p>&nbsp;</p>
     <p style="text-align:center;"><strong><span class="a">Wang Haihua</span></strong> <span class="b"></span> <span> </span></p>
     <p style="font-size:48px;text-align:center;"> &#128645; &#128651;&#x1F61C; &#128657; &#128660;</p>
-</section></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#-Joint-Probability" data-toc-modified-id="-Joint-Probability-1"><span class="toc-item-num">1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Joint Probability</font></a></span><ul class="toc-item"><li><span><a href="#-Example-1" data-toc-modified-id="-Example-1-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 1</font></a></span></li><li><span><a href="#-Example-2" data-toc-modified-id="-Example-2-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 2</font></a></span></li><li><span><a href="#-Example-3" data-toc-modified-id="-Example-3-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 3</font></a></span></li></ul></li><li><span><a href="#-Conditional-Probability" data-toc-modified-id="-Conditional-Probability-2"><span class="toc-item-num">2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Conditional Probability</font></a></span><ul class="toc-item"><li><span><a href="#-Example-1" data-toc-modified-id="-Example-1-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 1</font></a></span></li><li><span><a href="#-Example-2" data-toc-modified-id="-Example-2-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 2</font></a></span></li><li><span><a href="#-Example-3" data-toc-modified-id="-Example-3-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 3</font></a></span></li></ul></li><li><span><a href="#-Independence" data-toc-modified-id="-Independence-3"><span class="toc-item-num">3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Independence</font></a></span><ul class="toc-item"><li><span><a href="#-Independence-vs-Disjoint" data-toc-modified-id="-Independence-vs-Disjoint-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Independence vs Disjoint</font></a></span></li></ul></li><li><span><a href="#Law-of-Total-Probability" data-toc-modified-id="Law-of-Total-Probability-4"><span class="toc-item-num">4&nbsp;&nbsp;</span><font face="gotham" color="purple">Law of Total Probability</font></a></span><ul class="toc-item"><li><span><a href="#-Example-1" data-toc-modified-id="-Example-1-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 1</font></a></span></li><li><span><a href="#-Example-2" data-toc-modified-id="-Example-2-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 2</font></a></span></li><li><span><a href="#-Example-3" data-toc-modified-id="-Example-3-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span><font face="gotham" color="purple"> Example 3</font></a></span></li></ul></li></ul></div>
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
+</section></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="-Joint-Probability"><font face="gotham" color="purple"> Joint Probability</font><a class="anchor-link" href="#-Joint-Probability">&#182;</a></h1>
@@ -14423,21 +14403,31 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Joint probability and conditional probability are closely connected, however quite elusive for beginners, sometimes even experienced data scientists feel hard to tell the subtlety. We will tackle the joint probability first.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The joint probability is defined as</p>
+<p>The <strong>joint probability</strong> is defined as</p>
 $$
 P(A\cap B) = P(A)P(B)
-$$<p>when we talking about joint probability, we implicitly assume that</p>
+$$
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>when we talking about joint probability, we <u>implicitly</u> assume that</p>
 <ol>
 <li>$A$ and $B$ are independent events.</li>
 <li>$A$ and $B$ happen in the same time.</li>
 </ol>
-<p>If $A$ and $B$ are not independent, it is pointless to talk about joint probability, because they are affection each other's results. In other words, if $A$ and $B$ are dependent, when $A$ happens, the probability of $B$ happenning is not $P(B)$ anymore, we can't use $P(AB) = P(A)P(B)$.</p>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>If $A$ and $B$ are not independent, it is pointless to talk about joint probability, because they are affection each other's results. </li>
+</ul>
+<p>In other words</p>
+<ul>
+<li>if $A$ and $B$ are dependent, when $A$ happens, the probability of $B$ happenning is not $P(B)$ anymore, we can't use $P(AB) = P(A)P(B)$.</li>
+</ul>
 
 </div>
 </div></section><section>
@@ -14451,7 +14441,7 @@ $$<p>when we talking about joint probability, we implicitly assume that</p>
 <p>What is the joint probability of rolling the number 6 twice in a fair six-sided dice?</p>
 
 </div>
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Throwing dice is an independent event, <br></p>
@@ -14460,7 +14450,7 @@ $$
 P(A\cap A)=\frac{1}{6}\frac{1}{6}= \frac{1}{36}
 $$
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="-Example-2"><font face="gotham" color="purple"> Example 2</font><a class="anchor-link" href="#-Example-2">&#182;</a></h2>
@@ -14471,120 +14461,37 @@ $$
 <p>What is the joint probability of getting 3 times head followed by 3 times tail in a coin toss?</p>
 
 </div>
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $A$ = Getting $1$ time of head<br>
 Event $B$ = Getting $1$ time of tail</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 P(BBBAAA)= .5^6
 $$
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">.</span><span class="mi">5</span><span class="o">**</span><span class="mi">6</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.015625</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="-Example-3"><font face="gotham" color="purple"> Example 3</font><a class="anchor-link" href="#-Example-3">&#182;</a></h2>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>What is the joint probability that you pick up a card which is  <b>larger</b> than 4 and <b>less</b> than $10$ and also a $diamond$?</p>
+<p>What is the joint probability that you pick up a card which is  <b>larger</b> than 4 and <b>less</b> than $10$ and also a $diamond$? 
+<img src="https://github.com/reformship/reformship.github.io/blob/main/pages/1capacity/2math/images/cards.jpg?raw=true" alt="card"></p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $A$ = Getting card larger than $4$ and less than $10$, $(4&lt;x&lt;10)$<br>
 Event $B$ = Getting a $diamond$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>$P(A\cap B) = P(A)P(B) = \frac{5\times 4}{52}\frac{13}{52}$</p>
 <p>We multiply $4$ onto $\frac{5}{52}$ is because of $4$ different colors.</p>
 
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mi">52</span><span class="o">*</span><span class="mi">13</span><span class="o">/</span><span class="mi">52</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.09615384615384616</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="-Conditional-Probability"><font face="gotham" color="purple"> Conditional Probability</font><a class="anchor-link" href="#-Conditional-Probability">&#182;</a></h1>
@@ -14595,186 +14502,56 @@ Event $B$ = Getting a $diamond$.</p>
 <p>Conditional probability is denoted as</p>
 $$
 P(B|A)= \frac{P(A\cap B)}{P(A)}=\frac{P(A\cap B)}{P(A\cap B)+P(A\cap B^C)}
-$$
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>which reads, the probability of $B$ given $A$. Here we treat $A$ as a fact, it either happens or assumed to happen. $B^C$ is the complement event of $A$, that $P(B^C)+P(B) =1 $</p>
+$$<p>which reads, the probability of $B$ given $A$. Here we treat $A$ as a fact, it either happens or assumed to happen. $B^C$ is the complement event of $A$, that $P(B^C)+P(B) =1 $</p>
 
 </div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-1"><font face="gotham" color="purple"> Example 1</font><a class="anchor-link" href="#-Example-1">&#182;</a></h2>
-</div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>What is the probability of drawing a card, given which is a $diamond$, that is also <b>larger</b> than 4 and <b>less</b> than $10$?</p>
+<h2 id="-Example-1"><font face="gotham" color="purple"> Example 1</font><a class="anchor-link" href="#-Example-1">&#182;</a></h2><p>What is the probability of drawing a card, given which is a $diamond$, that is also <b>larger</b> than 4 and <b>less</b> than $10$?</p>
 
 </div>
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Note how we rephase the question than Example 3 in last section. When we are talking about conditional probability, we are changing our sample space, here the sample space change from all deck to $diamonds$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $A$ = Getting card larger than $4$ and less than $10$, $(4&lt;x&lt;10)$<br>
 Event $B$ = Getting a $diamond$.</p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>There are only $13$ cards of diamonds, this is the new sample space. And in this new sample space, we count how many numbers there are in $(4,\ 10)$. There are 5 numbers.Thus</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$P(A|B) = \frac{5}{13}$$
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">13</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.38461538461538464</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Then what is the joint probability of $P(A\cap B)$? Using multiplication rule $P(A\cap B) = P(A|B)P(B)$.</p>
 
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">13</span><span class="o">*</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.09615384615384616</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The joint probability only makes sense is because drawing a diamone and drawing in $(4 &lt;x&lt; 10)$ are independent events.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Note that we reproduced the same number  of the joint probability in Example 3 of last section.Keep that in mind, this is a common way of calculating joint probability</p>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-2"><font face="gotham" color="purple"> Example 2</font><a class="anchor-link" href="#-Example-2">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We roll a fair die twice and obtain two numbers $X_1= a$ and $X_2= b$. Given that I know $a+b=7$, what is the probability that $a=4$ or $b=4$?</p>
+<h2 id="-Example-2"><font face="gotham" color="purple"> Example 2</font><a class="anchor-link" href="#-Example-2">&#182;</a></h2><p>We roll a fair die twice and obtain two numbers $X_1= a$ and $X_2= b$. Given that I know $a+b=7$, what is the probability that $a=4$ or $b=4$?</p>
 
 </div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Our goal is to find out $p(a=4|a+b=7)$ and $p(b=4|a+b=7)$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $A$ : $a = 4$ or $b = 4$<br>
 Event $B$ : $a+b = 7$</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>There are only two way combinations of getting a $7$ if one of them is $4$, that are $(3, 4)$ and $(4, 3)$.</p>
 <p>And two dice have $6^2 = 36$ combination, to get $7$ there are $6$ combination: $(1, 6), (2, 5), (3,4), (4,3), (5,2),(6, 1)$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$\frac{P(A\cap B)}{P(B)}= \frac{2}{36}\Big/\frac{6}{36}=\frac{1}{3}$$
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-3"><font face="gotham" color="purple"> Example 3</font><a class="anchor-link" href="#-Example-3">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Consider a family that has two children. We are interested in the children's genders. Our sample space is $S=\{(G,G),(G,B),(B,G),(B,B)\}$. Also assume that all four possible outcomes are equally likely.</p>
+<h2 id="-Example-3"><font face="gotham" color="purple"> Example 3</font><a class="anchor-link" href="#-Example-3">&#182;</a></h2><p>Consider a family that has two children. We are interested in the children's genders. Our sample space is $S=\{(G,G),(G,B),(B,G),(B,B)\}$. Also assume that all four possible outcomes are equally likely.</p>
 <ol>
 <li>What is the probability that both children are girls given that the first child is a girl?</li>
 <li>We ask the father: "Do you have at least one daughter?" He responds "Yes!" Given this extra information, what is the probability that both children are girls? In other words, what is the probability that both children are girls given that we know at least one of them is a girl?</li>
@@ -14785,11 +14562,6 @@ $$\frac{P(A\cap B)}{P(B)}= \frac{2}{36}\Big/\frac{6}{36}=\frac{1}{3}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The first question's sample space is $\{(G,G),(G,B)\}$, the answer is $1/2$.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The second question's sample space is $\{(G,G),(G,B),(B,G)\}$, the answer is $1/3$.</p>
 
 </div>
@@ -14807,7 +14579,7 @@ Event $B$: Heads up when tossing a coin</p>
 <p>What is $P(A|B)$?</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Apparently, thay are independent events such that $P(A|B) = P(A)$. Formally it is from</p>
@@ -14819,20 +14591,10 @@ P(A | B) &amp;=\frac{P(A \cap B)}{P(B)} \\
 \end{aligned}
 $$
 </div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Independence-vs-Disjoint"><font face="gotham" color="purple"> Independence vs Disjoint</font><a class="anchor-link" href="#-Independence-vs-Disjoint">&#182;</a></h2>
-</div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Independence and disjoint are totally different concept, disjoint events mean if $A$ happens, then $B$ certainly can't happen, which exactly made sure they are dependent.</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="-Independence-vs-Disjoint"><font face="gotham" color="purple"> Independence vs Disjoint</font><a class="anchor-link" href="#-Independence-vs-Disjoint">&#182;</a></h2><p>Independence and disjoint are totally different concept, disjoint events mean if $A$ happens, then $B$ certainly can't happen, which exactly made sure they are dependent.</p>
 <p>Formally, consider two events $A$ and $B$, with $P(A) \neq 0$ and $P(B) \neq 0$.</p>
 <p>We can show that if $A$ and $B$ are disjoint, we have</p>
 $$
@@ -14840,15 +14602,10 @@ P(A \cap B)=\varnothing  \neq P(A) P(B)
 $$<p>Thus, $A$ and $B$ are not independent.</p>
 
 </div>
-</div></div></section></section><section><section>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Law-of-Total-Probability"><font face="gotham" color="purple">Law of Total Probability</font><a class="anchor-link" href="#Law-of-Total-Probability">&#182;</a></h1>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If $B_{1}, B_{2}, B_{3}, \cdots B_k$ is a partition of the sample space $S$, then for any event $A$ we have</p>
+<h1 id="Law-of-Total-Probability"><font face="gotham" color="purple">Law of Total Probability</font><a class="anchor-link" href="#Law-of-Total-Probability">&#182;</a></h1><p>If $B_{1}, B_{2}, B_{3}, \cdots B_k$ is a partition of the sample space $S$, then for any event $A$ we have</p>
 $$
 P(A)=\sum_{i=1}^k P\left(A \cap B_{i}\right)=\sum_{i=1}^k  P\left(A | B_{i}\right) P\left(B_{i}\right)
 $$<p>This is called <font face="gotham" color="red"> law of total probability.</p>
@@ -14857,88 +14614,32 @@ $$<p>This is called <font face="gotham" color="red"> law of total probability.</
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-1"><font face="gotham" color="purple"> Example 1</font><a class="anchor-link" href="#-Example-1">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A person has undertaken a mining job. The probabilities of completion of job on time with and without rain are $0.42$ and $0.90$ respectively. If the probability that it will rain is $0.45$, then determine the probability that the mining job will be completed on time.</p>
+<h2 id="-Example-1"><font face="gotham" color="purple"> Example 1</font><a class="anchor-link" href="#-Example-1">&#182;</a></h2><p>A person has undertaken a mining job. The probabilities of completion of job on time with and without rain are $0.42$ and $0.90$ respectively. If the probability that it will rain is $0.45$, then determine the probability that the mining job will be completed on time.</p>
 
 </div>
-</div></div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $R$: raining<br>
 Event $C$: complete the job on time</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$p(C) = p(C|R)p(R) + p(C|R^c)p(R^c) = .42\times .45 + .9\times .55$$
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">P_C</span> <span class="o">=</span> <span class="o">.</span><span class="mi">42</span><span class="o">*.</span><span class="mi">45</span><span class="o">+.</span><span class="mi">9</span><span class="o">*.</span><span class="mi">55</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The probability of completing mining job on time is </span><span class="si">%.3f%%</span><span class="s1">.&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">P_C</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The probability of completing mining job on time is 68.400%.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-2"><font face="gotham" color="purple"> Example 2</font><a class="anchor-link" href="#-Example-2">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We draw two cards from a deck of shuffled cards without replacement. Find the probability of getting a queen in the second draw.</p>
+<h2 id="-Example-2"><font face="gotham" color="purple"> Example 2</font><a class="anchor-link" href="#-Example-2">&#182;</a></h2><p>We draw two cards from a deck of shuffled cards without replacement. Find the probability of getting a queen in the second draw.</p>
 
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $Q1$: Drawing a queen in the first card<br>
 Event $Q2$: Drawing a queen in the second card</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 P(Q2) = P(Q2|Q1)*P(Q1) + P(Q2|Q1^c)P(Q1^c) = \frac{3}{51}\frac{4}{52}+\frac{4}{51}\frac{48}{52}
 $$
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
@@ -14974,15 +14675,10 @@ $$
 
 </div>
 
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="-Example-3"><font face="gotham" color="purple"> Example 3</font><a class="anchor-link" href="#-Example-3">&#182;</a></h2>
-</div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In a certain county<br></p>
+<h2 id="-Example-3"><font face="gotham" color="purple"> Example 3</font><a class="anchor-link" href="#-Example-3">&#182;</a></h2><p>In a certain county<br></p>
 <ol>
 <li>$60 \%$ of registered voters are Republicans </li>
 <li>$30 \%$ are Democrats</li>
@@ -14997,21 +14693,16 @@ $$
 <p>What is the probability that a randomly selected voter in this county opposes increasing military spending?</p>
 
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Event $A$: opposes increased military spending<br>
 Event $B$: Being Republican<br>
 Event $C$: Being Democrats<br>
 Event $D$: Being Independents</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$P(A) = P(A|B)P(B)+P(A|C)P(C)+P(A|D)P(D) = .4\times.6+ .65\times.3+ .55\times.1$$
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
@@ -15047,7 +14738,7 @@ $$P(A) = P(A|B)P(B)+P(A|C)P(C)+P(A|D)P(D) = .4\times.6+ .65\times.3+ .55\times.1
 
 </div>
 
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 </body>
